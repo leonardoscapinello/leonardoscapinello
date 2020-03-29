@@ -1,0 +1,525 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Sobreviva ao Corona</title>
+    <style>
+        /* -------------------------------------
+            GLOBAL RESETS
+        ------------------------------------- */
+        img {
+            border: none;
+            -ms-interpolation-mode: bicubic;
+            max-width: 100%;
+        }
+
+        body {
+            background-color: #ffffff;
+            font-family: sans-serif;
+            -webkit-font-smoothing: antialiased;
+            font-size: 14px;
+            line-height: 1.4;
+            margin: 0;
+            padding: 0;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        table {
+            border-collapse: separate;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+            width: 100%;
+        }
+
+        table td {
+            font-family: sans-serif;
+            font-size: 14px;
+            vertical-align: top;
+        }
+
+        /* -------------------------------------
+            BODY & CONTAINER
+        ------------------------------------- */
+
+        .body {
+            background-color: #ffffff;
+            width: 100%;
+        }
+
+        /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+        .container {
+            display: block;
+            margin: 0 auto !important;
+            /* makes it centered */
+            max-width: 580px;
+            padding: 10px;
+            width: 580px;
+        }
+
+        /* This should also be a block element, so that it will fill 100% of the .container */
+        .content {
+            box-sizing: border-box;
+            display: block;
+            margin: 0 auto;
+            max-width: 580px;
+            padding: 10px;
+        }
+
+        /* -------------------------------------
+            HEADER, FOOTER, MAIN
+        ------------------------------------- */
+        .main {
+            background: #ffffff;
+            border-radius: 3px;
+            width: 100%;
+        }
+
+        .wrapper {
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
+        .content-block {
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+
+        .footer {
+            clear: both;
+            margin-top: 10px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .footer td,
+        .footer p,
+        .footer span,
+        .footer a {
+            color: #999999;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        /* -------------------------------------
+            TYPOGRAPHY
+        ------------------------------------- */
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: #000000;
+            font-family: sans-serif;
+            font-weight: 400;
+            line-height: 1.4;
+            margin: 0;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 35px;
+            font-weight: 300;
+            text-align: center;
+            text-transform: capitalize;
+        }
+
+        p,
+        ul,
+        ol {
+            font-family: sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            margin: 0;
+            margin-bottom: 15px;
+        }
+
+        p li,
+        ul li,
+        ol li {
+            list-style-position: inside;
+            margin-left: 5px;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: underline;
+        }
+
+        /* -------------------------------------
+            BUTTONS
+        ------------------------------------- */
+        .btn {
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        .btn > tbody > tr > td {
+            padding-bottom: 15px;
+        }
+
+        .btn table {
+            width: auto;
+        }
+
+        .btn table td {
+            background-color: #ffffff;
+            border-radius: 50px;
+            text-align: center;
+        }
+
+        .btn a {
+            background-color: #ffffff;
+            border: solid 1px #0ABB87;
+            border-radius: 50px;
+            box-sizing: border-box;
+            color: #090508;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 14px;
+            font-weight: bold;
+            margin: 0;
+            padding: 12px 25px;
+            text-decoration: none;
+            text-transform: capitalize;
+        }
+
+        .btn-primary table td {
+            background-color: #0ABB87;
+        }
+
+        .btn-primary a {
+            background-color: #0ABB87 !important;
+            border-color: #0ABB87 !important;
+            color: #090508 !important;
+        }
+
+        /* -------------------------------------
+            OTHER STYLES THAT MIGHT BE USEFUL
+        ------------------------------------- */
+        .last {
+            margin-bottom: 0;
+        }
+
+        .first {
+            margin-top: 0;
+        }
+
+        .align-center {
+            text-align: center;
+        }
+
+        .align-right {
+            text-align: right;
+        }
+
+        .align-left {
+            text-align: left;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .mt0 {
+            margin-top: 0;
+        }
+
+        .mb0 {
+            margin-bottom: 0;
+        }
+
+        .preheader {
+            color: transparent;
+            display: none;
+            height: 0;
+            max-height: 0;
+            max-width: 0;
+            opacity: 0;
+            overflow: hidden;
+            mso-hide: all;
+            visibility: hidden;
+            width: 0;
+        }
+
+        .powered-by a {
+            text-decoration: none;
+        }
+
+        hr {
+            border: 0;
+            border-bottom: 1px solid #f6f6f6;
+            Margin: 20px 0;
+        }
+
+        /* -------------------------------------
+            RESPONSIVE AND MOBILE FRIENDLY STYLES
+        ------------------------------------- */
+        @media only screen and (max-width: 620px) {
+            table[class=body] h1 {
+                font-size: 28px !important;
+                margin-bottom: 10px !important;
+            }
+
+            table[class=body] p,
+            table[class=body] ul,
+            table[class=body] ol,
+            table[class=body] td,
+            table[class=body] span,
+            table[class=body] a {
+                font-size: 16px !important;
+            }
+
+            table[class=body] .wrapper,
+            table[class=body] .article {
+                padding: 10px !important;
+            }
+
+            table[class=body] .content {
+                padding: 0 !important;
+            }
+
+            table[class=body] .container {
+                padding: 0 !important;
+                width: 100% !important;
+            }
+
+            table[class=body] .main {
+                border-left-width: 0 !important;
+                border-radius: 0 !important;
+                border-right-width: 0 !important;
+            }
+
+            table[class=body] .btn table {
+                width: 100% !important;
+            }
+
+            table[class=body] .btn a {
+                width: 100% !important;
+            }
+
+            table[class=body] .img-responsive {
+                height: auto !important;
+                max-width: 100% !important;
+                width: auto !important;
+            }
+        }
+
+        /* -------------------------------------
+            PRESERVE THESE STYLES IN THE HEAD
+        ------------------------------------- */
+        @media all {
+            .ExternalClass {
+                width: 100%;
+            }
+
+            .ExternalClass,
+            .ExternalClass p,
+            .ExternalClass span,
+            .ExternalClass font,
+            .ExternalClass td,
+            .ExternalClass div {
+                line-height: 100%;
+            }
+
+            .apple-link a {
+                color: inherit !important;
+                font-family: inherit !important;
+                font-size: inherit !important;
+                font-weight: inherit !important;
+                line-height: inherit !important;
+                text-decoration: none !important;
+            }
+
+            .btn-primary table td:hover {
+                background-color: #0ABB87 !important;
+            }
+
+            .btn-primary a:hover {
+                background-color: #0ABB87 !important;
+                border-color: #0ABB87 !important;
+                color: #090508 !important;
+            }
+        }
+
+    </style>
+</head>
+<body class="">
+<table border="0" cellpadding="0" cellspacing="0" class="body">
+    <tr>
+        <td>&nbsp;</td>
+        <td class="container">
+            <div class="content">
+
+                <!-- START CENTERED WHITE CONTAINER -->
+                <span class="preheader">This is preheader text. Some clients will show this text as a preview.</span>
+                <table class="main">
+
+                    <!-- START MAIN CONTENT AREA -->
+                    <tr>
+                        <td class="wrapper">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td>
+                                        <p>Olá, Aqui é o Leonardo.</p>
+                                        <p>Recebi aqui sua curiosidade no e-book <b>Superando a Crise</b>, do nosso
+                                            combo <b>Sobreviva ao Corona</b>, certo?</p>
+                                        <p>Primeiramente, gostaria de te agradecer pela oportunidade de te mander esse
+                                            conteúdo e espero te ajudar durante esse momento tão difícil.</p>
+
+                                        <p><b>Você viu que eu coloquei a prévia do e-book em anexo?</b> Se você não
+                                            recebeu o anexo ou teve qualquer problema, deixei uma cópia salva
+                                            exclusivamente pra você em nosso site e você pode baixar <a
+                                                    href="https://sementesdigitais.com/previa?h=3186270904930496">clicando aqui.</a></p>
+
+                                        <p>Vou te mostrar uma matéria publicada num jornal a pouco tempo, e de verdade,
+                                            a situação do Brasil ainda está começando a se complicar, da uma olhada:</p>
+
+                                        <img src="https://sementesdigitais.com/public/images/opovo-autonomos-temem-ficar-sem-sustento.png"
+                                             alt="Autonomos temem ficar sem sustento - Jornal OPovo"
+                                             style="display: block">
+
+                                        <p>Talvez não tenha caido a ficha pra grande maioria das pessoas e torço para
+                                            que não demore muito mais até que todos percebam os riscos que a população
+                                            como um todo está correndo, principalmente economicamente.</p>
+
+                                        <b>Mas calma, não é hora de entrar em pânico, muito pelo contrário!</b>
+
+                                        <br/>
+                                        <br/>
+                                        <p>Nós precisamos unir forças e continuar movimentando a economia do Brasil para
+                                            que não entre em colapso, para que possamos continuar pagando nossos
+                                            funcionários (garantindo todos os benefícios) sem deixar essa roda gigante
+                                            parar.</p>
+
+
+                                        <b>Posso contar com você nessa força?</b>
+
+                                        <br/>
+                                        <br/>
+                                        <p>Deixa eu te explicar o que tem no e-book (versão completa), que você chegou a
+                                            ver no site antes de receber esse e-mail:</p>
+
+                                        <ul>
+                                            <li><b>O que é, de onde veio?</b> Nessa seção eu explico de forma clara e
+                                                suscinta de onde surgiu o COVID-19 e do que se trata esse vírus, também
+                                                abordando os riscos, sintomas e como prevenir o contágio e contaminação.<br><br>
+                                            </li>
+                                            <li><b>Criando fidelidade</b> Vou te explicar como gerar fidelidade numa
+                                                simples ligação, trazendo o cliente para perto de você, incluindo um
+                                                modelo prático.<br><br>
+                                            </li>
+                                            <li><b>Decole para novos horizontes</b> Se você ainda não tem, chegou a hora
+                                                de pensar um canal digital para criar valor e conteúdo para sua
+                                                audiência. Também vou passar técnicas que abordei junto a clientes para
+                                                ajuda-los a manter as vendas.<br><br>
+                                            </li>
+                                            <li><b>Renegocie, economize.</b> São 08 técnicas para você sair da mesa de
+                                                negociações (ou ligação, nesse momento) com seu fornecedor sem dor de
+                                                cabeça, nem perdendo dinheiro.<br><br>
+                                            </li>
+                                            <li><b>Segredos escondidos numa frase</b> Gatilhos mentais para você
+                                                melhorar sua capacidade de persuasão, entenda como usar cada um deles e
+                                                o que são, de forma limpa e objetiva.<br>
+                                            </li>
+                                        </ul>
+
+
+                                        <br/>
+
+                                        <p>Não é só o e-book que você vai levar <b>(preço original: R$ 49,90)</b>, mas
+                                            também esses bonus:</p>
+
+                                        <ul>
+                                            <li>Acesso a atualizações gratuitas no e-book sempre que forem lançadas.
+                                                <br><b> No valor de R$ 147,90</b><br><br>
+                                            </li>
+                                            <li>Acessar o conteúdo do Grupo no Telegram para Membros
+                                                <br><b> No valor de R$ 197,90</b><br><br>
+                                            </li>
+                                            <li>Oportunidade de tirar dúvidas no grupo de membros do Telegram
+                                                <br><b> No valor de R$ 197,90</b><br><br>
+                                            </li>
+                                        </ul>
+
+                                        <br/>
+
+                                        <p>Pra facilitar as contas, o preço original desse pacote é de R$ 593,60,
+                                            sim isso mesmo <strike>
+                                                <del><b>R$ 593,60</b></del>
+                                            </strike>.
+                                        </p>
+
+                                        <p>E essa é sua change de levar tudo isso, por apenas <b>R$19,90.</b> e pra
+                                            fazer isso, você só precisa concluir sua compra clicando no botão abaixo:
+                                        </p>
+
+                                        <br/>
+
+
+                                        <table border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
+                                            <tbody>
+                                            <tr>
+                                                <td align="left">
+                                                    <table border="0" cellpadding="0" cellspacing="0">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <a href="https://pay.hotmart.com/D24144693Y?checkoutMode=0&bid=1584845384129"
+                                                                   target="_blank">Garantir
+                                                                    Tudo isso por R$ 19,90</a></td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+
+
+                                        <br/>
+                                        <p>E preciso muito que você saiba disso, pra não dizer que não te avisei!</p>
+                                        <p>Essa oferta não vai durar pra sempre e quando o contador chegar a zero (dia
+                                            25/03/2020 às 23:59), o preço vai aumentar e você não vai mais ver esse
+                                            preço novamente.</p>
+
+                                        <br>
+
+                                        <img src="https://sementesdigitais.com/public/images/countdown.php?time=2020-03-26"
+                                             style="display: block;border-right: 5px !important;"/>
+
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- END MAIN CONTENT AREA -->
+                </table>
+
+                <!-- START FOOTER -->
+                <div class="footer">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="content-block">
+                                <span class="apple-link">Flexwei Digitals, ABC Paulista, São Paulo, Brasil.</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="content-block powered-by">
+                                Powered by <a href="https://flexwei.com">Marketing Concierge | Flexwei</a>.
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- END FOOTER -->
+
+                <!-- END CENTERED WHITE CONTAINER -->
+            </div>
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+</table>
+
+</body>
+</html>
