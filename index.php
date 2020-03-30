@@ -19,7 +19,7 @@ require_once("./src/properties/index.php");
 <body>
 <div id="wrapper">
     <?php require_once(DIRNAME . "../components/header-featured.php") ?>
-    <?php require_once(DIRNAME . "../components/blog-release.php") ?>
+    <?php require_once(DIRNAME . "../components/blog-featured-widget.php") ?>
     <?php require_once(DIRNAME . "../components/newsletter.php") ?>
     <?php require_once(DIRNAME . "../components/about-me.php") ?>
     <?php require_once(DIRNAME . "../components/cases.php") ?>

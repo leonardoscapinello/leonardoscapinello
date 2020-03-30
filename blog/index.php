@@ -15,10 +15,14 @@ require_once("../src/properties/index.php");
     <?= $socialAnalytics->getGoogleAnalyticsScript_Head() ?>
     <?= $socialAnalytics->getGoogleTagManagerScript_Head() ?>
     <?= $socialAnalytics->getFacebookPixel_Head("website") ?>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,500,700,900&display=swap"
+          rel="stylesheet">
 </head>
 <body>
 <div id="wrapper">
     <?php require_once(DIRNAME . "../components/header.php") ?>
+    <?php require_once(DIRNAME . "../components/blog-post-header.php") ?>
+    <?php require_once(DIRNAME . "../components/blog-post-content.php") ?>
     <?php require_once(DIRNAME . "../components/footer.php") ?>
 </div>
 

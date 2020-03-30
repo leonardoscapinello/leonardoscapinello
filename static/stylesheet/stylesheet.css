@@ -482,3 +482,119 @@ img {
 .footer ul li a:hover {
   color: #FFFFFF;
 }
+.blog-post {
+  background: #131313;
+}
+.blog-post.wrapper-blog {
+  background: #000000;
+}
+.blog-post .header-blog {
+  max-height: 60vh;
+  position: relative;
+  overflow: hidden;
+}
+.blog-post .header-blog .background {
+  width: 100%;
+  height: 100%;
+}
+.blog-post .header-blog .background:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  background: rgba(0,0,0,0.5);
+  background: linear-gradient(180deg,#131313 0%,rgba(0,0,0,0) 100%);
+}
+.blog-post .header-blog .background img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.blog-post .header-blog .background .overlay-text {
+  background: #000000;
+  background: linear-gradient(0deg,#000000 0%,rgba(0,0,0,0) 88%);
+  width: 100%;
+  min-height: 200px;
+  z-index: 7;
+  position: absolute;
+  bottom: 0;
+}
+.blog-post .header-blog .background .overlay-text .post-title {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top: 100px;
+}
+.blog-post .header-blog .background .overlay-text .post-title .post-data ul {
+  display: block;
+  margin: 20px 0;
+}
+.blog-post .header-blog .background .overlay-text .post-title .post-data ul li {
+  color: rgba(255,255,255,0.7);
+  display: inline-block;
+  font-size: .8em;
+  margin-right: 20px;
+}
+.blog-post .header-blog .background .overlay-text .post-title .post-data ul li i {
+  margin-right: 5px;
+}
+.blog-post .header-blog .background .overlay-text .post-title h2 {
+  font-size: 2.8em;
+  line-height: 72px;
+}
+.blog-post .post-content {
+  background: #000;
+  padding: 40px 0;
+}
+.blog-post .post-content * {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+}
+.blog-post .post-content b,
+.blog-post .post-content strong {
+  font-weight: 500;
+}
+.blog-post .post-content a {
+  color: #5ec1e4;
+  text-decoration: none;
+  font-weight: 400;
+}
+.blog-post .post-content a:hover {
+  text-decoration: underline;
+}
+.blog-post .post-content .content-blog {
+  border-radius: 6px;
+  background: #ffffff;
+  min-height: 300px;
+  padding: 60px 0;
+}
+.blog-post .post-content .content-blog p {
+  padding: 0 40px;
+  line-height: 30px;
+  margin: 20px 0;
+}
+.blog-post .post-content .content-blog p:first-child {
+  margin-top: 0;
+}
+.blog-post .post-content .content-blog ul {
+  margin: 20px 0;
+  padding: 0 80px;
+  list-style: initial;
+}
+.blog-post .post-content .content-blog figure {
+  background: #fafafa;
+  text-align: center;
+  padding: 50px 0;
+  margin: 40px 0;
+}
+.blog-post .post-content .content-blog figure img {
+  max-width: 100%;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 8px 5px -5px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0px 8px 5px -5px rgba(0,0,0,0.15);
+  box-shadow: 0px 8px 5px -5px rgba(0,0,0,0.15);
+}
