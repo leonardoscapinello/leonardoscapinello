@@ -25,6 +25,10 @@ class SocialAnalytics
         $script .= "gtag('js', new Date());";
         $script .= "gtag('config', '" . $this->google_analytics . "');";
         $script .= "</script>";
+
+
+
+        $script = null;
         return $script;
     }
 
@@ -37,6 +41,10 @@ class SocialAnalytics
         $script .= "'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);";
         $script .= "})(window,document,'script','dataLayer','" . $this->google_tagManager . "');</script>";
         $script .= "<!-- End Google Tag Manager -->";
+
+
+
+        $script = null;
         return $script;
     }
 
@@ -47,6 +55,10 @@ class SocialAnalytics
         $script .= "<noscript><iframe src=\"https://www.googletagmanager.com/ns.html?id=" . $this->google_tagManager . "\"";
         $script .= "height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe></noscript>";
         $script .= "<!-- End Google Tag Manager (noscript) -->";
+
+
+
+        $script = null;
         return $script;
     }
 
@@ -74,12 +86,20 @@ class SocialAnalytics
         $script .= "src=\"https://www.facebook.com/tr?id=" . $pixel_id . "&ev=PageView&noscript=1\"";
         $script .= "/></noscript>";
         $script .= "<!-- End Facebook Pixel Code -->";
+
+
+
+        $script = null;
         return $script;
     }
 
     public function getFacebookTrack_Body($custom_track = "PageView", $js_object = "")
     {
         if ($js_object === "") return "<script>fbq('track', '" . $custom_track . "');</script>";
+
+
+
+        $script = null;
         return "<script>fbq('track', '" . $custom_track . "',  " . $js_object . ");</script>";
     }
 

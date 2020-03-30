@@ -25,7 +25,7 @@
                         <div class="header-btn">
                             <button tooltip="Acessar minha Conta"
                                     class="btn only-desktop"
-                                    flow="down">Fazer Login
+                                    flow="down" onClick="window.location.href = '<?=LOGIN_URL?>';return false">Fazer Login
                             </button>
                         </div>
                     </div>

@@ -14,7 +14,7 @@
                         <h3 class="">Crie sua Conta Gratuita</h3>
                         <p class="text white topmargin">Receba por e-mail notificações sempre que um novo conteúdo for
                             postado aqui, gerencie suas preferências e garanta um conteúdo de qualidade e gratuito.</p>
-                        <button class="btn topmargin">Criar minha conta</button>
+                        <button class="btn topmargin"  onClick="window.location.href = '<?=REGISTER_URL?>';return false">Criar minha conta</button>
                     </div>
                 </div>
             </div>

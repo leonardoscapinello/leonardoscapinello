@@ -4,6 +4,16 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
+RewriteRule ^login/createsession$   ./src/public/authenticate.php [L,NC,QSA]
+RewriteRule ^login/createaccount$   ./src/public/createAccount.php [L,NC,QSA]
+RewriteRule ^login/redirect$        ./src/public/redirect.php [L,NC,QSA]
+
+
+RewriteRule ^login$                 ./src/public/login.php?action=login [L,NC,QSA]
+RewriteRule ^register$              ./src/public/register.php?action=login [L,NC,QSA]
+RewriteRule ^logout$                ./src/public/login.php?action=logout [L,NC,QSA]
+
+
 RewriteRule ^members/subscribe$   ./src/api/members/subscribe.php [L]
 
 # BLOG PAGES

@@ -2,19 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="038f153c-938b-4cd1-b7d1-679edc51ddf9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/blog-post-content.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/blog-post-header.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/blog-post-test.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/blog/111a03133d14214539c96e0f657dff1a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/blog/astronaut_spacesuit_butterflies_121755_1920x1080.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/blog/wallpapersden.com_k-league-of-legends-2020_1920x1080.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/class/AccountSession.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/class/Accounts.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/class/Numeric.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/class/Security.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/public/authenticate.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/public/createAccount.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/public/login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/public/redirect.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/public/register.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/public/validate.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/lock_icon_copy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/mountain-background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/puff.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/tick.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/user_icon_copy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/javascript/jquery-ui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/javascript/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/javascript/plyr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/stylesheet/authenticate.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/blog-release.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blog-featured-widget.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/less/stylesheet.less" beforeDir="false" afterPath="$PROJECT_DIR$/static/less/stylesheet.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/stylesheet/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/stylesheet/stylesheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/stylesheet/stylesheet.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/stylesheet/stylesheet.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/class/SocialAnalytics.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/SocialAnalytics.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header-featured.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header-featured.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/newsletter.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/newsletter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/properties/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/properties/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,15 +67,15 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/public" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\leonardoscapinello\src\components" />
-      <recent name="C:\wamp64\www\leonardoscapinello\blog" />
-      <recent name="C:\wamp64\www\leonardoscapinello\static\movie" />
+      <recent name="C:\wamp64\www\leonardoscapinello\src\public" />
+      <recent name="C:\wamp64\www\leonardoscapinello\static\javascript" />
       <recent name="C:\wamp64\www\leonardoscapinello\static\stylesheet" />
-      <recent name="C:\wamp64\www\leonardoscapinello\static" />
+      <recent name="C:\wamp64\www\leonardoscapinello\src\class" />
+      <recent name="C:\wamp64\www\leonardoscapinello\src\components" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -80,7 +92,7 @@
       <workItem from="1585310022662" duration="7735000" />
       <workItem from="1585402765546" duration="16245000" />
       <workItem from="1585440940270" duration="4886000" />
-      <workItem from="1585575841163" duration="11557000" />
+      <workItem from="1585575841163" duration="19697000" />
     </task>
     <servers />
   </component>
@@ -95,10 +107,10 @@
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
     <state x="-1433" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1585406082338" />
-    <state x="794" y="449" key="NewPhpFileDialog" timestamp="1585586793836">
+    <state x="794" y="449" key="NewPhpFileDialog" timestamp="1585592031563">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="794" y="449" key="NewPhpFileDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1585586793836" />
+    <state x="794" y="449" key="NewPhpFileDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1585592031563" />
     <state x="656" y="350" key="com.intellij.ide.util.TipDialog" timestamp="1585575852630">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -107,5 +119,9 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="616" y="243" key="run.anything.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1585587657860" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1585598007646">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1585598007646" />
   </component>
 </project>
