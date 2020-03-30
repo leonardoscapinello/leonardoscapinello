@@ -5,10 +5,18 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
 RewriteRule ^members/subscribe$   ./src/api/members/subscribe.php [L]
-RewriteRule ^b/([a-zA-Z0-9-z\-\_]+)$   ./blog/index.php?id=$1 [L]
+
+# BLOG PAGES
+RewriteRule ^b/([0-9]+)$   ./blog/index.php?id=$1 [L]
+RewriteRule ^blog/([0-9]+)/([a-zA-Z0-9-z\-\_]+)$   ./blog/index.php?id=$1 [L]
 
 # CAMPAIGNS REWRITE
 RewriteRule ^c/sobreviva-ao-corona$   ./campaigns/20200325-sobreviva-ao-corona/index.php [L]
+
+# MEDIA FOR BLOG
+RewriteRule ^m/blog/images/([^/]+)$   ./static/images/blog/$1 [L]
+RewriteRule ^m/blog/videos/([^/]+)$   ./static/movie/blog/$1 [L]
+
 
 # MEDIA FOR CAMPAIGNS
 RewriteRule ^m/sobreviva-ao-corona/([^/]+)$   ./campaigns/20200325-sobreviva-ao-corona/media/$1 [L]

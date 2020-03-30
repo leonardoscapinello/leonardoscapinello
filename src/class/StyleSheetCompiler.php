@@ -94,4 +94,28 @@ class StyleSheetCompiler
         return SITE_URL . "static/stylesheet/" . $filename;
     }
 
+    public function getImagePath($filename, $campaign = null)
+    {
+        if (not_empty($campaign)) {
+            if ($campaign === "blog") {
+                return SITE_URL . "m/blog/images/" . $filename;
+            } else {
+                return SITE_URL . "m/" . $campaign . "/" . $filename;
+            }
+        }
+        return SITE_URL . "static/images/" . $filename;
+
+    }
+
+    public function getMoviePath($filename, $campaign = null)
+    {
+        if (not_empty($campaign)) {
+            if ($campaign === "blog") {
+                return SITE_URL . "m/blog/movie/" . $filename;
+            }
+        }
+        return SITE_URL . "static/movie/" . $filename;
+
+    }
+
 }
