@@ -2,37 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="038f153c-938b-4cd1-b7d1-679edc51ddf9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/blog/add-element.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/create-post.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/edit-post.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/save-paragraph.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/class/Blog.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/class/URL.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/drop-horz.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/drop-vert-above.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/drop-vert-below.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/icons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/video.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/javascript/content-tools.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/stylesheet/content-tools.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/stylesheet/plyr.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/class/StyleSheetCompiler.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/StaticCompiler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/blog-featured-widget.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blog-featured-widget.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/blog-post-content.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blog-post-content-admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/blog-post-header.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blog-post-header-admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/blog-post-test.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blog-post-test.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cases.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cases.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header-featured.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header-featured.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/newsletter.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/newsletter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/properties/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/properties/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vendor/dompdf/dompdf/src/Css/Style.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/dompdf/dompdf/src/Css/Style.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/less/stylesheet.less" beforeDir="false" afterPath="$PROJECT_DIR$/static/less/stylesheet.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/stylesheet/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/stylesheet/stylesheet.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/stylesheet/stylesheet.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/stylesheet/stylesheet.min.css" afterDir="false" />
@@ -101,7 +71,7 @@
       <workItem from="1585310022662" duration="7735000" />
       <workItem from="1585402765546" duration="16245000" />
       <workItem from="1585440940270" duration="4886000" />
-      <workItem from="1585575841163" duration="35780000" />
+      <workItem from="1585575841163" duration="35976000" />
     </task>
     <servers />
   </component>

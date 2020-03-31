@@ -657,6 +657,14 @@ img {
   padding: 0 80px;
   list-style: initial;
 }
+.blog-post .post-content .content-blog ol {
+  margin: 20px 0;
+  padding: 0 80px;
+  list-style: decimal;
+}
+.blog-post .post-content .content-blog ol li {
+  list-style: inherit;
+}
 .blog-post .post-content .content-blog figure {
   background: #fafafa;
   text-align: center;
