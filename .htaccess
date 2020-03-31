@@ -17,9 +17,12 @@ RewriteRule ^logout$                ./src/public/login.php?action=logout [L,NC,Q
 RewriteRule ^members/subscribe$   ./src/api/members/subscribe.php [L]
 
 # BLOG PAGES
-RewriteRule ^b/save-paragraph$      ./blog/save-paragraph.php?id=$1 [L,NC,QSA]
-RewriteRule ^b/edit-post$           ./blog/edit-post.php?id=$1 [L,NC,QSA]
-RewriteRule ^b/create-post$         ./blog/create-post.php?id=$1 [L,NC,QSA]
+RewriteRule ^b/up$                      ./blog/upload_file.php?id=$1 [L,NC,QSA]
+RewriteRule ^b/up/processing$           ./blog/upload_processing.php?id=$1 [L,NC,QSA]
+RewriteRule ^b/save-paragraph$          ./blog/save-paragraph.php?id=$1 [L,NC,QSA]
+RewriteRule ^b/add-media$               ./blog/save-media.php?id=$1 [L,NC,QSA]
+RewriteRule ^b/edit-post$               ./blog/edit-post.php?id=$1 [L,NC,QSA]
+RewriteRule ^b/create-post$             ./blog/create-post.php?id=$1 [L,NC,QSA]
 
 RewriteRule ^b/([0-9]+)$                            ./blog/index.php?id=$1 [L]
 RewriteRule ^blog/([0-9]+)/([a-zA-Z0-9-z\-\_]+)$    ./blog/index.php?id=$1 [L]

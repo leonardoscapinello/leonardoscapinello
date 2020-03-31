@@ -3,7 +3,7 @@ $cover = $static->getImagePath($blog->getPostCover(), "blog");
 ?>
 <section>
     <div class="blog-post">
-        <div class="header-blog <?= $cover === null ? "noimage" : "" ?> ">
+        <div class="header-blog <?= $cover === null ? "no-image" : "image" ?> ">
             <div class="background">
                 <img src="<?= $cover ?>" alt=""/>
                 <div class="overlay-text">

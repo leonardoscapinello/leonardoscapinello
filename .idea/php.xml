@@ -10,6 +10,7 @@
       <path value="$PROJECT_DIR$/src/vendor/phenx/php-font-lib" />
       <path value="$PROJECT_DIR$/src/vendor/sabberworm/php-css-parser" />
       <path value="$PROJECT_DIR$/src/vendor/composer" />
+      <path value="$PROJECT_DIR$/src/vendor/html2text/html2text" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7" />

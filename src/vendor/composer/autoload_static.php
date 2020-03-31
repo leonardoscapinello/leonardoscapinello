@@ -15,6 +15,10 @@ class ComposerStaticInit3bfaa38a0a548d0be9f87290898144b2
         array (
             'PHPMailer\\PHPMailer\\' => 20,
         ),
+        'H' => 
+        array (
+            'Html2Text\\' => 10,
+        ),
         'F' => 
         array (
             'FontLib\\' => 8,
@@ -33,6 +37,11 @@ class ComposerStaticInit3bfaa38a0a548d0be9f87290898144b2
         'PHPMailer\\PHPMailer\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
+        ),
+        'Html2Text\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/html2text/html2text/src',
+            1 => __DIR__ . '/..' . '/html2text/html2text/test',
         ),
         'FontLib\\' => 
         array (

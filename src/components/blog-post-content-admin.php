@@ -13,9 +13,20 @@ if ($add !== null) $disabled = true;
                     <div class="col-xl-12 col-lg-12 col-sm-12">
                         <div class="content-blog">
 
+
+                            <?php
+                            $blogContent = new BlogContent();
+                            echo $blogContent->getAllByPost($id);
+                            ?>
+
                             <?php if ($add === "paragraph") { ?>
-                                <div class="content-paragraph edit-enabled" data-editable
+                                <div class="blog--post-block edit-enabled" data-editable
                                      data-name="paragraph-element"></div>
+                            <?php } elseif ($add === "media" || $add === "image") { ?>
+                                <div class="blog--modal-add">
+                                    <iframe src="<?= BLOG_ADMIN_ADD_MEDIA ?>?id=<?= $text->base64_encode($id) ?>&media_type=<?= $add ?>"
+                                            class="frame-full" scrolling="no" style="overflow: hidden"></iframe>
+                                </div>
                             <?php } ?>
 
                             <div class="add_text_widget">
@@ -25,11 +36,11 @@ if ($add !== null) $disabled = true;
                                             <i class="far fa-paragraph"></i>
                                         </a>
                                     </li>
-                                    <li <?= $disabled === false ? "tooltip=\"Adicionar Imagem\" flow=\"right\"" : "class=\"disabled\"" ?> >
-                                        <a href="#"><i class="far fa-image"></i></a>
+                                    <li <?= $disabled === false ? "tooltip=\"Adicionar Imagem\" flow=\"right\" onClick=\"add('image');\"" : "class=\"disabled\"" ?> >
+                                        <a style="cursor: pointer;"><i class="far fa-image"></i></a>
                                     </li>
-                                    <li <?= $disabled === false ? "tooltip=\"Adicionar Vídeo\" flow=\"right\"" : "class=\"disabled\"" ?> >
-                                        <a href="#"><i class="far fa-camera-movie"></i></a>
+                                    <li <?= $disabled === false ? "tooltip=\"Adicionar Vídeo\" flow=\"right\" onClick=\"add('media');\"" : "class=\"disabled\"" ?> >
+                                        <a style="cursor: pointer;"><i class="far fa-camera-movie"></i></a>
                                     </li>
                                     <li style="display:none" <?= $disabled === false ? "tooltip=\"Adicionar Citação\" flow=\"right\"" : "class=\"disabled\"" ?> >
                                         <a href="#"><i class="far fa-quote-right"></i></a>
@@ -90,6 +101,8 @@ if ($add !== null) $disabled = true;
             editor.start();
 
 
+            window.removeEventListener('beforeunload', editor._handleBeforeUnload);
+
             editor.addEventListener('saved', function (ev) {
                 var name, payload, regions, xhr;
                 regions = ev.detail().regions;
@@ -112,6 +125,9 @@ if ($add !== null) $disabled = true;
                         editor.busy(false);
                         if (ev.target.status == '200') {
                             new ContentTools.FlashUI('ok');
+                            window.setTimeout(function () {
+                                window.location.reload();
+                            }, 1000);
                         } else {
 
                             new ContentTools.FlashUI('no');
@@ -133,6 +149,12 @@ if ($add !== null) $disabled = true;
     function add(d) {
         if (d === "paragraph") {
             window.location.href = "<?= $url->addQueryString(array("add" => "paragraph")) ?>";
+        }
+        if (d === "image") {
+            window.location.href = "<?= $url->addQueryString(array("add" => "image")) ?>";
+        }
+        if (d === "media") {
+            window.location.href = "<?= $url->addQueryString(array("add" => "media")) ?>";
         }
     }
 </script>

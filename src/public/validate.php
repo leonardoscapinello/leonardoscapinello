@@ -1,5 +1,5 @@
 <?php
 if (!$session->isLogged()) {
-    header("location: " . $properties->getLoginURL());
+    header("location: " . LOGIN_URL);
     die;
 }

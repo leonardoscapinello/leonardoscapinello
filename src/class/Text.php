@@ -27,8 +27,14 @@ class Text
     public function utf8($string)
     {
         if ($this->isString($string)) {
-            $string = iconv(mb_detect_encoding($string, "UTF-8,ISO-8859-1"), "UTF-8", $string);
-            return $string;
+            if (preg_match('!!u', $string)) {
+                // UTF8 STRING
+                return utf8_decode($string);
+            } else {
+                // NOT UTF=8 STRING, SO CONVERT
+                $string = iconv(mb_detect_encoding($string, "UTF-8"), "UTF-8", $string);
+                return $string;
+            }
         }
         return null;
     }

@@ -1,6 +1,5 @@
 <?php
 require_once("./src/properties/index.php");
-
 ?>
 <html>
 <head>

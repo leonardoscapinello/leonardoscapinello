@@ -11,7 +11,9 @@ define("LOGIN_URL", SITE_URL . "login");
 define("REGISTER_URL", SITE_URL . "register");
 define("RECOVERY_URL", SITE_URL . "recovery");
 
+define("BLOG_ADMIN_EDIT_POST", SITE_URL . "b/edit-post");
 define("BLOG_ADMIN_SAVE_PARAGRAPH", SITE_URL . "b/save-paragraph");
+define("BLOG_ADMIN_ADD_MEDIA", SITE_URL . "b/add-media");
 
 require_once(DIRNAME . "../vendor/autoload.php");
 
@@ -39,6 +41,8 @@ require_once(DIRNAME . "/../class/Security.php");
 require_once(DIRNAME . "/../class/StaticCompiler.php");
 require_once(DIRNAME . "/../class/SocialAnalytics.php");
 require_once(DIRNAME . "/../class/Blog.php");
+require_once(DIRNAME . "/../class/BlogContent.php");
+require_once(DIRNAME . "/../class/Upload.php");
 
 require DIRNAME . '/../vendor/phpmailer/phpmailer/src/Exception.php';
 require DIRNAME . '/../vendor/phpmailer/phpmailer/src/PHPMailer.php';
@@ -54,9 +58,14 @@ $token = new Token();
 
 
 $database = new Database();
+
+$database->query('SET NAMES utf8');
+$database->execute();
+
 $security = new Security();
 $session = new AccountSession();
 $accounts = $account = new Accounts();
+
 
 
 

@@ -2,7 +2,7 @@
     <div class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-xl-8 col-lg-8 col-sm-12">
+                <div class="col-xl-9 col-lg-9 col-sm-12">
                     <div class="container">
                         <div class="row">
                             <div class="col-xl-5 col-lg-5 col-sm-12">
@@ -18,7 +18,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-6 col-sm-12">
+                <div class="col-xl-3 col-lg-3 col-sm-12">
                     <div class="footer-icon">
                         <img src="<?= $static->getImagePath("ls-white-background-black-icon.png") ?>" alt="LS"/>
                     </div>
