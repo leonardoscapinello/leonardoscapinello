@@ -9,9 +9,9 @@ require_once("./src/properties/index.php");
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Conteúdo sobre Migração ao Digital - Leonardo Scapinello</title>
-    <link href="<?= $stylesheet->getFileLocation("stylesheet.min.css") ?>" type="text/css" rel="stylesheet">
-    <link href="<?= $stylesheet->getFileLocation("owl.carousel.css") ?>" type="text/css" rel="stylesheet">
-    <link href="<?= $stylesheet->getFileLocation("owl.theme.default.css") ?>" type="text/css" rel="stylesheet">
+    <link href="<?= $static->getFileLocation("stylesheet.min.css") ?>" type="text/css" rel="stylesheet">
+    <link href="<?= $static->getFileLocation("owl.carousel.css") ?>" type="text/css" rel="stylesheet">
+    <link href="<?= $static->getFileLocation("owl.theme.default.css") ?>" type="text/css" rel="stylesheet">
     <?= $socialAnalytics->getGoogleAnalyticsScript_Head() ?>
     <?= $socialAnalytics->getGoogleTagManagerScript_Head() ?>
     <?= $socialAnalytics->getFacebookPixel_Head("website") ?>

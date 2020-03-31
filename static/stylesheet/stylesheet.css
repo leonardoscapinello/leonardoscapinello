@@ -91,6 +91,15 @@ body {
   min-width: 200px;
   transition: all .7s;
 }
+.btn.btn--secondary {
+  color: #000000;
+  border: 1px #000000 solid;
+  font-weight: 700;
+}
+.btn.btn--secondary:hover {
+  background: #000000;
+  color: #FFFFFF;
+}
 .btn:hover {
   background: #FFFFFF;
   color: #090C16;
@@ -142,6 +151,9 @@ p {
 }
 .text.white {
   color: #FFFFFF;
+}
+.text.black {
+  color: #000000;
 }
 .text.pink {
   color: #ed145b;
@@ -227,7 +239,7 @@ p {
   background-position: 550px;
   transition: all .4s;
 }
-.blog-release .blog-post--widget:hover .post-info .content a {
+.blog-release .blog-post--widget:hover .post-info .content .readmore {
   height: 35px;
   visibility: visible;
   padding: 10px 0;
@@ -263,7 +275,11 @@ p {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.blog-release .blog-post--widget .post-info .content a {
+.blog-release .blog-post--widget .post-info .content h5 {
+  font-weight: 600;
+  font-size: .85em;
+}
+.blog-release .blog-post--widget .post-info .content .readmore {
   display: block;
   height: 1px;
   overflow: hidden;
@@ -493,6 +509,9 @@ img {
   position: relative;
   overflow: hidden;
 }
+.blog-post .header-blog.noimage {
+  max-height: 20vh;
+}
 .blog-post .header-blog .background {
   width: 100%;
   height: 100%;
@@ -550,10 +569,6 @@ img {
   background: #000;
   padding: 40px 0;
 }
-.blog-post .post-content * {
-  font-family: 'Roboto Slab', serif;
-  font-weight: 300;
-}
 .blog-post .post-content b,
 .blog-post .post-content strong {
   font-weight: 500;
@@ -572,13 +587,70 @@ img {
   min-height: 300px;
   padding: 60px 0;
 }
-.blog-post .post-content .content-blog p {
+.blog-post .post-content .content-blog .content-paragraph {
   padding: 0 40px;
   line-height: 30px;
+  font-family: 'Roboto Slab', serif;
   margin: 20px 0;
 }
-.blog-post .post-content .content-blog p:first-child {
+.blog-post .post-content .content-blog .content-paragraph .text-center {
+  text-align: center;
+}
+.blog-post .post-content .content-blog .content-paragraph .text-left {
+  text-align: left;
+}
+.blog-post .post-content .content-blog .content-paragraph .text-right {
+  text-align: right;
+}
+.blog-post .post-content .content-blog .content-paragraph.edit-enabled {
+  border: 1px #ed145b dashed;
+  background: rgba(237,21,91,0.05);
+  margin: 0 2px;
+}
+.blog-post .post-content .content-blog .content-paragraph p,
+.blog-post .post-content .content-blog .content-paragraph b,
+.blog-post .post-content .content-blog .content-paragraph i {
+  font-family: 'Roboto Slab', serif;
+}
+.blog-post .post-content .content-blog .content-paragraph b {
+  font-weight: bold;
+}
+.blog-post .post-content .content-blog .content-paragraph i {
+  font-style: italic;
+}
+.blog-post .post-content .content-blog .content-paragraph h1 {
+  font-size: 34px;
+  color: #000;
+  line-height: 50px;
+  margin: 20px 0;
+}
+.blog-post .post-content .content-blog .content-paragraph h1:first-child {
   margin-top: 0;
+}
+.blog-post .post-content .content-blog .content-paragraph h2 {
+  font-size: 26px;
+  line-height: 40px;
+  color: #000;
+  margin: 20px 0;
+}
+.blog-post .post-content .content-blog .content-paragraph h2:first-child {
+  margin-top: 0;
+}
+.blog-post .post-content .content-blog .content-paragraph:first-child {
+  margin-top: 0;
+}
+.blog-post .post-content .content-blog table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px #ccc solid;
+}
+.blog-post .post-content .content-blog table th {
+  background: #090C16;
+  color: #FFFFFF;
+  padding: 5px 0;
+}
+.blog-post .post-content .content-blog table tr {
+  padding: 5px 0;
 }
 .blog-post .post-content .content-blog ul {
   margin: 20px 0;
@@ -597,4 +669,121 @@ img {
   -webkit-box-shadow: 0px 8px 5px -5px rgba(0,0,0,0.15);
   -moz-box-shadow: 0px 8px 5px -5px rgba(0,0,0,0.15);
   box-shadow: 0px 8px 5px -5px rgba(0,0,0,0.15);
+}
+.blog_input {
+  width: 100%;
+  margin: 30px 0;
+}
+.blog_input input[type="text"] {
+  width: 100%;
+  display: block;
+  font-size: 2em;
+  color: #000;
+  font-weight: 600;
+}
+.ct-custom-save {
+  background: #FFFFFF;
+  width: auto;
+  height: auto;
+  position: fixed;
+  top: 50%;
+  left: 53px;
+  transform: translate(0,-50%);
+  z-index: 9995;
+  -webkit-box-shadow: 0px -2px 5px 4px rgba(0,0,0,0.16);
+  -moz-box-shadow: 0px -2px 5px 4px rgba(0,0,0,0.16);
+  box-shadow: 0px -2px 5px 4px rgba(0,0,0,0.16);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.ct-custom-save ul {
+  list-style: none;
+  text-align: center;
+  padding: 0 !important;
+}
+.ct-custom-save ul li {
+  display: block;
+  padding: 15px 13px;
+  cursor: pointer;
+}
+.ct-custom-save ul li:first-child {
+  background: #42EBD5;
+}
+.ct-custom-save ul li:first-child a {
+  color: #000000;
+}
+.ct-custom-save ul li:last-child {
+  background: #ed145b;
+}
+.ct-custom-save ul li:last-child a {
+  color: #FFFFFF;
+}
+.ct-custom-save ul li a {
+  font-size: 1.5em;
+}
+.add_text_widget {
+  background: #FFFFFF;
+  width: auto;
+  height: auto;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translate(0,-50%);
+  z-index: 9999;
+  -webkit-box-shadow: 0px -2px 5px 4px rgba(0,0,0,0.16);
+  -moz-box-shadow: 0px -2px 5px 4px rgba(0,0,0,0.16);
+  box-shadow: 0px -2px 5px 4px rgba(0,0,0,0.16);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.add_text_widget ul {
+  list-style: none;
+  text-align: center;
+  padding: 0 !important;
+}
+.add_text_widget ul li {
+  display: block;
+  margin: 30px 13px;
+  color: #000;
+  text-align: center;
+}
+.add_text_widget ul li.disabled {
+  opacity: .2;
+  position: relative;
+}
+.add_text_widget ul li.disabled:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 99999;
+  padding: 10px;
+}
+.add_text_widget ul li:hover a {
+  color: #ed145b !important;
+}
+.add_text_widget ul li.disabled:hover a {
+  color: #000 !important;
+}
+.add_text_widget ul li a {
+  color: #000 !important;
+  font-size: 1.5em;
+}
+.add_text_widget ul li:first-child {
+  margin-left: 0;
+}
+.ct-ignition {
+  display: none;
+}
+.ct-tool-group .ct-tool.ct-tool--image,
+.ct-tool-group .ct-tool.ct-tool--video,
+.ct-tool-group .ct-tool.ct-tool--remove,
+.ct-tool-group .ct-tool.ct-tool--preformatted {
+  display: none !important;
+}
+.ct-widget.ct-inspector.ct-widget--active {
+  display: none !important;
 }

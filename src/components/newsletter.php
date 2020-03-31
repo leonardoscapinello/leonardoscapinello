@@ -4,8 +4,8 @@
             <div class="row">
                 <div class="col-xl-6 col-lg-6 col-sm-12">
                     <div class="ls-player-container half-player">
-                        <video poster="<?=$stylesheet->getMoviePath("leonardoscapinello-showcase-thumb.png")?>" class="ls-player ">
-                            <source src="<?=$stylesheet->getMoviePath("leonardoscapinello-showcase.mp4")?>"" type="video/mp4"/>
+                        <video poster="<?=$static->getMoviePath("leonardoscapinello-showcase-thumb.png")?>" class="ls-player ">
+                            <source src="<?=$static->getMoviePath("leonardoscapinello-showcase.mp4")?>"" type="video/mp4"/>
                         </video>
                     </div>
                 </div>

@@ -11,6 +11,8 @@ define("LOGIN_URL", SITE_URL . "login");
 define("REGISTER_URL", SITE_URL . "register");
 define("RECOVERY_URL", SITE_URL . "recovery");
 
+define("BLOG_ADMIN_SAVE_PARAGRAPH", SITE_URL . "b/save-paragraph");
+
 require_once(DIRNAME . "../vendor/autoload.php");
 
 
@@ -24,6 +26,7 @@ require_once(DIRNAME . "../functions/get_request.php");
 require_once(DIRNAME . "../functions/is_selected.php");
 require_once(DIRNAME . "../functions/get_page.php");
 
+require_once(DIRNAME . "/../class/URL.php");
 require_once(DIRNAME . "/../class/Text.php");
 require_once(DIRNAME . "/../class/Token.php");
 require_once(DIRNAME . "/../class/Numeric.php");
@@ -33,14 +36,16 @@ require_once(DIRNAME . "/../class/Campaign.php");
 require_once(DIRNAME . "/../class/Accounts.php");
 require_once(DIRNAME . "/../class/AccountSession.php");
 require_once(DIRNAME . "/../class/Security.php");
-require_once(DIRNAME . "/../class/StyleSheetCompiler.php");
+require_once(DIRNAME . "/../class/StaticCompiler.php");
 require_once(DIRNAME . "/../class/SocialAnalytics.php");
+require_once(DIRNAME . "/../class/Blog.php");
 
 require DIRNAME . '/../vendor/phpmailer/phpmailer/src/Exception.php';
 require DIRNAME . '/../vendor/phpmailer/phpmailer/src/PHPMailer.php';
 require DIRNAME . '/../vendor/phpmailer/phpmailer/src/SMTP.php';
 
-$stylesheet = new StyleSheetCompiler();
+$url = new URL();
+$static = new StaticCompiler();
 $socialAnalytics = new SocialAnalytics();
 $less = new lessc();
 $text = new Text();
@@ -57,16 +62,16 @@ $accounts = $account = new Accounts();
 
 $less->compileFile(DIRNAME . "../../static/less/stylesheet.less", DIRNAME . "../../static/stylesheet/stylesheet.css");
 
-$stylesheet->add(DIRNAME . "../../static/stylesheet/fontawesome.all.min.css");
-$stylesheet->add(DIRNAME . "../../static/stylesheet/reset.css");
-$stylesheet->add(DIRNAME . "../../static/stylesheet/container.css");
-$stylesheet->add(DIRNAME . "../../static/stylesheet/stylesheet.css");
-$stylesheet->add(DIRNAME . "../../static/stylesheet/tooltip.css");
-$stylesheet->add(DIRNAME . "../../static/fonts/gilroy/Gilroy.css");
-$stylesheet->setOutputFile(DIRNAME . "../../static/stylesheet/stylesheet");
-$stylesheet->addReplace("../images/", SITE_URL . "static/images/");
-$stylesheet->addReplace("../fonts/", SITE_URL . "static/fonts/");
-$stylesheet->compileCSS();
+$static->add(DIRNAME . "../../static/stylesheet/fontawesome.all.min.css");
+$static->add(DIRNAME . "../../static/stylesheet/reset.css");
+$static->add(DIRNAME . "../../static/stylesheet/container.css");
+$static->add(DIRNAME . "../../static/stylesheet/stylesheet.css");
+$static->add(DIRNAME . "../../static/stylesheet/tooltip.css");
+$static->add(DIRNAME . "../../static/fonts/gilroy/Gilroy.css");
+$static->setOutputFile(DIRNAME . "../../static/stylesheet/stylesheet");
+$static->addReplace("../images/", SITE_URL . "static/images/");
+$static->addReplace("../fonts/", SITE_URL . "static/fonts/");
+$static->compileCSS();
 
 
 ob_start("sanitize_output");

@@ -1,6 +1,11 @@
 <?php
 require_once("../src/properties/index.php");
 
+$id = get_request("id");
+$blog = new Blog($id);
+
+$author = new Accounts($blog->getIdAuthor());
+
 ?>
 <html>
 <head>
@@ -8,28 +13,26 @@ require_once("../src/properties/index.php");
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Conteúdo sobre Migração ao Digital - Leonardo Scapinello</title>
+    <title>[RASCUNHO] <?= $blog->getPostTitle() ?> - Leonardo Scapinello</title>
     <link href="<?= $static->getFileLocation("stylesheet.min.css") ?>" type="text/css" rel="stylesheet">
     <link href="<?= $static->getFileLocation("owl.carousel.css") ?>" type="text/css" rel="stylesheet">
     <link href="<?= $static->getFileLocation("owl.theme.default.css") ?>" type="text/css" rel="stylesheet">
-    <?= $socialAnalytics->getGoogleAnalyticsScript_Head() ?>
-    <?= $socialAnalytics->getGoogleTagManagerScript_Head() ?>
-    <?= $socialAnalytics->getFacebookPixel_Head("website") ?>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,500,700,900&display=swap"
+    <link href="<?= $static->getFileLocation("content-tools.min.css") ?>" type="text/css" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,500,700,900&display=swap"
           rel="stylesheet">
 </head>
 <body>
 <div id="wrapper">
     <?php require_once(DIRNAME . "../components/header.php") ?>
-    <?php //require_once(DIRNAME . "../components/blog-post-header.php") ?>
-    <?php //require_once(DIRNAME . "../components/blog-post-content.php") ?>
+    <?php require_once(DIRNAME . "../components/blog-post-header-admin.php") ?>
+    <?php require_once(DIRNAME . "../components/blog-post-content-admin.php") ?>
     <?php require_once(DIRNAME . "../components/footer.php") ?>
 </div>
-
 
 <link rel="stylesheet" href="<?= $static->getFileLocation("plyr.css") ?>"/>
 <script src="<?= $static->getJSFileLocation("jquery.min.js") ?>"></script>
 <script src="<?= $static->getJSFileLocation("plyr.js") ?>"></script>
+<script src="<?= $static->getJSFileLocation("content-tools.min.js") ?>"></script>
 <script type="text/javascript">
     const players = Array.from(document.querySelectorAll('.ls-player')).map(p => new Plyr(p));
 </script>

@@ -14,8 +14,8 @@ if (not_empty($username)) $username = $text->base64_decode($username);
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title></title>
-    <link href="<?= $stylesheet->getFileLocation("../fonts/gilroy/Gilroy.css") ?>" type="text/css" rel="stylesheet">
-    <link href="<?= $stylesheet->getFileLocation("authenticate.css") ?>" type="text/css" rel="stylesheet">
+    <link href="<?= $static->getFileLocation("../fonts/gilroy/Gilroy.css") ?>" type="text/css" rel="stylesheet">
+    <link href="<?= $static->getFileLocation("authenticate.css") ?>" type="text/css" rel="stylesheet">
 </head>
 <body>
 
@@ -23,7 +23,7 @@ if (not_empty($username)) $username = $text->base64_decode($username);
     <form action="<?= LOGIN_URL ?>/createaccount" method="POST">
         <div class="authentibox">
             <div class="company">
-                <img src="<?= $stylesheet->getImagePath("ls-white-background-black-icon.png") ?>"
+                <img src="<?= $static->getImagePath("ls-white-background-black-icon.png") ?>"
                      alt="Leonardo Scapinello"/>
                 <h2>Crie sua conta grátis.</h2>
             </div>

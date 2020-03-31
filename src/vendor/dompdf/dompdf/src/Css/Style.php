@@ -247,7 +247,7 @@ class Style
      */
     public function __construct(Stylesheet $stylesheet, $origin = Stylesheet::ORIG_AUTHOR)
     {
-        $this->setFontMetrics($stylesheet->getFontMetrics());
+        $this->setFontMetrics($static->getFontMetrics());
 
         $this->_props = [];
         $this->_important_props = [];
@@ -315,7 +315,7 @@ class Style
             $d["elevation"] = "level";
             $d["empty_cells"] = "show";
             $d["float"] = "none";
-            $d["font_family"] = $stylesheet->get_dompdf()->getOptions()->getDefaultFont();
+            $d["font_family"] = $static->get_dompdf()->getOptions()->getDefaultFont();
             $d["font_size"] = "medium";
             $d["font_style"] = "normal";
             $d["font_variant"] = "normal";

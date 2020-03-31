@@ -19,18 +19,20 @@
 
                 <div class="blog-post--widget">
                     <div class="background">
-                        <img src="<?= $stylesheet->getImagePath("pexels-photo-2-_opt-800x534.jpg", "blog") ?>"
+                        <img src="<?= $static->getImagePath("pexels-photo-2-_opt-800x534.jpg", "blog") ?>"
                              alt="Background"/>
                     </div>
-                    <div class="post-info">
-                        <div class="content">
-                            <div class="stamp">DINHEIRO</div>
-                            <h5>Aprenda como ganhar dinheiro na internet seguindo esse método de 5 passos
-                                simple
-                                ainda hoje</h5>
-                            <a href="./blog/126/aprenda-a-ganhar-dinheiro-na-internet-seguindo-esse-metodo-de-cinco-passos-simples-ainda-hoje">Ler Postagem</a>
+                    <a href="./blog/126/aprenda-a-ganhar-dinheiro-na-internet-seguindo-esse-metodo-de-cinco-passos-simples-ainda-hoje">
+                        <div class="post-info">
+                            <div class="content">
+                                <div class="stamp">DINHEIRO</div>
+                                <h5>Aprenda como ganhar dinheiro na internet seguindo esse método de 5 passos
+                                    simple
+                                    ainda hoje</h5>
+                                <span class="readmore">Ler Postagem</span>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
             <?php } ?>

@@ -53,7 +53,7 @@
                         </div>
                         <div class="col-xl-6 col-lg-6 col-sm-12">
                             <div class="hd-cover">
-                                <img src="<?= $stylesheet->getImagePath("ebook-sobreviva-ao-corona.png", "sobreviva-ao-corona") ?>"
+                                <img src="<?= $static->getImagePath("ebook-sobreviva-ao-corona.png", "sobreviva-ao-corona") ?>"
                                      alt=" E-book Sobreviva ao Coronavírus">
                             </div>
                             <button tooltip="Continuar Lendo no Blog" class="only-mobile btn " flow="down">Continuar

@@ -1,6 +1,6 @@
 <?php
 
-class StyleSheetCompiler
+class StaticCompiler
 {
 
     private $files = array();
@@ -93,8 +93,12 @@ class StyleSheetCompiler
     {
         return SITE_URL . "static/stylesheet/" . $filename;
     }
+    public function getJSFileLocation($filename)
+    {
+        return SITE_URL . "static/javascript/" . $filename;
+    }
 
-    public function getImagePath($filename, $campaign = null)
+    private function getImagePath_Address($filename, $campaign = null)
     {
         if (not_empty($campaign)) {
             if ($campaign === "blog") {
@@ -106,6 +110,19 @@ class StyleSheetCompiler
         return SITE_URL . "static/images/" . $filename;
 
     }
+
+    public function getImagePath($filename, $campaign = null)
+    {
+        $address = $this->getImagePath_Address($filename, $campaign);
+        $filename = $address;
+        $file_headers = @get_headers($filename);
+        if (stripos($file_headers[0], "404 Not Found") > 0 || (stripos($file_headers[0], "302 Found") > 0 && stripos($file_headers[7], "404 Not Found") > 0)) {
+            return null;
+        } else {
+            return $filename;
+        }
+    }
+
 
     public function getMoviePath($filename, $campaign = null)
     {

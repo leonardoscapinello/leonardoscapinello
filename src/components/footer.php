@@ -20,7 +20,7 @@
                 </div>
                 <div class="col-xl-4 col-lg-6 col-sm-12">
                     <div class="footer-icon">
-                        <img src="<?= $stylesheet->getImagePath("ls-white-background-black-icon.png") ?>" alt="LS"/>
+                        <img src="<?= $static->getImagePath("ls-white-background-black-icon.png") ?>" alt="LS"/>
                     </div>
                 </div>
             </div>
