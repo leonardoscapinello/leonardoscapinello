@@ -1,5 +1,6 @@
 <?php
 require_once("../src/properties/index.php");
+require_once("../src/public/validate-admin.php");
 
 $post_content = $_POST[0];
 $id_post = $_POST[1];

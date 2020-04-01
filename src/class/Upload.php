@@ -2,8 +2,8 @@
 
 class Upload
 {
-    private $max_allowed_file_size = 20480; // size in KB
-    private $allowed_extensions = array("png", "jpg", "jpeg", "gif", "bmp", "pdf");
+    private $max_allowed_file_size = 1024*5; // size in KB
+    private $allowed_extensions = array("png", "jpg", "jpeg", "gif", "mp4", "webm");
     private $upload_folder = "../../../static/images/blog/uploads/";
 
     private $file = array();
@@ -73,20 +73,36 @@ class Upload
             $path_of_uploaded_file = $upload_folder . $newfilename;
             $temp = $this->getTempFolder();
 
-            if (is_uploaded_file($temp)) {
-                error_log('A1');
-                if (copy($temp, $path_of_uploaded_file)) {
-                    error_log('A2');
-                    if (file_exists($path_of_uploaded_file)) {
-                        error_log('A3');
-                        return $newfilename;
+            if ($this->checkForFileSize()) {
+                if ($this->checkForFormat()) {
+
+
+                    if (is_uploaded_file($temp)) {
+                        if (copy($temp, $path_of_uploaded_file)) {
+                            if (file_exists($path_of_uploaded_file)) {
+                                return array(true, $newfilename);
+                            } else {
+                                error_log("AK1-AAA");
+                            }
+                        } else {
+                            error_log("AK1-bbb");
+                        }
+                    } else {
+                        error_log("AK1-ccc");
                     }
+
+
+                } else {
+                    return array(false, "O formato do arquivo enviado não é aceito, considere apenas imagens e vídeos (.png, .jpg, .gif, .mp4)");
                 }
+            } else {
+                return array(false, "O arquivo é muito grande, o tamanho máximo permitido é de 10MB");
             }
+
         } catch (Exception $exception) {
             error_log($exception);
         }
-        return false;
+        return array(false, "Não foi possível enviar o arquivo.");
     }
 
 

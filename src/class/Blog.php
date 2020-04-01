@@ -65,6 +65,20 @@ class Blog
         return $id;
     }
 
+    public function uploadCover($post_cover, $id_post = 0)
+    {
+        global $database;
+        global $text;
+        try {
+            $database->query("UPDATE blog SET post_cover = ? WHERE id_post = ?");
+            $database->bind(1, $post_cover);
+            $database->bind(2, $text->base64_decode($id_post));
+            $database->execute();
+        } catch (Exception $exception) {
+            error_log($exception);
+        }
+    }
+
     /**
      * @return mixed
      */
@@ -104,7 +118,6 @@ class Blog
     {
         return $this->post_cover;
     }
-
 
 
     /**

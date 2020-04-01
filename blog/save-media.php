@@ -1,9 +1,10 @@
 <?php
 require_once("../src/properties/index.php");
-require_once("../src/public/validate.php");
+require_once("../src/public/validate-admin.php");
+
 $id_blog = get_request("id");
 $media_type = get_request("media_type") === null ? "image" : get_request("media_type");
-if ($id_blog === null) die("<span style=\"font-family:Arial, serif\">Não foi possível identificar a postagem referida. Tente novamente ou contacte o suporte técnico LS.<br /><br />suporte@flexwei.com<br /><br /><a href=\"#\" onClick=\"window.top.location.href = window.top.location.href.replace('add=image','').replace('add=media', '')\">Fechar</a></a></span>");
+if ($id_blog === null) die("<span style=\"font-family:Arial, serif\">Não foi possível identificar a postagem referida. Tente novamente ou contacte o suporte técnico LS.<br /><br />suporte@flexwei.com<br /><br /><a href=\"#\" onClick=\"window.top.location.href = window.top.location.href.replace('add=image','').replace('add=video', '').replace('add=cover', '')\">Fechar</a></a></span>");
 
 
 if (get_request("action") === "upload") {
@@ -112,10 +113,11 @@ if (get_request("action") === "upload") {
 <body>
 <form action="up" method="POST" enctype="multipart/form-data">
     <a href="#"
-       onClick="window.top.location.href = window.top.location.href.replace('add=image','').replace('add=media', '').replace('&&', '')">Fechar
+       onClick="window.top.location.href = window.top.location.href.replace('add=image','').replace('add=video', '').replace('&&', '').replace('add=cover', '')">Fechar
         janela e voltar</a>
     <input type="hidden" name="id" id="id" value="<?= $id_blog ?>"/>
     <input type="hidden" name="action" id="action" value="upload"/>
+    <input type="hidden" name="media_type" id="media_type" value="<?= $media_type ?>"/>
     <input type="file" name="attach_blog" id="attach_blog" style="opacity: 0" required>
     <div class="file" onClick="addFile();return false;">
         <i class="far fa-cloud-upload"></i>

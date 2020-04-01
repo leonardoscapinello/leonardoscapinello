@@ -93,6 +93,7 @@ class StaticCompiler
     {
         return SITE_URL . "static/stylesheet/" . $filename;
     }
+
     public function getJSFileLocation($filename)
     {
         return SITE_URL . "static/javascript/" . $filename;
@@ -100,9 +101,10 @@ class StaticCompiler
 
     private function getImagePath_Address($filename, $campaign = null)
     {
+        if ($filename === null || $filename === "") return null;
         if (not_empty($campaign)) {
             if ($campaign === "blog") {
-                return SITE_URL . "m/blog/images/" . $filename;
+                return BLOG_COVER_PATH . $filename;
             } else {
                 return SITE_URL . "m/" . $campaign . "/" . $filename;
             }
@@ -114,6 +116,7 @@ class StaticCompiler
     public function getImagePath($filename, $campaign = null)
     {
         $address = $this->getImagePath_Address($filename, $campaign);
+        if ($address === null) return null;
         $filename = $address;
         $file_headers = @get_headers($filename);
         if (stripos($file_headers[0], "404 Not Found") > 0 || (stripos($file_headers[0], "302 Found") > 0 && stripos($file_headers[7], "404 Not Found") > 0)) {

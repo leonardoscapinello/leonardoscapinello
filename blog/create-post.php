@@ -1,6 +1,6 @@
 <?php
 require_once("../src/properties/index.php");
-
+require_once("../src/public/validate-admin.php");
 
 $title = get_request("post_title");
 if (not_empty($title)) {

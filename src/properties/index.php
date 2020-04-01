@@ -14,6 +14,8 @@ define("RECOVERY_URL", SITE_URL . "recovery");
 define("BLOG_ADMIN_EDIT_POST", SITE_URL . "b/edit-post");
 define("BLOG_ADMIN_SAVE_PARAGRAPH", SITE_URL . "b/save-paragraph");
 define("BLOG_ADMIN_ADD_MEDIA", SITE_URL . "b/add-media");
+define("BLOG_UPLOADED_FILES_PATH", SITE_URL . "b/media/");
+define("BLOG_COVER_PATH", BLOG_UPLOADED_FILES_PATH . "cover/");
 
 require_once(DIRNAME . "../vendor/autoload.php");
 
@@ -65,8 +67,6 @@ $database->execute();
 $security = new Security();
 $session = new AccountSession();
 $accounts = $account = new Accounts();
-
-
 
 
 $less->compileFile(DIRNAME . "../../static/less/stylesheet.less", DIRNAME . "../../static/stylesheet/stylesheet.css");

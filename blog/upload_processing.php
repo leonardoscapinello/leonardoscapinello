@@ -1,3 +1,12 @@
+<?php
+require_once("../src/public/validate-admin.php");
+
+$error = null;
+if (isset($_REQUEST['error']) && $_REQUEST['error'] !== null) {
+    $error = $_REQUEST['error'];
+}
+?>
+
 <html>
 <head>
     <meta charset="UTF-8">
@@ -23,10 +32,12 @@
     </style>
 </head>
 <body>
-<div class="loader loader--style2" title="1">
-    <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-         x="0px" y="0px"
-         width="100px" height="100px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+<?php if ($error === null) { ?>
+    <div class="loader loader--style2" title="1">
+        <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+             x="0px" y="0px"
+             width="100px" height="100px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;"
+             xml:space="preserve">
   <path fill="#000"
         d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z">
       <animateTransform attributeType="xml"
@@ -38,11 +49,15 @@
                         repeatCount="indefinite"/>
   </path>
   </svg>
-</div>
-<script type="text/javascript">
-    window.setTimeout(function () {
-        window.top.location.href = window.top.location.href.replace('add=image', '').replace('add=media', '');
-    },3000);
-</script>
+    </div>
+    <script type="text/javascript">
+        window.setTimeout(function () {
+            window.top.location.href = window.top.location.href.replace('add=image', '').replace('add=video', '').replace('add=cover', '');
+        }, 3000);
+    </script>
+<?php } else { ?>
+    <?php echo base64_decode($error); ?>
+    <a href="javascript:history.back(-1);">Voltar</a>
+<?php } ?>
 </body>
 </html>

@@ -22,7 +22,7 @@ if ($add !== null) $disabled = true;
                             <?php if ($add === "paragraph") { ?>
                                 <div class="blog--post-block edit-enabled" data-editable
                                      data-name="paragraph-element"></div>
-                            <?php } elseif ($add === "media" || $add === "image") { ?>
+                            <?php } elseif ($add === "video" || $add === "image" || $add === "cover") { ?>
                                 <div class="blog--modal-add">
                                     <iframe src="<?= BLOG_ADMIN_ADD_MEDIA ?>?id=<?= $text->base64_encode($id) ?>&media_type=<?= $add ?>"
                                             class="frame-full" scrolling="no" style="overflow: hidden"></iframe>
@@ -39,7 +39,7 @@ if ($add !== null) $disabled = true;
                                     <li <?= $disabled === false ? "tooltip=\"Adicionar Imagem\" flow=\"right\" onClick=\"add('image');\"" : "class=\"disabled\"" ?> >
                                         <a style="cursor: pointer;"><i class="far fa-image"></i></a>
                                     </li>
-                                    <li <?= $disabled === false ? "tooltip=\"Adicionar Vídeo\" flow=\"right\" onClick=\"add('media');\"" : "class=\"disabled\"" ?> >
+                                    <li <?= $disabled === false ? "tooltip=\"Adicionar Vídeo\" flow=\"right\" onClick=\"add('video');\"" : "class=\"disabled\"" ?> >
                                         <a style="cursor: pointer;"><i class="far fa-camera-movie"></i></a>
                                     </li>
                                     <li style="display:none" <?= $disabled === false ? "tooltip=\"Adicionar Citação\" flow=\"right\"" : "class=\"disabled\"" ?> >
@@ -153,8 +153,11 @@ if ($add !== null) $disabled = true;
         if (d === "image") {
             window.location.href = "<?= $url->addQueryString(array("add" => "image")) ?>";
         }
-        if (d === "media") {
-            window.location.href = "<?= $url->addQueryString(array("add" => "media")) ?>";
+        if (d === "video") {
+            window.location.href = "<?= $url->addQueryString(array("add" => "video")) ?>";
+        }
+        if (d === "cover") {
+            window.location.href = "<?= $url->addQueryString(array("add" => "cover")) ?>";
         }
     }
 </script>

@@ -1,6 +1,8 @@
 <?php
 require_once("../src/properties/index.php");
-
+$id = get_request("id");
+$blog = new Blog($id);
+$author = new Accounts($blog->getIdAuthor());
 ?>
 <html>
 <head>
@@ -21,8 +23,8 @@ require_once("../src/properties/index.php");
 <body>
 <div id="wrapper">
     <?php require_once(DIRNAME . "../components/header.php") ?>
-    <?php //require_once(DIRNAME . "../components/blog-post-header.php") ?>
-    <?php //require_once(DIRNAME . "../components/blog-post-content.php") ?>
+    <?php require_once(DIRNAME . "../components/blog-post-header-public.php") ?>
+    <?php require_once(DIRNAME . "../components/blog-post-content-public.php") ?>
     <?php require_once(DIRNAME . "../components/footer.php") ?>
 </div>
 
