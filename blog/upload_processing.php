@@ -1,4 +1,5 @@
 <?php
+require_once("../src/properties/index.php");
 require_once("../src/public/validate-admin.php");
 
 $error = null;

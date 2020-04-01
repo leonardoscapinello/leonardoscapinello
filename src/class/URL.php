@@ -3,6 +3,11 @@
 class URL
 {
 
+
+    private $accents = array('À', 'Á', 'Â', 'Ã', 'Ä', 'Å', 'Æ', 'Ç', 'È', 'É', 'Ê', 'Ë', 'Ì', 'Í', 'Î', 'Ï', 'Ð', 'Ñ', 'Ò', 'Ó', 'Ô', 'Õ', 'Ö', 'Ø', 'Ù', 'Ú', 'Û', 'Ü', 'Ý', 'ß', 'à', 'á', 'â', 'ã', 'ä', 'å', 'æ', 'ç', 'è', 'é', 'ê', 'ë', 'ì', 'í', 'î', 'ï', 'ð', 'ñ', 'ò', 'ó', 'ô', 'õ', 'ö', 'ø', 'ù', 'ú', 'û', 'ü', 'ý', 'þ', 'ÿ');
+    private $noAccents = array('A', 'A', 'A', 'A', 'A', 'A', 'AE', 'C', 'E', 'E', 'E', 'E', 'I', 'I', 'I', 'I', 'D', 'N', 'O', 'O', 'O', 'O', 'O', 'O', 'U', 'U', 'U', 'U', 'Y', 'B', 'a', 'a', 'a', 'a', 'a', 'a', 'ae', 'c', 'e', 'e', 'e', 'e', 'i', 'i', 'i', 'i', 'o', 'n', 'o', 'o', 'o', 'o', 'o', 'o', 'u', 'u', 'u', 'u', 'y', 'p', 'y');
+
+
     public function getActualURL()
     {
         return (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
@@ -35,5 +40,36 @@ class URL
         return false;
     }
 
+
+    public function friendly($value)
+    {
+        global $text;
+        try {
+            $value = $text->utf8($value);
+            $value = $text->lowercase($value);
+
+            // Convert all dashes to hyphens
+            $value = str_replace('—', '-', $value);
+            $value = str_replace('‒', '-', $value);
+            $value = str_replace('―', '-', $value);
+
+            // Convert underscores and spaces to hyphens
+            $value = str_replace('_', '-', $value);
+            $value = str_replace(' ', '-', $value);
+
+            $value = str_replace($this->accents, $this->noAccents, $value);
+
+            // Remove everything except 0-9, a-z, A-Z and hyphens
+            $value = preg_replace('/[^A-Za-z0-9-]+/', '', $value);
+
+            do {
+                $value = str_replace('--', '-', $value);
+            } while (mb_substr_count($value, '--') > 0);
+
+            return $value;
+        } catch (Exception $exception) {
+            error_log($exception);
+        }
+    }
 
 }

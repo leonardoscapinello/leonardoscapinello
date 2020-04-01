@@ -19,9 +19,15 @@ require_once("./src/properties/index.php");
 <div id="wrapper">
     <?php require_once(DIRNAME . "../components/header-featured.php") ?>
     <?php require_once(DIRNAME . "../components/blog-featured-widget.php") ?>
-    <?php require_once(DIRNAME . "../components/newsletter.php") ?>
-    <?php require_once(DIRNAME . "../components/about-me.php") ?>
-    <?php require_once(DIRNAME . "../components/cases.php") ?>
+    <?php if ($session->isLogged()) { ?>
+        <?php require_once(DIRNAME . "../components/blog-categories-widgets.php") ?>
+        <?php require_once(DIRNAME . "../components/series-widget.php") ?>
+    <?php } else { ?>
+        <?php require_once(DIRNAME . "../components/newsletter.php") ?>
+        <?php require_once(DIRNAME . "../components/about-me.php") ?>
+        <?php require_once(DIRNAME . "../components/cases.php") ?>
+    <?php } ?>
+
     <?php require_once(DIRNAME . "../components/footer.php") ?>
 </div>
 
@@ -36,6 +42,36 @@ require_once("./src/properties/index.php");
 <script type="text/javascript">
     $(document).ready(function () {
         $('.blog-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            responsiveClass: true,
+            control: false,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true
+                },
+                720: {
+                    items: 2,
+                    nav: false
+                },
+                1000: {
+                    items: 3,
+                    nav: false
+                },
+                1360: {
+                    items: 4,
+                    nav: false,
+                    loop: false
+                },
+                1680: {
+                    items: 5,
+                    nav: false,
+                    loop: false
+                }
+            }
+        });
+        $('.categories-carousel').owlCarousel({
             loop: true,
             margin: 10,
             responsiveClass: true,

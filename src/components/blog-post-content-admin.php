@@ -98,6 +98,8 @@ if ($add !== null) $disabled = true;
         window.addEventListener('load', function () {
             editor = ContentTools.EditorApp.get();
             editor.init('*[data-editable]');
+            ContentTools.Tools.Heading.tagName = 'h3';
+            ContentTools.Tools.Subheading.tagName = 'h4';
             editor.start();
 
 

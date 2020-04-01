@@ -25,19 +25,19 @@ RewriteRule ^b/edit-post$               ./blog/edit-post.php?id=$1 [L,NC,QSA]
 RewriteRule ^b/create-post$             ./blog/create-post.php?id=$1 [L,NC,QSA]
 RewriteRule ^b/media/(.*)$                   ./static/uploads/blog/$1 [L,NC,QSA]
 
-RewriteRule ^b/([0-9]+)$                            ./blog/index.php?id=$1 [L]
-RewriteRule ^blog/([0-9]+)/([a-zA-Z0-9-z\-\_]+)$    ./blog/index.php?id=$1 [L]
+RewriteRule ^b/([0-9]+)$                            ./blog/index.php?id=$1 [L,NC,QSA]
+RewriteRule ^blog/([0-9]+)/([a-zA-Z0-9-z\-\_]+)$    ./blog/index.php?id=$1&title=$2 [L,NC,QSA]
 
 # CAMPAIGNS REWRITE
-RewriteRule ^c/sobreviva-ao-corona$   ./campaigns/20200325-sobreviva-ao-corona/index.php [L]
+RewriteRule ^c/sobreviva-ao-corona$   ./campaigns/20200325-sobreviva-ao-corona/index.php [L,NC,QSA]
 
 # MEDIA FOR BLOG
-RewriteRule ^m/blog/images/([^/]+)$   ./static/images/blog/$1 [L]
-RewriteRule ^m/blog/videos/([^/]+)$   ./static/movie/blog/$1 [L]
+RewriteRule ^m/blog/images/([^/]+)$   ./static/images/blog/$1 [L,NC,QSA]
+RewriteRule ^m/blog/videos/([^/]+)$   ./static/movie/blog/$1 [L,NC,QSA]
 
 
 # MEDIA FOR CAMPAIGNS
-RewriteRule ^m/sobreviva-ao-corona/([^/]+)$   ./campaigns/20200325-sobreviva-ao-corona/media/$1 [L]
+RewriteRule ^m/sobreviva-ao-corona/([^/]+)$   ./campaigns/20200325-sobreviva-ao-corona/media/$1 [L,NC,QSA]
 
 
-RewriteRule ^([^/]+)$ index.php [L]
+RewriteRule ^([^/]+)$ index.php [L,NC,QSA]

@@ -20,7 +20,8 @@
     "ext-json": "*",
     "ext-fileinfo": "*",
     "phpmailer/phpmailer": "^6.1",
-    "html2text/html2text": "^4.2"
+    "html2text/html2text": "^4.2",
+    "ext-mbstring": "*"
   },
   "config": {
     "vendor-dir": "src/vendor/"

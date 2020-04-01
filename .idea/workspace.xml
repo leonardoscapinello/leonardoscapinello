@@ -2,64 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="038f153c-938b-4cd1-b7d1-679edc51ddf9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/blog-post-content-public.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/blog-post-header-public.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/company-navigation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/public/validate-admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/blog/3gWoHvGsYmT4rnafY3zCafNJVCry3EfMQJCK7SuytkDaP3khg6NYdcmw27uxlXVn-b47bf358-62bf-46bf-9dae-d0232cbc7193.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/blog/7v32AGYRsnpY92vU1nRTZeQi394B4B6uSqvPT3YTMjHiLHOLBVKXHicUzdGke08x-7b8e1d96-5645-4c47-9877-3a3406fba288.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/blog/FPsj7JUQCDlGt7tgqZwIcruIBUXUtgWLeHFdZFWA1witbIdoBxSbirffxXjCl8GV-d9c1f87d-a281-4c5e-8f31-b4f9d3dd9407.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/blog/NBHEKIUIC9aBG1xPz43vCPGZ8RDvEDjsMBAxLhRDAsubIBIOgud9llIX145GKJWe-f0922983-3e9a-4e15-8a65-ee316ee8679c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/blog/NVTGi3W06swVbyPUYQXl3dlB5mvjHL9J6MOyDMTG1RJc8ux84mh4MgiezBl1yeJD-25ea99cc-6b46-4308-850e-066aca4c39c3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/blog/R1tOznOVXy4jShvFuAMxKORzfk6yrnDtNVnMI9eDMgMI40C1Vls7igupZfG2JGz9-6f0cc3a6-bd87-4f8d-bdb0-70632b46edd8.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/blog/T6ptGPBOtTLzkchXFQXZ9iduWExV1WY0eQrgcKBKhEQA196UFUrDsKlt1ITw5oBU-95b2d9d0-dc5c-446b-a932-ceab01ee0084.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/blog/bz1Rc5eHeFVJIDquSCa2cMLtiHu1wC0EmGILkIK91z1M1XNU27uF2yP8oyiva0iK-42d54b87-e69b-4f2c-acf5-5f2581eb9e66.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/blog/cover/CSQhMdXEWquyDtpSDfz5BGOqIEyHuCBUAkl9YPEMMH8xmrrJDs9bqOu6m867PKq3-19b73862-4c0b-4884-baa6-6cccbff4aa6f.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/blog/cover/Ea7r9hFvzVueiDRmsQZKA27bQzUsQlxzn5fmThO7Xhiehv5hTG9JXnLix7Hy8qUx-e1096979-4583-4ae7-9d6a-9aae54af32c8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/blog/cover/EyfkBkMO3NmixmKl4OFxGqHkVd1AzEmiZVmtjGxclphQSIpJ7hlUVKwQqoeOAVT6-84640bf5-a170-41dd-956d-7f6ef02d6030.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/blog/cover/JYwZWSEStXbBKxgArQvg4YdHL9JdTk9ogjqwAxBfR0EU8Bz5u0d8G55bBHqyDRMh-5492c46b-4ee1-480c-8cbc-d134234fa97b.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/blog/cover/SUrIquRJOzaCxxssVVODbJ56qbIxWXuCP51Ao8uEMiztwNefJiueXRXkhClnz2AQ-288d3882-5a72-478e-bb58-0feb0bda1c26.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/blog/cover/YyQ6ASc522vUfNu0G5VGIge5rcknLk4UyIxi3GfPsar52TWKsx8fFzCJ2f1kp49o-d29d4a8c-545c-4dff-aa83-b665876a808f.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/blog/cover/cq3UoqKz28oVHSFytDCDg2q9R7JAA6sj3nvfXJ4TShK6NMvmulNFOzA7ECF9j8e7-c53dd407-ca8c-48a5-8d78-e45bfa6aba08.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/blog/cover/crrXigOIYycDM66NTuNYErgoMNQUg90NP1xcedpkt5HbrjU03glrixkLoeWvJISO-09c3f26e-2d94-46ca-8c72-ef7876cd59ce.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/blog/cover/pJT9YxY46MeLF7roWCnHI1efNTixkjtqXgO8ioYM4ikuYxNxVhF9dhXZ0UQszpgq-48ac4153-b4b3-48f0-9bf9-d363a8f645dd.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/blog/cover/t8voAvMtssH60GQDdV3KHTqYv7jjbw395eZnNDpDcGoqv6j7rMSqYMIPbdJIuW8U-65992fc4-6ac5-4342-914c-3de458d2a764.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/blog/cover/uJxQlLJNFVVnNtGSnbLWOYaWa18Tjjw01G1J0LI27TekBzXdXo6FsGpHKJEyaT7j-edbce408-9ed7-46fd-972d-97a127d533ac.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/blog/cover/v0ZqvvQPfMr0yBrB3SiNhZbjcgCy2nTmVN195fYlMTZMHa0wMTrTrTzGxMPacv5T-a91afdd3-6232-4461-98fd-eec27026023e.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/blog/cover/x9VdiGy7ulR4TJzKNqVqRJZRggE5Bzd0TkuAK848a9UdsjoYqOaeTZfcvQLKBhJs-20379036-2622-4a64-bacf-b19c59b55313.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/blog/cover/y2x5C0DdCCkCLypPUpvY12VGdIttivUhUNwlbFJy9Au5rAkyYAra0RCwUWBbrf0z-830308e9-4887-4486-9fc3-067156d9ed19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/blog/cover/zXYbzgyrSCvDlFen10ynv1GB6xfNBcCapnFsTQm6iBVYAkFEMzpSitfgMl2jlXKJ-7fb02b71-a117-4bec-82ee-0b913d764f97.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/blog/lHBl9ubH7z9KoXiz2HP6CHSl5Ok3dxHWiscCjRBTeoQpAtOqsJRaNuWmqbmstvxz-81857bd2-aa7a-4d2d-ac8a-0c59d3eb7a1f.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/blog/pk3yA1TwG6UTXw1Zjfr0LXS1Td5k1E1fs0kqYJ7sJjZhID1oYDzLHL0LfP70Ovbg-3b5afde1-d257-4264-b583-08052c705274.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/blog/vkIbRtlytkhl80GgKC9dRVM1hZ7jIXjNdpYiyEtVCUFYAO3OU1Lf7F8fc0bSvzo6-69a2515f-3e33-4f46-95f5-23e2983cee1e.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/class/BlogWidget.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/blog-categories-widgets.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/series-widget.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/lock-background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/uploads/blog/cover/S7Fd2dmnwowj0ajBRi57w5BCN807v2i8PCeoYacbmrWxV1IFeNT5hnvTYgj1jAik-212f6bd1-f420-44ca-8b69-14e6d3ace7df.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/uploads/blog/cover/bsgFx6vVC3FXyYyyU4YUAP97XJ3K0nw8wrH4hAnz9g7JrilHQf5UtdyAdbqBsSE9-bae12c93-fee4-4a14-91ec-8ab7872ced38.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/uploads/blog/cover/rtWWGGNtQcvsK5PPvxm9bKz8a5pI0wvjllJ1pHYf5Tqb5kR3kPVVTGog0d43zpuI-2d56b2de-5f98-4f61-9d86-de8a3380f179.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/add-element.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/add-element.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/create-post.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/create-post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/edit-post.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/edit-post.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/save-media.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/save-media.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/save-paragraph.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/save-paragraph.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/upload_file.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/upload_file.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/upload_processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/upload_processing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/class/Blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/Blog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/class/BlogContent.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/BlogContent.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/class/StaticCompiler.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/StaticCompiler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/class/Upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/Upload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/class/URL.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/URL.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/about-me.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about-me.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blog-featured-widget.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blog-featured-widget.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/blog-post-content-admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blog-post-content-admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/blog-post-header-admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blog-post-header-admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header-featured.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header-featured.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blog-post-header-public.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blog-post-header-public.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/company-navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/company-navigation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/properties/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/properties/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/blog/111a03133d14214539c96e0f657dff1a.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/uploads/blog/cover/7qnINxZQLlElP9TiNuYYlQ9chQTc0qmpyL6i4CWBBAPSmJCTlZT1IxQFQ2aPIfy7-7a1794fa-3085-4258-a6d1-a2030347ce6f.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/blog/astronaut_spacesuit_butterflies_121755_1920x1080.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/blog/pexels-photo-2-_opt-800x534.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/blog/uploads/Mtmr3dQ4q1Vj71tVKywhFdJbTkAGG7re6UeST1Ke5IwMQPQYCftw9OgAhGrkdmGZ-76a689a0-f934-4b63-a278-bb2d27f1aaa3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/blog/uploads/y8RPu9QtCVb3AK7mvivGQnA1xKDr8dvhTmkyQn0VhmPyxPCbd6Lt3nXSxu7wtZKJ-13155f64-c053-4416-b0be-3fdc7eb9dd0c.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/blog/wallpapersden.com_k-league-of-legends-2020_1920x1080.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/static/less/stylesheet.less" beforeDir="false" afterPath="$PROJECT_DIR$/static/less/stylesheet.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/stylesheet/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/stylesheet/stylesheet.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/stylesheet/stylesheet.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/stylesheet/stylesheet.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/3gWoHvGsYmT4rnafY3zCafNJVCry3EfMQJCK7SuytkDaP3khg6NYdcmw27uxlXVn-b47bf358-62bf-46bf-9dae-d0232cbc7193.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/7v32AGYRsnpY92vU1nRTZeQi394B4B6uSqvPT3YTMjHiLHOLBVKXHicUzdGke08x-7b8e1d96-5645-4c47-9877-3a3406fba288.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/FPsj7JUQCDlGt7tgqZwIcruIBUXUtgWLeHFdZFWA1witbIdoBxSbirffxXjCl8GV-d9c1f87d-a281-4c5e-8f31-b4f9d3dd9407.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/NBHEKIUIC9aBG1xPz43vCPGZ8RDvEDjsMBAxLhRDAsubIBIOgud9llIX145GKJWe-f0922983-3e9a-4e15-8a65-ee316ee8679c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/NVTGi3W06swVbyPUYQXl3dlB5mvjHL9J6MOyDMTG1RJc8ux84mh4MgiezBl1yeJD-25ea99cc-6b46-4308-850e-066aca4c39c3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/R1tOznOVXy4jShvFuAMxKORzfk6yrnDtNVnMI9eDMgMI40C1Vls7igupZfG2JGz9-6f0cc3a6-bd87-4f8d-bdb0-70632b46edd8.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/T6ptGPBOtTLzkchXFQXZ9iduWExV1WY0eQrgcKBKhEQA196UFUrDsKlt1ITw5oBU-95b2d9d0-dc5c-446b-a932-ceab01ee0084.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/bz1Rc5eHeFVJIDquSCa2cMLtiHu1wC0EmGILkIK91z1M1XNU27uF2yP8oyiva0iK-42d54b87-e69b-4f2c-acf5-5f2581eb9e66.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/lHBl9ubH7z9KoXiz2HP6CHSl5Ok3dxHWiscCjRBTeoQpAtOqsJRaNuWmqbmstvxz-81857bd2-aa7a-4d2d-ac8a-0c59d3eb7a1f.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/pk3yA1TwG6UTXw1Zjfr0LXS1Td5k1E1fs0kqYJ7sJjZhID1oYDzLHL0LfP70Ovbg-3b5afde1-d257-4264-b583-08052c705274.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/vkIbRtlytkhl80GgKC9dRVM1hZ7jIXjNdpYiyEtVCUFYAO3OU1Lf7F8fc0bSvzo6-69a2515f-3e33-4f46-95f5-23e2983cee1e.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,9 +86,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\leonardoscapinello\src\components" />
+      <recent name="C:\wamp64\www\leonardoscapinello\src\class" />
       <recent name="C:\wamp64\www\leonardoscapinello\src\public" />
       <recent name="C:\wamp64\www\leonardoscapinello\blog" />
-      <recent name="C:\wamp64\www\leonardoscapinello\src\class" />
       <recent name="C:\wamp64\www\leonardoscapinello\static\javascript" />
     </key>
   </component>
@@ -127,7 +107,8 @@
       <workItem from="1585402765546" duration="16245000" />
       <workItem from="1585440940270" duration="4886000" />
       <workItem from="1585575841163" duration="35976000" />
-      <workItem from="1585657108314" duration="29432000" />
+      <workItem from="1585657108314" duration="29795000" />
+      <workItem from="1585746745097" duration="21729000" />
     </task>
     <servers />
   </component>
@@ -153,10 +134,10 @@
     <state x="-1126" y="449" key="NewPhpFileDialog/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1585690788544" />
     <state x="794" y="449" key="NewPhpFileDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1585592031563" />
     <state x="794" y="449" key="NewPhpFileDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1585706234790" />
-    <state x="656" y="350" key="com.intellij.ide.util.TipDialog" timestamp="1585657111231">
+    <state x="656" y="350" key="com.intellij.ide.util.TipDialog" timestamp="1585746747769">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="656" y="350" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1585657111231" />
+    <state x="656" y="350" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1585746747769" />
     <state x="616" y="243" key="run.anything.popup" timestamp="1585705962210">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

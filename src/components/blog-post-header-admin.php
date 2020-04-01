@@ -1,5 +1,5 @@
 <?php
-$cover = $static->getImagePath($blog->getPostCover(), "blog");
+$cover = $static->getImagePath($blog->getPostCover(), "blog@cover");
 ?>
 <section>
     <div class="blog-post">

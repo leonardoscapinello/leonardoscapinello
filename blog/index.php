@@ -3,6 +3,16 @@ require_once("../src/properties/index.php");
 $id = get_request("id");
 $blog = new Blog($id);
 $author = new Accounts($blog->getIdAuthor());
+
+$title = get_request("title");
+$real_title = $blog->getPostURL(true);
+
+if ($title !== $real_title) {
+    header("location: " . $blog->getPostURL());
+    die;
+}
+
+
 ?>
 <html>
 <head>

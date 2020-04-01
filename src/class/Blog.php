@@ -14,6 +14,10 @@ class Blog
     private $is_active;
     private $is_private;
 
+    private $id_category;
+    private $category_name;
+    private $category_background;
+
 
     public function __construct($id_post = 0)
     {
@@ -21,7 +25,7 @@ class Blog
         global $text;
         global $session;
         global $numeric;
-        $database->query("SELECT * FROM blog WHERE id_post = ? OR short_key = ?");
+        $database->query("SELECT * FROM blog b LEFT JOIN blog_categories bc ON bc.id_category = b.id_category WHERE id_post = ? OR short_key = ?");
         $database->bind(1, $id_post);
         $database->bind(2, $id_post);
         $result = $database->resultsetObject();
@@ -32,7 +36,7 @@ class Blog
         }
     }
 
-    public function register($post_title)
+    public function register($post_title, $id_category)
     {
         global $database;
         global $accounts;
@@ -45,10 +49,11 @@ class Blog
                 $id_account = $accounts->getIdAccount();
                 $short_key = $token->tokenAlphanumeric(6);
 
-                $database->query("INSERT INTO blog (id_author, short_key, post_title) VALUES (?,?,?)");
+                $database->query("INSERT INTO blog (id_author, short_key, post_title, id_category) VALUES (?,?,?,?)");
                 $database->bind(1, $id_account);
                 $database->bind(2, $short_key);
                 $database->bind(3, $post_title);
+                $database->bind(4, $id_category);
                 $database->execute();
 
                 $id = $database->lastInsertId();
@@ -74,6 +79,42 @@ class Blog
             $database->bind(1, $post_cover);
             $database->bind(2, $text->base64_decode($id_post));
             $database->execute();
+        } catch (Exception $exception) {
+            error_log($exception);
+        }
+    }
+
+    public function getCategories()
+    {
+        global $database;
+        try {
+            $database->query("SELECT id_category, category_name FROM blog_categories WHERE is_active = 'Y'");
+            $rs = $database->resultset();
+            if (count($rs)) {
+                return $rs;
+            }
+        } catch (Exception $exception) {
+            error_log($exception);
+        }
+        return array();
+    }
+
+    public function getCategoryStamp()
+    {
+        return "<span class=\"stamp\" style=\"margin: 0;top: 0;background:" . $this->category_background . "\">" . $this->category_name . "</span>";
+    }
+
+    public function getPostURL($return_only_title = false)
+    {
+        try {
+            $u = new URL();
+
+            if ($return_only_title) return $u->friendly($this->post_title);
+
+            $url = BLOG . BLOG_POST_PAGE;
+            $url = str_replace("{id}", $this->id_post, $url);
+            $url = str_replace("{title}", $u->friendly($this->post_title), $url);
+            return $url;
         } catch (Exception $exception) {
             error_log($exception);
         }
