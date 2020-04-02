@@ -3,6 +3,8 @@
         <div class="header">
 
             <?php require_once("company-navigation.php") ?>
+            <div class="header-outer-size"></div>
+
 
             <div class="presentation">
                 <div class="container">

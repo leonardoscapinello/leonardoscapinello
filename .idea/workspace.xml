@@ -2,44 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="038f153c-938b-4cd1-b7d1-679edc51ddf9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/class/BlogWidget.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/blog-categories-widgets.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/series-widget.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/lock-background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/blog/cover/S7Fd2dmnwowj0ajBRi57w5BCN807v2i8PCeoYacbmrWxV1IFeNT5hnvTYgj1jAik-212f6bd1-f420-44ca-8b69-14e6d3ace7df.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/blog/cover/bsgFx6vVC3FXyYyyU4YUAP97XJ3K0nw8wrH4hAnz9g7JrilHQf5UtdyAdbqBsSE9-bae12c93-fee4-4a14-91ec-8ab7872ced38.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/blog/cover/rtWWGGNtQcvsK5PPvxm9bKz8a5pI0wvjllJ1pHYf5Tqb5kR3kPVVTGog0d43zpuI-2d56b2de-5f98-4f61-9d86-de8a3380f179.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/footer-scripts.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/javascript/leonardoscapinello.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/uploads/blog/04HqTAYsG26PvGj9q9QMdQZn7TI3fcRV6mUIokSKWI0IbZViTFjCt9hbFMhcZa7I-ed834b1a-aba6-4134-abb2-3cd3524c04d8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/uploads/blog/cover/6vxJoQQ4b7Ufh2OYqcAC9TqLk1HW4sC0xT9GPpUOIK7pcZoYYnLREDlGwimPDP0F-b0fb6f25-bdbc-4b0a-9483-14dac11e4247.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/uploads/blog/cover/D1G0nx4JRkf7r7IZu9TR1DlgxCtq4zYqYazkGiPndqwFGs1bU81gLbniZOH8ZwKo-85fa962d-9d54-495b-9e8a-90c18f15ad3d.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/create-post.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/create-post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/edit-post.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/edit-post.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/upload_processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/upload_processing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/class/Blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/Blog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/class/StaticCompiler.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/StaticCompiler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/class/URL.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/URL.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/about-me.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about-me.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/blog-featured-widget.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blog-featured-widget.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/blog-post-content-admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blog-post-content-admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/blog-post-header-admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blog-post-header-admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/blog-post-header-public.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blog-post-header-public.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/company-navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/company-navigation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header-featured.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header-featured.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/series-widget.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/series-widget.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/properties/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/properties/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/less/stylesheet.less" beforeDir="false" afterPath="$PROJECT_DIR$/static/less/stylesheet.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/stylesheet/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/stylesheet/stylesheet.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/stylesheet/stylesheet.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/stylesheet/stylesheet.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/uploads/blog/3gWoHvGsYmT4rnafY3zCafNJVCry3EfMQJCK7SuytkDaP3khg6NYdcmw27uxlXVn-b47bf358-62bf-46bf-9dae-d0232cbc7193.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/uploads/blog/7v32AGYRsnpY92vU1nRTZeQi394B4B6uSqvPT3YTMjHiLHOLBVKXHicUzdGke08x-7b8e1d96-5645-4c47-9877-3a3406fba288.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/uploads/blog/FPsj7JUQCDlGt7tgqZwIcruIBUXUtgWLeHFdZFWA1witbIdoBxSbirffxXjCl8GV-d9c1f87d-a281-4c5e-8f31-b4f9d3dd9407.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/uploads/blog/NBHEKIUIC9aBG1xPz43vCPGZ8RDvEDjsMBAxLhRDAsubIBIOgud9llIX145GKJWe-f0922983-3e9a-4e15-8a65-ee316ee8679c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/uploads/blog/NVTGi3W06swVbyPUYQXl3dlB5mvjHL9J6MOyDMTG1RJc8ux84mh4MgiezBl1yeJD-25ea99cc-6b46-4308-850e-066aca4c39c3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/uploads/blog/R1tOznOVXy4jShvFuAMxKORzfk6yrnDtNVnMI9eDMgMI40C1Vls7igupZfG2JGz9-6f0cc3a6-bd87-4f8d-bdb0-70632b46edd8.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/uploads/blog/T6ptGPBOtTLzkchXFQXZ9iduWExV1WY0eQrgcKBKhEQA196UFUrDsKlt1ITw5oBU-95b2d9d0-dc5c-446b-a932-ceab01ee0084.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/uploads/blog/bz1Rc5eHeFVJIDquSCa2cMLtiHu1wC0EmGILkIK91z1M1XNU27uF2yP8oyiva0iK-42d54b87-e69b-4f2c-acf5-5f2581eb9e66.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/uploads/blog/lHBl9ubH7z9KoXiz2HP6CHSl5Ok3dxHWiscCjRBTeoQpAtOqsJRaNuWmqbmstvxz-81857bd2-aa7a-4d2d-ac8a-0c59d3eb7a1f.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/uploads/blog/pk3yA1TwG6UTXw1Zjfr0LXS1Td5k1E1fs0kqYJ7sJjZhID1oYDzLHL0LfP70Ovbg-3b5afde1-d257-4264-b583-08052c705274.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/uploads/blog/vkIbRtlytkhl80GgKC9dRVM1hZ7jIXjNdpYiyEtVCUFYAO3OU1Lf7F8fc0bSvzo6-69a2515f-3e33-4f46-95f5-23e2983cee1e.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +33,13 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -108,7 +97,7 @@
       <workItem from="1585440940270" duration="4886000" />
       <workItem from="1585575841163" duration="35976000" />
       <workItem from="1585657108314" duration="29795000" />
-      <workItem from="1585746745097" duration="21729000" />
+      <workItem from="1585746745097" duration="34156000" />
     </task>
     <servers />
   </component>

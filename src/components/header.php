@@ -4,3 +4,4 @@
             <?php require_once("company-navigation.php") ?>
         </div>
 </header>
+<div class="header-outer-size"></div>

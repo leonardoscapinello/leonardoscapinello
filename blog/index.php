@@ -39,11 +39,7 @@ if ($title !== $real_title) {
 </div>
 
 
-<link rel="stylesheet" href="<?= $static->getFileLocation("plyr.css") ?>"/>
-<script src="<?= $static->getJSFileLocation("jquery.min.js") ?>"></script>
-<script src="<?= $static->getJSFileLocation("plyr.js") ?>"></script>
-<script type="text/javascript">
-    const players = Array.from(document.querySelectorAll('.ls-player')).map(p => new Plyr(p));
-</script>
+
+<?php require_once(DIRNAME . "../components/footer-scripts.php") ?>
 </body>
 </html>

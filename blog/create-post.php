@@ -43,7 +43,7 @@ if (not_empty($title) && not_empty($id_category)) {
                     <div class="container">
                         <div class="row">
                             <div class="col-xl-12 col-lg-12 col-sm-12">
-                                <div class="content-blog">
+                                <div class="content-blog" style="margin-top: 50px">
 
                                     <div class="blog--post-block">
                                         <label class="text black">Digite o título desse artigo.</label>
@@ -80,5 +80,6 @@ if (not_empty($title) && not_empty($id_category)) {
 </div>
 
 
+<?php require_once(DIRNAME . "../components/footer-scripts.php") ?>
 </body>
 </html>

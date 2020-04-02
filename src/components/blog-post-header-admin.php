@@ -19,7 +19,7 @@ $cover = $static->getImagePath($blog->getPostCover(), "blog@cover");
                                         <ul>
                                             <li><i class="far fa-clock"></i> 22/10/2020</li>
                                             <li><i class="far fa-user"></i> <?= $author->getFullName() ?></li>
-                                            <li><span class="stamp" style="margin: 0;top: 0;">DINHEIRO</span></li>
+                                            <li><?= $blog->getCategoryStamp() ?></li>
                                         </ul>
                                     </div>
                                 </div>

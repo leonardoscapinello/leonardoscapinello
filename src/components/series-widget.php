@@ -17,13 +17,13 @@
                 <?php for ($i = 0; $i < 6; $i++) { ?>
                     <div class="blog-post--widget locked">
                         <div class="background">
-                            <img src="http://localhost/leonardoscapinello/b/media/cover/S7Fd2dmnwowj0ajBRi57w5BCN807v2i8PCeoYacbmrWxV1IFeNT5hnvTYgj1jAik-212f6bd1-f420-44ca-8b69-14e6d3ace7df.png"/>
+                            <img src="./b/media/cover/S7Fd2dmnwowj0ajBRi57w5BCN807v2i8PCeoYacbmrWxV1IFeNT5hnvTYgj1jAik-212f6bd1-f420-44ca-8b69-14e6d3ace7df.png"/>
                         </div>
                         <div class="post-info">
                             <div class="content">
                                 <div class="stamp" style="background:#2d2d2d">SÉRIE</div>
-                                <h5>Um mundo à nova geração</h5>
-                                <span class="readmore">Ler Postagem</span>
+                                <h5>Em Breve</h5>
+                                <span class="readmore">Acompanhar</span>
                             </div>
                         </div>
                     </div>

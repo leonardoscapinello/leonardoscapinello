@@ -8,6 +8,8 @@ if (!isset($_SESSION)) {
 define("DIRNAME", dirname(__FILE__) . "/");
 define("SITE_URL", "http://localhost/leonardoscapinello/");
 define("LOGIN_URL", SITE_URL . "login");
+define("LOGOUT_URL", SITE_URL . "logout");
+define("ACCOUNT_PROFILE", SITE_URL . "meu-perfil");
 define("REGISTER_URL", SITE_URL . "register");
 define("RECOVERY_URL", SITE_URL . "recovery");
 

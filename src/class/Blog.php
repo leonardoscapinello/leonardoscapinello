@@ -46,6 +46,8 @@ class Blog
 
             if (not_empty($post_title) && strlen($post_title) > 3) {
 
+                $post_title = htmlentities($post_title, ENT_NOQUOTES, "UTF-8", false);
+
                 $id_account = $accounts->getIdAccount();
                 $short_key = $token->tokenAlphanumeric(6);
 
@@ -101,7 +103,8 @@ class Blog
 
     public function getCategoryStamp()
     {
-        return "<span class=\"stamp\" style=\"margin: 0;top: 0;background:" . $this->category_background . "\">" . $this->category_name . "</span>";
+        global $text;
+        return "<span class=\"stamp\" style=\"margin: 0;top: 0;background:" . $this->category_background . "\">" . $text->utf8($this->category_name) . "</span>";
     }
 
     public function getPostURL($return_only_title = false)
