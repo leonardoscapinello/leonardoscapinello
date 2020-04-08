@@ -33,9 +33,11 @@ require_once(DIRNAME . "../functions/translate.php");
 require_once(DIRNAME . "../functions/get_request.php");
 require_once(DIRNAME . "../functions/is_selected.php");
 require_once(DIRNAME . "../functions/get_page.php");
+require_once(DIRNAME . "../functions/stringsafe.php");
 
 require_once(DIRNAME . "/../class/URL.php");
 require_once(DIRNAME . "/../class/Text.php");
+require_once(DIRNAME . "/../class/Date.php");
 require_once(DIRNAME . "/../class/Token.php");
 require_once(DIRNAME . "/../class/Numeric.php");
 require_once(DIRNAME . "/../class/lessphp/lessc.inc.php");
@@ -50,6 +52,8 @@ require_once(DIRNAME . "/../class/Blog.php");
 require_once(DIRNAME . "/../class/BlogContent.php");
 require_once(DIRNAME . "/../class/BlogWidget.php");
 require_once(DIRNAME . "/../class/Upload.php");
+require_once(DIRNAME . "/../class/BlogSearch.php");
+require_once(DIRNAME . "/../class/Pages.php");
 
 require DIRNAME . '/../vendor/phpmailer/phpmailer/src/Exception.php';
 require DIRNAME . '/../vendor/phpmailer/phpmailer/src/PHPMailer.php';
@@ -62,6 +66,8 @@ $less = new lessc();
 $text = new Text();
 $numeric = new Numeric();
 $token = new Token();
+$date = new Date();
+
 
 
 $database = new Database();

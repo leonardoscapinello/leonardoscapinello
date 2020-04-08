@@ -107,6 +107,53 @@ $(document).ready(function () {
 });
 
 
+var typingTimer;
+var doneTypingInterval = 700;
+var $input = $('#q');
+
+$input.on('keyup', function () {
+    clearTimeout(typingTimer);
+    typingTimer = setTimeout(doneTyping, doneTypingInterval);
+});
+$input.on('keydown', function () {
+    clearTimeout(typingTimer);
+});
+
 $(window).on("resize", function () {
     $(".header-outer-size").css("height", ($(".header--company").outerHeight() - 6) + "px");
 });
+
+
+function openSearch(){
+    $input.val("");
+    $("#load-search").html("<div class=\"result\"> <div class=\"post-title text center\"> <i class=\"far fa-robot\"></i> <p class=\"text center\"><span class=\"big-text\">Bip. Bip.</span><br /> É só você digitar o que está procurando (aqui em cima) e vou revirar alguns documentos, beleza?</p> </div> </div>");
+    $("#search_modal").fadeIn(300);
+    $("body").css("overflow", "hidden");
+}
+
+$(".close_smdl").on("click", function(){
+    $("#search_modal").fadeOut(300);
+    $("body").css("overflow", "initial");
+});
+
+function doneTyping () {
+    let v = $input.val();
+    if(v.length === 0){
+        $("#search_modal").fadeOut(300);
+    }else if(v.length > 0){
+        search(v);
+    }
+}
+
+function search(str) {
+    $.ajax({
+        data: {q: str},
+        type: 'GET',
+        url: SERVER + "/06a943c59f33a34bb5924aaf72cd2995",
+        cache: false,
+        crossDomain: true,
+        success: function (data) {
+            $("#load-search").fadeOut(200).html(data).fadeIn(300);
+        }
+    });
+}

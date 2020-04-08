@@ -14,6 +14,9 @@ class Blog
     private $is_active;
     private $is_private;
 
+    private $first_name;
+    private $last_name;
+
     private $id_category;
     private $category_name;
     private $category_background;
@@ -23,9 +26,7 @@ class Blog
     {
         global $database;
         global $text;
-        global $session;
-        global $numeric;
-        $database->query("SELECT * FROM blog b LEFT JOIN blog_categories bc ON bc.id_category = b.id_category WHERE id_post = ? OR short_key = ?");
+        $database->query("SELECT * FROM blog b LEFT JOIN blog_categories bc ON bc.id_category = b.id_category LEFT JOIN (SELECT id_account, first_name, last_name FROM accounts WHERE is_customer = 'N') ac ON ac.id_account = b.id_author WHERE id_post = ? OR short_key = ?");
         $database->bind(1, $id_post);
         $database->bind(2, $id_post);
         $result = $database->resultsetObject();
@@ -123,12 +124,26 @@ class Blog
         }
     }
 
+    public function getEditURL()
+    {
+        try {
+            return BLOG_ADMIN_EDIT_POST . "?id=" . $this->getIdPost() . "&post=" . $this->getShortKey();
+        } catch (Exception $exception) {
+            error_log($exception);
+        }
+    }
+
     /**
      * @return mixed
      */
     public function getIdPost()
     {
         return $this->id_post;
+    }
+
+    public function getAuthor()
+    {
+        return $this->first_name . " " . $this->last_name;
     }
 
     /**

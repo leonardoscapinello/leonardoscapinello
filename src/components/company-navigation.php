@@ -17,8 +17,8 @@
                         <li><a href="<?= SITE_URL ?>empresa-online" title="Sua Empresa Online">Sua
                                 Empresa
                                 Online</a></li>
-                        <li><a href="<?= SITE_URL ?>blog">Contato </a></li>
-                        <li><a href="<?= SITE_URL ?>blog">Baixar E-book Grátis
+                        <li><a href="<?= SITE_URL ?>entrar-em-contato">Contato </a></li>
+                        <li><a href="<?= SITE_URL ?>baixar-ebook-gratis">Baixar E-book Grátis
                                 <span class="stamp">Novo</span>
                             </a></li>
                         <?php if ($session->isLogged()) { ?>
@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="col-xl-1 only-desktop">
-                <div class="navigation-mobile-btn" onClick="navigation();">
+                <div class="navigation-mobile-btn" onClick="openSearch();">
                     <i class="far fa-search"></i>
                 </div>
             </div>
@@ -58,5 +58,22 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+<div id="search_modal">
+
+    <div class="close_smdl"><i class="far fa-times"></i></div>
+
+    <div class="search_container">
+        <div class="search_input">
+            <form method="GET" action="">
+                <input type="search" name="q" id="q" placeholder="Faça sua busca por conteúdo, digite aqui." maxlength="72"
+                       autocomplete="off"/>
+            </form>
+        </div>
+
+        <div class="results" id="load-search"></div>
+
+
     </div>
 </div>

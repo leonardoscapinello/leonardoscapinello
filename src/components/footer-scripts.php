@@ -1,3 +1,6 @@
+<script type="text/javascript">
+    const SERVER = "<?=SITE_URL?>";
+</script>
 <link rel="stylesheet" href="<?= $static->getFileLocation("plyr.css") ?>"/>
 <script src="<?= $static->getJSFileLocation("jquery.min.js") ?>"></script>
 <script src="<?= $static->getJSFileLocation("plyr.js") ?>"></script>

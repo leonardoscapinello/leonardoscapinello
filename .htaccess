@@ -4,6 +4,8 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
+RewriteRule ^06a943c59f33a34bb5924aaf72cd2995$   ./src/public/search-api.php [L,NC,QSA]
+
 RewriteRule ^login/createsession$   ./src/public/authenticate.php [L,NC,QSA]
 RewriteRule ^login/createaccount$   ./src/public/createAccount.php [L,NC,QSA]
 RewriteRule ^login/redirect$        ./src/public/redirect.php [L,NC,QSA]
@@ -28,16 +30,17 @@ RewriteRule ^b/media/(.*)$                   ./static/uploads/blog/$1 [L,NC,QSA]
 RewriteRule ^b/([0-9]+)$                            ./blog/index.php?id=$1 [L,NC,QSA]
 RewriteRule ^blog/([0-9]+)/([a-zA-Z0-9-z\-\_]+)$    ./blog/index.php?id=$1&title=$2 [L,NC,QSA]
 
-# CAMPAIGNS REWRITE
-RewriteRule ^c/sobreviva-ao-corona$   ./campaigns/20200325-sobreviva-ao-corona/index.php [L,NC,QSA]
-
 # MEDIA FOR BLOG
 RewriteRule ^m/blog/images/([^/]+)$   ./static/images/blog/$1 [L,NC,QSA]
 RewriteRule ^m/blog/videos/([^/]+)$   ./static/movie/blog/$1 [L,NC,QSA]
 
 
-# MEDIA FOR CAMPAIGNS
-RewriteRule ^m/sobreviva-ao-corona/([^/]+)$   ./campaigns/20200325-sobreviva-ao-corona/media/$1 [L,NC,QSA]
+# CAMPAIGNS REWRITE
+RewriteRule ^c/empresa-online$              ./campaigns/20200405-empresa-online/$1 [L,NC,QSA]
+RewriteRule ^c/empresa-online/(.*)$         ./campaigns/20200405-empresa-online/$1 [L,NC,QSA]
 
+RewriteRule ^c/sobreviva-ao-corona$             ./campaigns/20200325-sobreviva-ao-corona/$1 [L,NC,QSA]
+RewriteRule ^c/sobreviva-ao-corona/(.*)$        ./campaigns/20200325-sobreviva-ao-corona/$1 [L,NC,QSA]
 
-RewriteRule ^([^/]+)$ index.php [L,NC,QSA]
+RewriteRule ^([^/]+)$ index.php?p=$1 [L,NC,QSA]
+

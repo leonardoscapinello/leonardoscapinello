@@ -42,7 +42,8 @@ if (not_empty($title) && not_empty($id_category)) {
                 <form method="POST" action="">
                     <div class="container">
                         <div class="row">
-                            <div class="col-xl-12 col-lg-12 col-sm-12">
+                            <div class="offset-3"></div>
+                            <div class="col-xl-6 col-lg-6 col-sm-12">
                                 <div class="content-blog" style="margin-top: 50px">
 
                                     <div class="blog--post-block">
@@ -61,6 +62,12 @@ if (not_empty($title) && not_empty($id_category)) {
                                                 <?php } ?>
                                             </select>
                                         </div>
+                                        <br>
+
+                                        <p>Após a criação desse post, você receberá um e-mail para confirmar a criação e
+                                            terá acesso aos paineis de edição.</p>
+                                        <br>
+
                                         <div class="blog_input" align="center">
                                             <button class="btn btn--secondary">Criar Rascunho</button>
                                         </div>
@@ -68,6 +75,7 @@ if (not_empty($title) && not_empty($id_category)) {
 
                                 </div>
                             </div>
+                            <div class="offset-3"></div>
                         </div>
                     </div>
                 </form>

@@ -13,7 +13,7 @@ class Accounts
     private $phone_number;
     private $insert_time;
     private $is_active;
-    private $is_customer;
+    private $is_customer = "N";
 
     public function __construct($id_account = 0)
     {

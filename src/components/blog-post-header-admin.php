@@ -12,7 +12,9 @@ $cover = $static->getImagePath($blog->getPostCover(), "blog@cover");
                             <div class="row">
                                 <div class="col-xl-12 col-lg-12 col-sm-12">
                                     <h2>
-                                        <i class="add-cover-blog far fa-camera" onClick="add('cover');return false"></i>
+                                        <?php if ($session->isLogged() && !$accounts->isCustomer()) { ?>
+                                            <i class="add-cover-blog far fa-camera" onClick="add('cover');return false"></i>
+                                        <?php } ?>
                                         <?= $blog->getPostTitle() ?>
                                     </h2>
                                     <div class="post-data">

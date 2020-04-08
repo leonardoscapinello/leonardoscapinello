@@ -106,7 +106,7 @@ class StaticCompiler
             if ($campaign === "blog@cover") {
                 return BLOG_COVER_PATH . $filename;
             } else {
-                return SITE_URL . "m/" . $campaign . "/" . $filename;
+                return SITE_URL . "c/" . $campaign . "/media/" . $filename;
             }
         }
         return SITE_URL . "static/images/" . $filename;
@@ -116,7 +116,7 @@ class StaticCompiler
     public function getImagePath($filename, $campaign = null)
     {
         $address = $this->getImagePath_Address($filename, $campaign);
-        error_log($address);
+
         if ($address === null) return null;
         $filename = $address;
         $file_headers = @get_headers($filename);

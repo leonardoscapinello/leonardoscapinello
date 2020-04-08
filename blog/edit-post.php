@@ -3,9 +3,17 @@ require_once("../src/properties/index.php");
 require_once("../src/public/validate-admin.php");
 
 $id = get_request("id");
+$id_paragraph = get_request("paragraph");
+
 $blog = new Blog($id);
+$url = new URL();
 
 $author = new Accounts($blog->getIdAuthor());
+if ($id_paragraph === null) {
+    header("location: " . $url->addQueryString(array("paragraph" => 0)));
+    die;
+}
+
 
 ?>
 <html>
@@ -19,7 +27,7 @@ $author = new Accounts($blog->getIdAuthor());
     <link href="<?= $static->getFileLocation("owl.carousel.css") ?>" type="text/css" rel="stylesheet">
     <link href="<?= $static->getFileLocation("owl.theme.default.css") ?>" type="text/css" rel="stylesheet">
     <link href="<?= $static->getFileLocation("content-tools.min.css") ?>" type="text/css" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,500,700,900&display=swap"
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,500,700,900&display=swap"
           rel="stylesheet">
 </head>
 <body>
@@ -29,13 +37,6 @@ $author = new Accounts($blog->getIdAuthor());
     <?php require_once(DIRNAME . "../components/blog-post-content-admin.php") ?>
     <?php require_once(DIRNAME . "../components/footer.php") ?>
 </div>
-
-<link rel="stylesheet" href="<?= $static->getFileLocation("plyr.css") ?>"/>
-<script src="<?= $static->getJSFileLocation("jquery.min.js") ?>"></script>
-<script src="<?= $static->getJSFileLocation("plyr.js") ?>"></script>
-<script type="text/javascript">
-    const players = Array.from(document.querySelectorAll('.ls-player')).map(p => new Plyr(p));
-</script>
 
 <?php require_once(DIRNAME . "../components/footer-scripts.php") ?>
 </body>

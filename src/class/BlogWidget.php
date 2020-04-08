@@ -66,7 +66,7 @@ class BlogWidget
     }
 
 
-    private function url($id_post, $post_title)
+    public function url($id_post, $post_title)
     {
         try {
             $u = new URL();

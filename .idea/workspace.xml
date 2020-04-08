@@ -2,23 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="038f153c-938b-4cd1-b7d1-679edc51ddf9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/footer-scripts.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/javascript/leonardoscapinello.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/blog/04HqTAYsG26PvGj9q9QMdQZn7TI3fcRV6mUIokSKWI0IbZViTFjCt9hbFMhcZa7I-ed834b1a-aba6-4134-abb2-3cd3524c04d8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/blog/cover/6vxJoQQ4b7Ufh2OYqcAC9TqLk1HW4sC0xT9GPpUOIK7pcZoYYnLREDlGwimPDP0F-b0fb6f25-bdbc-4b0a-9483-14dac11e4247.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/blog/cover/D1G0nx4JRkf7r7IZu9TR1DlgxCtq4zYqYazkGiPndqwFGs1bU81gLbniZOH8ZwKo-85fa962d-9d54-495b-9e8a-90c18f15ad3d.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/campaigns/20200405-empresa-online/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/class/BlogSearch.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/class/Date.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/class/Pages.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/functions/stringsafe.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/empresa-online.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/public/search-api.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/uploads/blog/q1pwNhcFTNsF0JiOHVrIsjGgT4dgme2lYeTwy2mLk2qtSQy8XwT6pv0dgk8fg7K0-25ce9ea5-3c80-4897-876f-a112e5150e83.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/create-post.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/create-post.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/edit-post.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/edit-post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/save-paragraph.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/save-paragraph.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/class/Accounts.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/Accounts.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/class/Blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/Blog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/class/BlogContent.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/BlogContent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/class/BlogWidget.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/BlogWidget.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/class/SocialAnalytics.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/SocialAnalytics.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/class/StaticCompiler.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/StaticCompiler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/class/URL.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/URL.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blog-post-content-admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blog-post-content-admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/blog-post-header-admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blog-post-header-admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blog-post-header-public.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blog-post-header-public.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/company-navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/company-navigation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header-featured.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header-featured.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/series-widget.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/series-widget.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer-scripts.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer-scripts.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/properties/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/properties/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/javascript/leonardoscapinello.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/javascript/leonardoscapinello.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/less/stylesheet.less" beforeDir="false" afterPath="$PROJECT_DIR$/static/less/stylesheet.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/stylesheet/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/stylesheet/stylesheet.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/stylesheet/stylesheet.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/stylesheet/stylesheet.min.css" afterDir="false" />
@@ -70,15 +81,15 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/class" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\leonardoscapinello\src\components" />
       <recent name="C:\wamp64\www\leonardoscapinello\src\class" />
+      <recent name="C:\wamp64\www\leonardoscapinello\campaigns\20200405-empresa-online" />
       <recent name="C:\wamp64\www\leonardoscapinello\src\public" />
       <recent name="C:\wamp64\www\leonardoscapinello\blog" />
-      <recent name="C:\wamp64\www\leonardoscapinello\static\javascript" />
+      <recent name="C:\wamp64\www\leonardoscapinello\src\components" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -98,6 +109,11 @@
       <workItem from="1585575841163" duration="35976000" />
       <workItem from="1585657108314" duration="29795000" />
       <workItem from="1585746745097" duration="34156000" />
+      <workItem from="1585842924672" duration="5633000" />
+      <workItem from="1585917055618" duration="9712000" />
+      <workItem from="1586213833792" duration="616000" />
+      <workItem from="1586260859724" duration="8551000" />
+      <workItem from="1586274191884" duration="17244000" />
     </task>
     <servers />
   </component>
@@ -108,25 +124,33 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1155" y="242" key="#com.intellij.ide.util.MemberChooser" timestamp="1585694349041">
-      <screen x="-1920" y="0" width="1920" height="1050" />
+    <state x="1020" y="242" key="#com.intellij.ide.util.MemberChooser" timestamp="1586303351693">
+      <screen x="0" y="0" width="2560" height="1050" />
     </state>
-    <state x="-1155" y="242" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1585694349041" />
+    <state x="1020" y="242" key="#com.intellij.ide.util.MemberChooser/-1920.0.1536.840/0.0.2560.1050@0.0.2560.1050" timestamp="1586303351693" />
+    <state x="-1155" y="242" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1586267469112" />
+    <state x="765" y="242" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1585848432122" />
     <state x="765" y="242" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1585605171499" />
     <state x="-1433" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585406082338">
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
     <state x="-1433" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1585406082338" />
-    <state x="794" y="449" key="NewPhpFileDialog" timestamp="1585706234790">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="1059" y="449" key="NewPhpFileDialog" timestamp="1586301487060">
+      <screen x="0" y="0" width="2560" height="1050" />
     </state>
+    <state x="1059" y="449" key="NewPhpFileDialog/-1920.0.1536.840/0.0.2560.1050@0.0.2560.1050" timestamp="1586301487060" />
     <state x="-1126" y="449" key="NewPhpFileDialog/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1585690788544" />
     <state x="794" y="449" key="NewPhpFileDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1585592031563" />
     <state x="794" y="449" key="NewPhpFileDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1585706234790" />
-    <state x="656" y="350" key="com.intellij.ide.util.TipDialog" timestamp="1585746747769">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="-1264" y="350" key="com.intellij.ide.util.TipDialog" timestamp="1586274196569">
+      <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
-    <state x="656" y="350" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1585746747769" />
+    <state x="-1264" y="350" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1586274196569" />
+    <state x="656" y="350" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1586213836307" />
+    <state x="-1151" y="443" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586265153118">
+      <screen x="-1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="-1151" y="443" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1586265153118" />
     <state x="616" y="243" key="run.anything.popup" timestamp="1585705962210">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

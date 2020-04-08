@@ -15,47 +15,50 @@ class SocialAnalytics
     );
 
 
-    public function getGoogleAnalyticsScript_Head()
+    public function getGoogleAnalyticsScript_Head($google_analytics = null)
     {
+        if ($google_analytics === null) $google_analytics = $this->google_tagManager;
+        if ($google_analytics === null) return null;
         $script = "<!-- Global site tag (gtag.js) - Google Analytics -->";
-        $script .= "<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-162090744-1\"></script>";
+        $script .= "<script async src=\"https://www.googletagmanager.com/gtag/js?id=" . $google_analytics . "\"></script>";
         $script .= "<script>";
         $script .= "window.dataLayer = window.dataLayer || [];";
         $script .= "function gtag(){dataLayer.push(arguments);}";
         $script .= "gtag('js', new Date());";
-        $script .= "gtag('config', '" . $this->google_analytics . "');";
+        $script .= "gtag('config', '" . $google_analytics . "');";
         $script .= "</script>";
-
 
 
         $script = null;
         return $script;
     }
 
-    public function getGoogleTagManagerScript_Head()
+    public function getGoogleTagManagerScript_Head($google_tagManager = null)
     {
+        if ($google_tagManager === null) $google_tagManager = $this->google_tagManager;
+        if ($google_tagManager === null) return null;
         $script = "<!-- Google Tag Manager -->";
         $script .= "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':";
         $script .= "new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],";
         $script .= "j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=";
         $script .= "'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);";
-        $script .= "})(window,document,'script','dataLayer','" . $this->google_tagManager . "');</script>";
+        $script .= "})(window,document,'script','dataLayer','" . $google_tagManager . "');</script>";
         $script .= "<!-- End Google Tag Manager -->";
-
 
 
         $script = null;
         return $script;
     }
 
-    public function getGoogleTagManagerScript_Body()
+    public function getGoogleTagManagerScript_Body($google_tagManager = null)
     {
+        if ($google_tagManager === null) $google_tagManager = $this->google_tagManager;
+        if ($google_tagManager === null) return null;
         $script = "<!-- Google Tag Manager (noscript) -->";
         $script .= "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':";
-        $script .= "<noscript><iframe src=\"https://www.googletagmanager.com/ns.html?id=" . $this->google_tagManager . "\"";
+        $script .= "<noscript><iframe src=\"https://www.googletagmanager.com/ns.html?id=" . $google_tagManager . "\"";
         $script .= "height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe></noscript>";
         $script .= "<!-- End Google Tag Manager (noscript) -->";
-
 
 
         $script = null;
@@ -88,7 +91,6 @@ class SocialAnalytics
         $script .= "<!-- End Facebook Pixel Code -->";
 
 
-
         $script = null;
         return $script;
     }
@@ -96,7 +98,6 @@ class SocialAnalytics
     public function getFacebookTrack_Body($custom_track = "PageView", $js_object = "")
     {
         if ($js_object === "") return "<script>fbq('track', '" . $custom_track . "');</script>";
-
 
 
         $script = null;

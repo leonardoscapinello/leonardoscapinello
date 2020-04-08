@@ -3,13 +3,31 @@
 class URL
 {
 
+    private $custom_url = "";
 
     private $accents = array('À', 'Á', 'Â', 'Ã', 'Ä', 'Å', 'Æ', 'Ç', 'È', 'É', 'Ê', 'Ë', 'Ì', 'Í', 'Î', 'Ï', 'Ð', 'Ñ', 'Ò', 'Ó', 'Ô', 'Õ', 'Ö', 'Ø', 'Ù', 'Ú', 'Û', 'Ü', 'Ý', 'ß', 'à', 'á', 'â', 'ã', 'ä', 'å', 'æ', 'ç', 'è', 'é', 'ê', 'ë', 'ì', 'í', 'î', 'ï', 'ð', 'ñ', 'ò', 'ó', 'ô', 'õ', 'ö', 'ø', 'ù', 'ú', 'û', 'ü', 'ý', 'þ', 'ÿ');
     private $noAccents = array('A', 'A', 'A', 'A', 'A', 'A', 'AE', 'C', 'E', 'E', 'E', 'E', 'I', 'I', 'I', 'I', 'D', 'N', 'O', 'O', 'O', 'O', 'O', 'O', 'U', 'U', 'U', 'U', 'Y', 'B', 'a', 'a', 'a', 'a', 'a', 'a', 'ae', 'c', 'e', 'e', 'e', 'e', 'i', 'i', 'i', 'i', 'o', 'n', 'o', 'o', 'o', 'o', 'o', 'o', 'u', 'u', 'u', 'u', 'y', 'p', 'y');
 
+    private function act()
+    {
+        return (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+    }
+
+    /**
+     * @param string $custom_url
+     */
+    public function setCustomUrl(string $custom_url)
+    {
+        $this->custom_url = $custom_url;
+    }
+
+
 
     public function getActualURL()
     {
+        if (not_empty($this->custom_url)) {
+            return $this->custom_url;
+        }
         return (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
     }
 
@@ -23,12 +41,21 @@ class URL
         }
     }
 
-    public function removeQueryString($key)
+    public function removeQueryString($array_of_keys)
     {
         $url = $this->getActualURL();
-        $url = preg_replace('/(?:&|(\?))' . $key . '=[^&]*(?(1)&|)?/i', "$1", $url);
-        $url = rtrim($url, '?');
-        $url = rtrim($url, '&');
+        if (is_array($array_of_keys)) {
+            foreach ($array_of_keys as $key) {
+                $url = preg_replace('/(?:&|(\?))' . $key . '=[^&]*(?(1)&|)?/i', "$1", $url);
+                $url = rtrim($url, '?');
+                $url = rtrim($url, '&');
+            }
+        } else {
+            $url = preg_replace('/(?:&|(\?))' . $array_of_keys . '=[^&]*(?(1)&|)?/i', "$1", $url);
+            $url = rtrim($url, '?');
+            $url = rtrim($url, '&');
+        }
+
         return $url;
     }
 

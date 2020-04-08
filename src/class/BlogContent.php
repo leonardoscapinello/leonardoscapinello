@@ -53,17 +53,59 @@ class BlogContent
         return $id;
     }
 
-    public function getAllByPost($id_blog)
+    public function update($post_content, $id_content = 0)
+    {
+        global $database;
+        global $accounts;
+        global $token;
+        $id = 0;
+        try {
+
+            if (not_empty($post_content) && strlen($post_content) > 5) {
+                $id_account = $accounts->getIdAccount();
+                $html2TextConverter = new \Html2Text\Html2Text($post_content);
+
+                $post_content = $html2TextConverter->getHtml();
+                $post_content_clean = $html2TextConverter->getText();
+                $post_content_clean_minified = str_replace(array("\r", "\n"), " ", $post_content_clean);
+
+                $database->query("UPDATE blog_content SET id_author = ?, content = ?, content_clean = ?, content_clean_minified = ? WHERE id_content = ?");
+                $database->bind(1, $id_account);
+                $database->bind(2, $post_content);
+                $database->bind(3, $post_content_clean);
+                $database->bind(4, $post_content_clean_minified);
+                $database->bind(5, $id_content);
+                $database->execute();
+                $id = $id_content;
+
+            } else {
+                $database->query("UPDATE blog_content SET is_active = 'N' WHERE id_content = ?");
+                $database->bind(1, $id_content);
+                $database->execute();
+                $id = $id_content;
+            }
+
+        } catch (Exception $exception) {
+            error_log($exception);
+        }
+        return $id;
+    }
+
+    public function getAllByPost($id_blog, $edit = false)
     {
         global $database;
         global $accounts;
         $print_result = "";
         try {
-            $database->query("SELECT content, media_type, alternative_text FROM blog_content WHERE id_blog = ? AND is_active = 'Y' ORDER BY order_number, insert_time ASC");
+            $database->query("SELECT id_content, content, media_type, alternative_text FROM blog_content WHERE id_blog = ? AND is_active = 'Y' ORDER BY order_number, insert_time ASC");
             $database->bind(1, $id_blog);
             $resultset = $database->resultset();
             for ($i = 0; $i < count($resultset); $i++) {
-                $print_result .= $this->prepareContent($resultset[$i]['content'], $resultset[$i]['media_type'], $resultset[$i]['alternative_text']);
+                if ($edit) {
+                    $print_result .= $this->prepareContent($resultset[$i]['content'], $resultset[$i]['media_type'], $resultset[$i]['alternative_text'], $resultset[$i]['id_content']);
+                } else {
+                    $print_result .= $this->prepareContent($resultset[$i]['content'], $resultset[$i]['media_type'], $resultset[$i]['alternative_text'], false);
+                }
             }
         } catch (Exception $exception) {
             error_log($exception);
@@ -71,10 +113,12 @@ class BlogContent
         return $print_result;
     }
 
-    private function prepareContent($content, $media_type, $alternative_text = null)
+    private function prepareContent($content, $media_type, $alternative_text = null, $id_paragraph_for_edit = false)
     {
+        $edit_script = "";
         if ($media_type === "paragraph") {
-            $post_content_html = "<div class=\"blog--post-block blog-content--block\">";
+            if ($id_paragraph_for_edit) $edit_script = "onClick=\"edit(" . $id_paragraph_for_edit . ");return false;\" data-paragraph=\"" . $id_paragraph_for_edit . "\" id=\"P" . $id_paragraph_for_edit . "\"";
+            $post_content_html = "<div class=\"blog--post-block blog-content--block\" " . $edit_script . ">";
             $post_content_html .= $content;
             $post_content_html .= "</div>";
         }
