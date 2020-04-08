@@ -1,5 +1,4 @@
 <?php
-
 date_default_timezone_set("America/Sao_Paulo");
 if (!isset($_SESSION)) {
     session_start();
@@ -54,10 +53,18 @@ require_once(DIRNAME . "/../class/BlogWidget.php");
 require_once(DIRNAME . "/../class/Upload.php");
 require_once(DIRNAME . "/../class/BlogSearch.php");
 require_once(DIRNAME . "/../class/Pages.php");
+require_once(DIRNAME . "/../class/EmailNotification.php");
 
 require DIRNAME . '/../vendor/phpmailer/phpmailer/src/Exception.php';
 require DIRNAME . '/../vendor/phpmailer/phpmailer/src/PHPMailer.php';
 require DIRNAME . '/../vendor/phpmailer/phpmailer/src/SMTP.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+$mail = new PHPMailer(true);
+
 
 $url = new URL();
 $static = new StaticCompiler();
@@ -67,6 +74,7 @@ $text = new Text();
 $numeric = new Numeric();
 $token = new Token();
 $date = new Date();
+$emailNotification = new EmailNotification();
 
 
 

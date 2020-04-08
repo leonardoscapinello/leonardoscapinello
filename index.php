@@ -38,7 +38,6 @@ $page = new Pages($p);
         }
     }else{
         require_once(DIRNAME . "../components/header.php");
-
     }
 
     require_once(DIRNAME . "../components/footer.php");

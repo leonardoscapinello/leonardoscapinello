@@ -88,7 +88,11 @@ class Pages
      */
     public function getContent()
     {
-        return $this->content;
+        try {
+
+        } catch (Exception $exception) {
+
+        }
     }
 
     /**

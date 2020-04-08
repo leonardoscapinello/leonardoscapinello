@@ -2,37 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="038f153c-938b-4cd1-b7d1-679edc51ddf9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/campaigns/20200405-empresa-online/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/class/BlogSearch.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/class/Date.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/class/Pages.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/functions/stringsafe.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/empresa-online.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/public/search-api.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/blog/q1pwNhcFTNsF0JiOHVrIsjGgT4dgme2lYeTwy2mLk2qtSQy8XwT6pv0dgk8fg7K0-25ce9ea5-3c80-4897-876f-a112e5150e83.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/class/EmailNotification.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/countdown/countdown-clock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/countdown/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/uploads/blog/XZIs9hO0f6NFBmTjl1Kzk5LY5hwpfbggMoDLBJlWPgvNPTYkR1nhVT17YnuZvqAH-97a55b2b-fc75-4a79-ab6d-0600f485c791.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/uploads/blog/cover/ySl70RFBFi5gckX0F6Z01tx7sIgUeI4LpIsO8Xzs8eBiWdrZnSk8FZgnoesbDVlO-820e649f-2b51-44cc-900b-8f1db2d8d258.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/uploads/blog/vl6VGm2QWhVq1Aamp4GavYr4VnEIpAxzBNzr5oD0xL3nrhER0JEyn91vXhXXp3l6-7cf0f52f-2a59-4209-b850-ab4f2bc43a87.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/create-post.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/create-post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/edit-post.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/edit-post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/save-paragraph.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/save-paragraph.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/class/Accounts.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/Accounts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/class/Blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/Blog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/class/BlogContent.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/BlogContent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/class/BlogWidget.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/BlogWidget.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/class/SocialAnalytics.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/SocialAnalytics.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/class/StaticCompiler.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/StaticCompiler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/class/URL.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/URL.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/blog-post-content-admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blog-post-content-admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/blog-post-header-admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blog-post-header-admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/blog-post-header-public.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blog-post-header-public.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/company-navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/company-navigation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer-scripts.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer-scripts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/class/Pages.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/Pages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/class/Upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/Upload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/notifications/preview-ebook.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/notifications/default.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/empresa-online.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/empresa-online.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/properties/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/properties/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/javascript/leonardoscapinello.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/javascript/leonardoscapinello.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/less/stylesheet.less" beforeDir="false" afterPath="$PROJECT_DIR$/static/less/stylesheet.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/stylesheet/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/stylesheet/stylesheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/stylesheet/stylesheet.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/stylesheet/stylesheet.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/search-api.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/search-api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,15 +66,15 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/class" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/images/countdown" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\leonardoscapinello\static\images\countdown" />
       <recent name="C:\wamp64\www\leonardoscapinello\src\class" />
       <recent name="C:\wamp64\www\leonardoscapinello\campaigns\20200405-empresa-online" />
       <recent name="C:\wamp64\www\leonardoscapinello\src\public" />
       <recent name="C:\wamp64\www\leonardoscapinello\blog" />
-      <recent name="C:\wamp64\www\leonardoscapinello\src\components" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -113,7 +98,8 @@
       <workItem from="1585917055618" duration="9712000" />
       <workItem from="1586213833792" duration="616000" />
       <workItem from="1586260859724" duration="8551000" />
-      <workItem from="1586274191884" duration="17244000" />
+      <workItem from="1586274191884" duration="18138000" />
+      <workItem from="1586355604733" duration="16722000" />
     </task>
     <servers />
   </component>
@@ -135,18 +121,20 @@
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
     <state x="-1433" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1585406082338" />
-    <state x="1059" y="449" key="NewPhpFileDialog" timestamp="1586301487060">
+    <state x="1059" y="449" key="NewPhpFileDialog" timestamp="1586364285871">
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state x="1059" y="449" key="NewPhpFileDialog/-1920.0.1536.840/0.0.2560.1050@0.0.2560.1050" timestamp="1586301487060" />
     <state x="-1126" y="449" key="NewPhpFileDialog/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1585690788544" />
     <state x="794" y="449" key="NewPhpFileDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1585592031563" />
     <state x="794" y="449" key="NewPhpFileDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1585706234790" />
-    <state x="-1264" y="350" key="com.intellij.ide.util.TipDialog" timestamp="1586274196569">
-      <screen x="-1920" y="0" width="1920" height="1050" />
+    <state x="1059" y="449" key="NewPhpFileDialog/0.0.2560.1050/-1920.0.1536.834@0.0.2560.1050" timestamp="1586364285871" />
+    <state x="-1395" y="278" key="com.intellij.ide.util.TipDialog" timestamp="1586355612756">
+      <screen x="-1920" y="0" width="1536" height="834" />
     </state>
     <state x="-1264" y="350" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1586274196569" />
     <state x="656" y="350" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1586213836307" />
+    <state x="-1395" y="278" key="com.intellij.ide.util.TipDialog/0.0.2560.1050/-1920.0.1536.834@-1920.0.1536.834" timestamp="1586355612756" />
     <state x="-1151" y="443" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586265153118">
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>

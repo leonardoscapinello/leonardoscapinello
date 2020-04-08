@@ -2,7 +2,7 @@
 
 class Upload
 {
-    private $max_allowed_file_size = 1024*5; // size in KB
+    private $max_allowed_file_size = 1024*30; // size in KB
     private $allowed_extensions = array("png", "jpg", "jpeg", "gif", "mp4", "webm");
     private $upload_folder = "../../../static/images/blog/uploads/";
 
