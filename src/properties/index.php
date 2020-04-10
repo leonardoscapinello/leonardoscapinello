@@ -94,16 +94,16 @@ $accountsTemporaryRegister = new AccountTemporary();
 
 $less->compileFile(DIRNAME . "../../static/less/stylesheet.less", DIRNAME . "../../static/stylesheet/stylesheet.css");
 
-$static->add(DIRNAME . "../../static/stylesheet/fontawesome.all.min.css");
-$static->add(DIRNAME . "../../static/stylesheet/reset.css");
-$static->add(DIRNAME . "../../static/stylesheet/container.css");
-$static->add(DIRNAME . "../../static/stylesheet/stylesheet.css");
-$static->add(DIRNAME . "../../static/stylesheet/tooltip.css");
-$static->add(DIRNAME . "../../static/fonts/gilroy/Gilroy.css");
-$static->setOutputFile(DIRNAME . "../../static/stylesheet/stylesheet");
-$static->addReplace("../images/", SITE_URL . "static/images/");
-$static->addReplace("../fonts/", SITE_URL . "static/fonts/");
-$static->compileCSS();
-
+//$static->add(DIRNAME . "../../static/stylesheet/fontawesome.all.min.css");
+//$static->add(DIRNAME . "../../static/stylesheet/reset.css");
+//$static->add(DIRNAME . "../../static/stylesheet/container.css");
+//$static->add(DIRNAME . "../../static/stylesheet/stylesheet.css");
+//$static->add(DIRNAME . "../../static/stylesheet/tooltip.css");
+//$static->add(DIRNAME . "../../static/fonts/gilroy/Gilroy.css");
+//$static->setOutputFile(DIRNAME . "../../static/stylesheet/stylesheet");
+//$static->addReplace("../images/", SITE_URL . "static/images/");
+//$static->addReplace("../fonts/", SITE_URL . "static/fonts/");
+//$static->compileCSS();
+//
 
 ob_start("sanitize_output");

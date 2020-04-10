@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="038f153c-938b-4cd1-b7d1-679edc51ddf9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/images-compressed/4e9982543077069123e560813a5416dd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/series-default-background.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/class/AccountSession.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/AccountSession.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/class/Accounts.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/Accounts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/series-widget.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/series-widget.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/createAccount.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/createAccount.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/less/stylesheet.less" beforeDir="false" afterPath="$PROJECT_DIR$/static/less/stylesheet.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/stylesheet/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/stylesheet/stylesheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/stylesheet/stylesheet.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/stylesheet/stylesheet.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/properties/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/properties/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +99,7 @@
       <workItem from="1586274191884" duration="18138000" />
       <workItem from="1586355604733" duration="28820000" />
       <workItem from="1586433455932" duration="36264000" />
-      <workItem from="1586534842831" duration="5664000" />
+      <workItem from="1586534842831" duration="6305000" />
     </task>
     <servers />
   </component>
