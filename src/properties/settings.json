@@ -2,10 +2,10 @@
   "database": {
     "server": "localhost",
     "port": "3306",
-    "user": "root",
-    "password": "",
+    "user": "developer",
+    "password": "cbPw7zw4eNtU2DGX",
     "password_encryption": "",
-    "database": "leonardoscapinello",
+    "database": "leonardoscapinello_homolog",
     "driver": "mysql"
   }
 }
