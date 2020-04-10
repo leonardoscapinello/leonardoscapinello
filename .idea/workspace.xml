@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="038f153c-938b-4cd1-b7d1-679edc51ddf9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/properties/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/properties/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/class/StaticCompiler.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/StaticCompiler.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +99,7 @@
       <workItem from="1586274191884" duration="18138000" />
       <workItem from="1586355604733" duration="28820000" />
       <workItem from="1586433455932" duration="36264000" />
-      <workItem from="1586534842831" duration="6305000" />
+      <workItem from="1586534842831" duration="6471000" />
     </task>
     <servers />
   </component>
