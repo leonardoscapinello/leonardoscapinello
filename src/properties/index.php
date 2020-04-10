@@ -96,7 +96,7 @@ $accounts = $account = new Accounts();
 $accountsTemporaryRegister = new AccountTemporary();
 
 if (get_request("recompile") !== null) {
-    $less->compileFile(DIRNAME . "../../static/less/stylesheet.less", DIRNAME . "../../static/stylesheet/stylesheet.css");
+    //$less->compileFile(DIRNAME . "../../static/less/stylesheet.less", DIRNAME . "../../static/stylesheet/stylesheet.css");
     $static->add(DIRNAME . "../../static/stylesheet/fontawesome.all.min.css");
     $static->add(DIRNAME . "../../static/stylesheet/reset.css");
     $static->add(DIRNAME . "../../static/stylesheet/container.css");
