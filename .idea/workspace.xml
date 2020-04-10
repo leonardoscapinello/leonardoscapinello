@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="038f153c-938b-4cd1-b7d1-679edc51ddf9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/class/StaticCompiler.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/StaticCompiler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/properties/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/properties/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,15 +65,15 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/blog" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\leonardoscapinello\src\components" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\leonardoscapinello\blog" />
       <recent name="C:\wamp64\www\leonardoscapinello\src\pages" />
       <recent name="C:\wamp64\www\leonardoscapinello\static\javascript" />
       <recent name="C:\wamp64\www\leonardoscapinello\src\class" />
       <recent name="C:\wamp64\www\leonardoscapinello\src\public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\leonardoscapinello\src\components" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -99,7 +100,7 @@
       <workItem from="1586274191884" duration="18138000" />
       <workItem from="1586355604733" duration="28820000" />
       <workItem from="1586433455932" duration="36264000" />
-      <workItem from="1586534842831" duration="6523000" />
+      <workItem from="1586534842831" duration="7537000" />
     </task>
     <servers />
   </component>
@@ -126,6 +127,10 @@
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state x="440" y="184" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1050/-1920.0.1536.834@0.0.2560.1050" timestamp="1586385176697" />
+    <state x="1035" y="329" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586543921065">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state x="1035" y="329" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1050/-1920.0.1536.834@0.0.2560.1050" timestamp="1586543921065" />
     <state x="1020" y="242" key="#com.intellij.ide.util.MemberChooser" timestamp="1586477825626">
       <screen x="0" y="0" width="2560" height="1050" />
     </state>

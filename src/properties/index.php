@@ -1,4 +1,8 @@
 <?php
+ini_set ('display_errors', 'on');
+ini_set ('log_errors', 'on');
+ini_set ('display_startup_errors', 'on');
+ini_set ('error_reporting', E_ALL);
 date_default_timezone_set("America/Sao_Paulo");
 if (!isset($_SESSION)) {
     session_start();
@@ -6,7 +10,7 @@ if (!isset($_SESSION)) {
 
 define("DIRNAME", dirname(__FILE__) . "/");
 define("SITE_NAME", "Leonardo Scapinello");
-define("SITE_URL", "http://flexwei-sv1.site/leonardoscapinello/");
+define("SITE_URL", "http://leonardoscapinello.flexwei-development.xyz/");
 define("LOGIN_URL", SITE_URL . "login");
 define("LOGOUT_URL", SITE_URL . "logout");
 define("ACCOUNT_PROFILE", SITE_URL . "meu-perfil");
@@ -42,7 +46,7 @@ require_once(DIRNAME . "/../class/Text.php");
 require_once(DIRNAME . "/../class/Date.php");
 require_once(DIRNAME . "/../class/Token.php");
 require_once(DIRNAME . "/../class/Numeric.php");
-require_once(DIRNAME . "/../class/lessphp/lessc.inc.php");
+//require_once(DIRNAME . "/../class/lessphp/lessc.inc.php");
 require_once(DIRNAME . "/../class/Database.php");
 require_once(DIRNAME . "/../class/Campaign.php");
 require_once(DIRNAME . "/../class/Accounts.php");
@@ -74,7 +78,7 @@ $mail = new PHPMailer(true);
 $url = new URL();
 $static = new StaticCompiler();
 $socialAnalytics = new SocialAnalytics();
-$less = new lessc();
+//$less = new lessc();
 $text = new Text();
 $numeric = new Numeric();
 $token = new Token();
@@ -92,7 +96,7 @@ $accounts = $account = new Accounts();
 $accountsTemporaryRegister = new AccountTemporary();
 
 
-$less->compileFile(DIRNAME . "../../static/less/stylesheet.less", DIRNAME . "../../static/stylesheet/stylesheet.css");
+//$less->compileFile(DIRNAME . "../../static/less/stylesheet.less", DIRNAME . "../../static/stylesheet/stylesheet.css");
 
 //$static->add(DIRNAME . "../../static/stylesheet/fontawesome.all.min.css");
 //$static->add(DIRNAME . "../../static/stylesheet/reset.css");
@@ -104,6 +108,6 @@ $less->compileFile(DIRNAME . "../../static/less/stylesheet.less", DIRNAME . "../
 //$static->addReplace("../images/", SITE_URL . "static/images/");
 //$static->addReplace("../fonts/", SITE_URL . "static/fonts/");
 //$static->compileCSS();
-//
+
 
 ob_start("sanitize_output");
