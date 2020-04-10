@@ -69,11 +69,10 @@ class AccountSession
     private function createSessionCookie($session_token)
     {
         $cookie_name = $this->cookie_name;
-        if (!isset($_COOKIE[$cookie_name])) {
-            setcookie($cookie_name, $session_token, time() + (86400 * 30), "/");
-            return $session_token;
+        if (isset($_COOKIE[$cookie_name])) {
+            $this->cleanSession();
         }
-        return false;
+        return setcookie($cookie_name, $session_token, time() + (86400 * 30), "/");;
     }
 
 
@@ -119,14 +118,23 @@ class AccountSession
         global $database;
         global $security;
         if (not_empty($this->username) && not_empty($this->password)) {
-            $database->query("SELECT id_account, password FROM accounts WHERE username = ?");
+            $database->query("SELECT id_account, password FROM accounts WHERE username = ? OR email = ?");
             $database->bind(1, $this->username);
+            $database->bind(2, $this->username);
             $resultset = $database->resultset();
             if (count($resultset) > 0) {
                 $security->setIdAccount($resultset[0]['id_account']);
                 $db_password = $security->decrypt($resultset[0]['password']);
                 $post_password = $security->hash($this->password, false);
+
+
+                error_log("createSession()---------------");
+                error_log($db_password);
+                error_log($post_password);
+
                 if ($db_password === $post_password) return $this->storeSessionCookie($resultset[0]['id_account']);
+
+
             }
         }
         return false;

@@ -17,7 +17,7 @@
                 <?php for ($i = 0; $i < 6; $i++) { ?>
                     <div class="blog-post--widget locked">
                         <div class="background">
-                            <img src="./b/media/cover/S7Fd2dmnwowj0ajBRi57w5BCN807v2i8PCeoYacbmrWxV1IFeNT5hnvTYgj1jAik-212f6bd1-f420-44ca-8b69-14e6d3ace7df.png"/>
+                            <img src="<?=$static->getImagePath("series-default-background.png")?>"/>
                         </div>
                         <div class="post-info">
                             <div class="content">

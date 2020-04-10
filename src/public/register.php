@@ -5,7 +5,18 @@ if ($session->isLogged()) {
     die;
 }
 $username = get_request("u");
+$attempt = get_request("attempt");
 if (not_empty($username)) $username = $text->base64_decode($username);
+
+$message = "";
+if ($attempt === $text->base64_encode("-1")) $message = "Preencha seu Primeiro Nome Corretamente.";
+if ($attempt === $text->base64_encode("-2")) $message = "Preencha seu Sobrenome Corretamente.";
+if ($attempt === $text->base64_encode("-3")) $message = "Preencha seu E-mail Corretamente.";
+if ($attempt === $text->base64_encode("-4")) $message = "Preencha sua Senha com no mínimo 6 digitos.";
+if ($attempt === $text->base64_encode("-5")) $message = "Preencha seu WhatsApp Corretamente.";
+if ($attempt === $text->base64_encode("0")) $message = "Já existe um usuário com esse e-mail.";
+
+
 ?>
 <html>
 <head>
@@ -27,23 +38,27 @@ if (not_empty($username)) $username = $text->base64_decode($username);
                     <img src="<?= $static->getImagePath("ls-white-background-black-icon.png") ?>"
                          alt="Leonardo Scapinello"/>
                 </a>
-                <h2>Crie sua conta grátis.</h2>
+                <?php if (not_empty($attempt) && not_empty($message)) { ?>
+                    <h2 style="color: #ed145b"><?=$message?></h2>
+                <?php } else { ?>
+                    <h2>Crie sua conta grátis.</h2>
+                <?php } ?>
             </div>
             <div class="inputs">
 
-                <?php if ($accountsTemporaryRegister->getFirstName() !== null) { ?>
+                <?php if ($accountsTemporaryRegister->getFirstName() !== "") { ?>
                     <p class="text white" style="color: #FFFFFF;padding: 10px 20px;line-height: 22px;font-size: 14px">
                         Opa, <b><?= $accountsTemporaryRegister->getFirstName() ?></b>, tudo bem por ai?<br/>Falta pouco
                         pra você criar sua conta grátis.</p>
                 <?php } ?>
 
 
-                <div class="input_line" <?= $accountsTemporaryRegister->getFirstName() !== null ? "style=\"display:none;\"" : "" ?>>
+                <div class="input_line" <?= $accountsTemporaryRegister->getFirstName() !== "" ? "style=\"display:none;\"" : "" ?>>
                     <input type="text" name="first_name" id="first_name"
                            value="<?= $accountsTemporaryRegister->getFirstName() ?>" placeholder="Nome"
                            autocomplete="off"/>
                 </div>
-                <div class="input_line" <?= $accountsTemporaryRegister->getLastName() !== null ? "style=\"display:none;\"" : "" ?>>
+                <div class="input_line" <?= $accountsTemporaryRegister->getLastName() !== "" ? "style=\"display:none;\"" : "" ?>>
                     <input type="text" name="last_name" id="last_name"
                            value="<?= $accountsTemporaryRegister->getLastName() ?>" placeholder="Sobrenome"
                            autocomplete="off"/>

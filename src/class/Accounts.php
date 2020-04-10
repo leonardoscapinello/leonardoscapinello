@@ -41,18 +41,37 @@ class Accounts
         global $security;
         global $session;
         try {
+
+            error_log("resetPassword()----------------");
+            error_log($new . " / " . $confirm_new);
+
             if (strlen($new) > 5 && strlen($confirm_new) > 5) {
+                error_log("yes, its bigger than 5 chars");
                 if ($new === $confirm_new) {
+                    error_log("yes, its equals");
                     if (notempty($this->getIdAccount())) {
+                        error_log("yes, id account is not empty");
                         if ($numeric->isIdentity($this->getIdAccount())) {
+                            error_log("yes, its identity");
+
                             $security->setIdAccount($this->getIdAccount());
                             $pw = $security->hash($confirm_new, false);
+                            error_log("yes, the encrypt is $pw");
                             $pw = $security->encrypt($pw);
+
+
+                            error_log("yes, the hash is $pw");
+
                             $database->query("UPDATE accounts SET password = ? WHERE id_account = ?");
                             $database->bind(1, $pw);
                             $database->bind(2, $this->getIdAccount());
                             $database->execute();
+
+                            error_log("yes, the update is done with password: $pw");
+
+
                             $session->logoutFromAllSessions($this->getIdAccount());
+
                             return true;
                         }
                     }
@@ -64,24 +83,34 @@ class Accounts
         return false;
     }
 
-    public function register($first_name, $last_name, $email_address, $password)
+    public function register($first_name, $last_name, $email_address, $password, $phone = null)
     {
         global $database;
         global $security;
         $id = 0;
         try {
 
-            $database->query("INSERT INTO accounts (username, email, first_name, last_name) VALUES (?,?,?,?)");
+            $phone = preg_replace("/[^0-9]/", "", $phone);
+
+            if (strlen($first_name) < 3) return -1;
+            if (strlen($last_name) < 3) return -2;
+            if (strlen($email_address) < 6) return -3;
+            if (strlen($password) < 6) return -4;
+            if (strlen($phone) < 5) return -5;
+
+            $database->query("INSERT INTO accounts (username, email, first_name, last_name, phone_number) VALUES (?,?,?,?,?)");
             $database->bind(1, $email_address);
             $database->bind(2, $email_address);
             $database->bind(3, $first_name);
             $database->bind(4, $last_name);
+            $database->bind(5, $phone);
             $database->execute();
 
             $id = $database->lastInsertId();
+            error_log("user used [$password] as password");
+
 
             $tmp_account = new Accounts($id);
-
             $tmp_account->resetPassword($password, $password);
 
 
@@ -89,6 +118,7 @@ class Accounts
             echo $exception;
             error_log($exception);
         }
+        error_log("REG" . $id);
         return $id;
     }
 
