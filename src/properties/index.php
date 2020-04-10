@@ -1,8 +1,8 @@
 <?php
-ini_set ('display_errors', 'on');
-ini_set ('log_errors', 'on');
-ini_set ('display_startup_errors', 'on');
-ini_set ('error_reporting', E_ALL);
+ini_set('display_errors', 'on');
+ini_set('log_errors', 'on');
+ini_set('display_startup_errors', 'on');
+ini_set('error_reporting', E_ALL);
 date_default_timezone_set("America/Sao_Paulo");
 if (!isset($_SESSION)) {
     session_start();
@@ -95,19 +95,18 @@ $session = new AccountSession();
 $accounts = $account = new Accounts();
 $accountsTemporaryRegister = new AccountTemporary();
 
-
-//$less->compileFile(DIRNAME . "../../static/less/stylesheet.less", DIRNAME . "../../static/stylesheet/stylesheet.css");
-
-//$static->add(DIRNAME . "../../static/stylesheet/fontawesome.all.min.css");
-//$static->add(DIRNAME . "../../static/stylesheet/reset.css");
-//$static->add(DIRNAME . "../../static/stylesheet/container.css");
-//$static->add(DIRNAME . "../../static/stylesheet/stylesheet.css");
-//$static->add(DIRNAME . "../../static/stylesheet/tooltip.css");
-//$static->add(DIRNAME . "../../static/fonts/gilroy/Gilroy.css");
-//$static->setOutputFile(DIRNAME . "../../static/stylesheet/stylesheet");
-//$static->addReplace("../images/", SITE_URL . "static/images/");
-//$static->addReplace("../fonts/", SITE_URL . "static/fonts/");
-//$static->compileCSS();
-
+if (get_request("recompile") !== null) {
+    $less->compileFile(DIRNAME . "../../static/less/stylesheet.less", DIRNAME . "../../static/stylesheet/stylesheet.css");
+    $static->add(DIRNAME . "../../static/stylesheet/fontawesome.all.min.css");
+    $static->add(DIRNAME . "../../static/stylesheet/reset.css");
+    $static->add(DIRNAME . "../../static/stylesheet/container.css");
+    $static->add(DIRNAME . "../../static/stylesheet/stylesheet.css");
+    $static->add(DIRNAME . "../../static/stylesheet/tooltip.css");
+    $static->add(DIRNAME . "../../static/fonts/gilroy/Gilroy.css");
+    $static->setOutputFile(DIRNAME . "../../static/stylesheet/stylesheet");
+    $static->addReplace("../images/", SITE_URL . "static/images/");
+    $static->addReplace("../fonts/", SITE_URL . "static/fonts/");
+    $static->compileCSS();
+}
 
 ob_start("sanitize_output");
