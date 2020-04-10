@@ -2,12 +2,9 @@
 require_once("./src/properties/index.php");
 $p = get_request("p");
 $home = false;
-if ($p === "index.php") $home = !$home;
+if ($p === "index.php" || $p === "" || $p === null) $home = true;
 
 $page = new Pages($p);
-
-
-
 ?>
 <html>
 <head>

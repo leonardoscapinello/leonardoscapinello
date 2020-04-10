@@ -128,9 +128,6 @@ class AccountSession
                 $post_password = $security->hash($this->password, false);
 
 
-                error_log("createSession()---------------");
-                error_log($db_password);
-                error_log($post_password);
 
                 if ($db_password === $post_password) return $this->storeSessionCookie($resultset[0]['id_account']);
 
