@@ -9,7 +9,7 @@
                 <div class="col-xl-6 col-lg-6 col-sm-12">
                     <div class="superior-space">
                         <h2 class="text white">Seu negócio ainda atua de forma desconectada? Melhore agora!</h2>
-                        <p class="text white topmargin">Meu nome é Leonardo e desde 2012 atuo constrindo a imagem de
+                        <p class="text white topmargin">Meu nome é Leonardo e desde 2012 atuo construindo a imagem de
                             empresas locais num
                             ambiente global. Favorecendo o crescimento local por meio de uma identidade
                             sólida e firme sobre sua marca.</p>

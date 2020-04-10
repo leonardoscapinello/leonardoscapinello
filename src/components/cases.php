@@ -15,7 +15,7 @@
 
             <div class="customer-image customer-widget">
                 <div class="customer-logo">
-                    <img src="<?=$static->getImagePath("customers/grupo-pizza-express-grey.png")?>"
+                    <img src="<?=$static->getImagePath("grupo-pizza-express-grey.png", "customers")?>"
                          alt="Logotipo do Grupo Pizza Express"/>
                 </div>
                 <div class="customer-name">
@@ -25,7 +25,7 @@
 
             <div class="customer-image customer-widget">
                 <div class="customer-logo">
-                    <img src="<?=$static->getImagePath("customers/oppy-tecnologia-e-sistemas-grey.png")?>"
+                    <img src="<?=$static->getImagePath("oppy-tecnologia-e-sistemas-grey.png", "customers")?>"
                          alt="Logotipo da Lima Empreendimentos"/>
                 </div>
                 <div class="customer-name">
@@ -35,7 +35,7 @@
 
             <div class="customer-image customer-widget">
                 <div class="customer-logo">
-                    <img src="<?=$static->getImagePath("customers/lima-empreendimentos-grey.png")?>"
+                    <img src="<?=$static->getImagePath("lima-empreendimentos-grey.png", "customers")?>"
                          alt="Logotipo da Lima Empreendimentos"/>
                 </div>
                 <div class="customer-name">
@@ -46,7 +46,7 @@
 
             <div class="customer-image customer-widget">
                 <div class="customer-logo">
-                    <img src="<?=$static->getImagePath("customers/rbwgrupo-grey.png")?>"
+                    <img src="<?=$static->getImagePath("rbwgrupo-grey.png", "customers")?>"
                          alt="Logotipo da RBWGrupo"/>
                 </div>
                 <div class="customer-name">
@@ -56,7 +56,7 @@
 
             <div class="customer-image customer-widget">
                 <div class="customer-logo">
-                    <img src="<?=$static->getImagePath("customers/pizzaria-italia-maua-grey.png")?>"
+                    <img src="<?=$static->getImagePath("pizzaria-italia-maua-grey.png", "customers")?>"
                          alt="Logotipo da Pizzaria Itália em Mauá"/>
                 </div>
                 <div class="customer-name">
@@ -66,7 +66,7 @@
 
             <div class="customer-image customer-widget">
                 <div class="customer-logo">
-                    <img src="<?=$static->getImagePath("customers/quattromodas-grey.png")?>"
+                    <img src="<?=$static->getImagePath("quattromodas-grey.png", "customers")?>"
                          alt="Logotipo da QuattroModas"/>
                 </div>
                 <div class="customer-name">

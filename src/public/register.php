@@ -23,26 +23,48 @@ if (not_empty($username)) $username = $text->base64_decode($username);
     <form action="<?= LOGIN_URL ?>/createaccount" method="POST">
         <div class="authentibox">
             <div class="company">
-                <img src="<?= $static->getImagePath("ls-white-background-black-icon.png") ?>"
-                     alt="Leonardo Scapinello"/>
+                <a href="<?= SITE_URL ?>" style="margin: 0;">
+                    <img src="<?= $static->getImagePath("ls-white-background-black-icon.png") ?>"
+                         alt="Leonardo Scapinello"/>
+                </a>
                 <h2>Crie sua conta grátis.</h2>
             </div>
             <div class="inputs">
-                <div class="input_line">
-                    <input type="text" name="first_name" id="first_name" placeholder="Nome" autocomplete="off"/>
+
+                <?php if ($accountsTemporaryRegister->getFirstName() !== null) { ?>
+                    <p class="text white" style="color: #FFFFFF;padding: 10px 20px;line-height: 22px;font-size: 14px">
+                        Opa, <b><?= $accountsTemporaryRegister->getFirstName() ?></b>, tudo bem por ai?<br/>Falta pouco
+                        pra você criar sua conta grátis.</p>
+                <?php } ?>
+
+
+                <div class="input_line" <?= $accountsTemporaryRegister->getFirstName() !== null ? "style=\"display:none;\"" : "" ?>>
+                    <input type="text" name="first_name" id="first_name"
+                           value="<?= $accountsTemporaryRegister->getFirstName() ?>" placeholder="Nome"
+                           autocomplete="off"/>
+                </div>
+                <div class="input_line" <?= $accountsTemporaryRegister->getLastName() !== null ? "style=\"display:none;\"" : "" ?>>
+                    <input type="text" name="last_name" id="last_name"
+                           value="<?= $accountsTemporaryRegister->getLastName() ?>" placeholder="Sobrenome"
+                           autocomplete="off"/>
+                </div>
+                <div class="input_line" <?= $accountsTemporaryRegister->getEmail() !== null ? "style=\"display:none;\"" : "" ?>>
+                    <input type="text" name="username" id="username"
+                           value="<?= $accountsTemporaryRegister->getEmail() ?>" placeholder="E-mail"
+                           autocomplete="off"/>
+                </div>
+                <div class="input_line" <?= $accountsTemporaryRegister->getPhone() !== null ? "style=\"display:none;\"" : "" ?>>
+                    <input type="text" name="phone" id="phone" class="phone_with_ddd"
+                           value="<?= $accountsTemporaryRegister->getPhone() ?>"
+                           placeholder="WhatsApp" autocomplete="off"/>
                 </div>
                 <div class="input_line">
-                    <input type="text" name="last_name" id="last_name" placeholder="Sobrenome" autocomplete="off"/>
-                </div>
-                <div class="input_line">
-                    <input type="text" name="username" id="username" placeholder="E-mail" autocomplete="off"/>
-                </div>
-                <div class="input_line">
-                    <input type="password" name="password" id="password" placeholder="Senha" autocomplete="off"/>
+                    <input type="password" name="password" id="password" value="" placeholder="Senha"
+                           autocomplete="off"/>
                 </div>
                 <div class="input_line bt" align="center">
                     <button class="btn">Criar Conta</button>
-                    <a href="<?=LOGIN_URL?>">Já tenho cadastro. Entrar.</a>
+                    <a href="<?= LOGIN_URL ?>">Já tenho cadastro. Entrar.</a>
                 </div>
             </div>
         </div>
@@ -50,7 +72,6 @@ if (not_empty($username)) $username = $text->base64_decode($username);
 </div>
 
 
-<script src="./static/javascript/jquery.min.js"></script>
-<script src="./static/javascript/jquery-ui.min.js"></script>
+<?php require_once(DIRNAME . "../components/footer-scripts.php") ?>
 </body>
 </html>

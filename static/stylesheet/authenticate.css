@@ -8,7 +8,8 @@ body {
 }
 
 body ::-webkit-input-placeholder {
-    color: #4d4d4d;
+    color: rgba(255, 255, 255, .5);
+    letter-spacing: 0;
 }
 
 .authentibox {
@@ -24,6 +25,10 @@ body ::-webkit-input-placeholder {
     border-top: 2px solid rgb(237, 20, 91);
     box-sizing: border-box;
     padding-bottom: 50px;
+}
+
+input[type="password"] {
+    letter-spacing: 5px;
 }
 
 
@@ -58,7 +63,7 @@ body ::-webkit-input-placeholder {
     width: 100%;
     display: block;
     background: #1d1d1d;
-    color: #4d4d4d;
+    color: #ffffff;
     border: none;
     line-height: 30px;
     border-top: 1px #3d3d3d solid;

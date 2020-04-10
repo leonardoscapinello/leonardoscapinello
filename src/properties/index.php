@@ -5,16 +5,19 @@ if (!isset($_SESSION)) {
 }
 
 define("DIRNAME", dirname(__FILE__) . "/");
-define("SITE_URL", "http://localhost/leonardoscapinello/");
+define("SITE_NAME", "Leonardo Scapinello");
+define("SITE_URL", "http://flexwei-sv1.site/leonardoscapinello/");
 define("LOGIN_URL", SITE_URL . "login");
 define("LOGOUT_URL", SITE_URL . "logout");
 define("ACCOUNT_PROFILE", SITE_URL . "meu-perfil");
 define("REGISTER_URL", SITE_URL . "register");
+define("REGISTER_URL_SMALL_FORM_COOKIE", SITE_URL . "register/store");
 define("RECOVERY_URL", SITE_URL . "recovery");
 
 define("BLOG", SITE_URL . "blog/");
 define("BLOG_POST_PAGE", "{id}/{title}");
 define("BLOG_ADMIN_EDIT_POST", SITE_URL . "b/edit-post");
+define("BLOG_ADMIN_PUBLISH_POST", SITE_URL . "b/publish");
 define("BLOG_ADMIN_SAVE_PARAGRAPH", SITE_URL . "b/save-paragraph");
 define("BLOG_ADMIN_ADD_MEDIA", SITE_URL . "b/add-media");
 define("BLOG_UPLOADED_FILES_PATH", SITE_URL . "b/media/");
@@ -44,6 +47,7 @@ require_once(DIRNAME . "/../class/Database.php");
 require_once(DIRNAME . "/../class/Campaign.php");
 require_once(DIRNAME . "/../class/Accounts.php");
 require_once(DIRNAME . "/../class/AccountSession.php");
+require_once(DIRNAME . "/../class/AccountTemporary.php");
 require_once(DIRNAME . "/../class/Security.php");
 require_once(DIRNAME . "/../class/StaticCompiler.php");
 require_once(DIRNAME . "/../class/SocialAnalytics.php");
@@ -63,6 +67,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
+
 $mail = new PHPMailer(true);
 
 
@@ -76,8 +81,6 @@ $token = new Token();
 $date = new Date();
 $emailNotification = new EmailNotification();
 
-
-
 $database = new Database();
 
 $database->query('SET NAMES utf8');
@@ -86,6 +89,7 @@ $database->execute();
 $security = new Security();
 $session = new AccountSession();
 $accounts = $account = new Accounts();
+$accountsTemporaryRegister = new AccountTemporary();
 
 
 $less->compileFile(DIRNAME . "../../static/less/stylesheet.less", DIRNAME . "../../static/stylesheet/stylesheet.css");

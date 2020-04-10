@@ -10,9 +10,9 @@
                             </div>
                             <div class="col-xl-7 col-lg-7 col-sm-12">
                                 <ul>
-                                    <li><a href="/termos/politica-de-privacidade">Política de Privacidade</a></li>
-                                    <li><a href="/termos/termos-de-uso">Termos de Uso</a></li>
-                                    <li><a href="/ajuda">Suporte</a></li>
+                                    <li><a href="<?=SITE_URL?>termos/politica-de-privacidade">Política de Privacidade</a></li>
+                                    <li><a href="<?=SITE_URL?>termos/termos-de-uso">Termos de Uso</a></li>
+                                    <li><a href="<?=SITE_URL?>ajuda">Suporte</a></li>
                                 </ul>
                             </div>
                         </div>

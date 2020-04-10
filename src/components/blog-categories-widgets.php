@@ -11,7 +11,7 @@ if (count($categories) > 0) {
                     <div class="row">
                         <div class="col-xl-8 col-lg-8 col-sm-12">
                             <div class="blog-release-notifications text " style="float: left;margin-right: 15px"
-                                 tooltip="Ativar notificações" flow="top">
+                                 tooltip="Ativar notificações" onClick="enableNotifications('<?= $categories[$i]['category_name'] ?>');" flow="top">
                                 <button class="btn btn--transparent"><i class="far fa-bell"></i></button>
                             </div>
                             <h3><?= $categories[$i]['category_name'] ?></h3>

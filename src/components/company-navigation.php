@@ -17,9 +17,8 @@
                         <li><a href="<?= SITE_URL ?>empresa-online" title="Sua Empresa Online">Sua
                                 Empresa
                                 Online</a></li>
-                        <li><a href="<?= SITE_URL ?>entrar-em-contato">Contato </a></li>
-                        <li><a href="<?= SITE_URL ?>baixar-ebook-gratis">Baixar E-book Grátis
-                                <span class="stamp">Novo</span>
+                        <li><a href="<?= SITE_URL ?>metodo-carbon">Método CarbOn
+                                <span class="stamp">Pré-venda</span>
                             </a></li>
                         <?php if ($session->isLogged()) { ?>
                             <li class="only-mobile account">

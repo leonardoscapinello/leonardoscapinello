@@ -22,7 +22,10 @@
     "phpmailer/phpmailer": "^6.1",
     "html2text/html2text": "^4.2",
     "ext-mbstring": "*",
-    "ext-gd": "*"
+    "ext-gd": "*",
+    "spatie/image-optimizer": "^1.2",
+    "ps/image-optimizer": "^2.0",
+    "algorithmia/algorithmia": "^1.0"
   },
   "config": {
     "vendor-dir": "src/vendor/"

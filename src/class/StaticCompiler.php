@@ -99,6 +99,7 @@ class StaticCompiler
         return SITE_URL . "static/javascript/" . $filename;
     }
 
+    /*
     private function getImagePath_Address($filename, $campaign = null)
     {
         if ($filename === null || $filename === "") return null;
@@ -115,6 +116,7 @@ class StaticCompiler
 
     public function getImagePath($filename, $campaign = null)
     {
+        global $optimizerChain;
         $address = $this->getImagePath_Address($filename, $campaign);
 
         if ($address === null) return null;
@@ -125,6 +127,112 @@ class StaticCompiler
         } else {
             return $filename;
         }
+    }*/
+
+    private function getCampaignMain($campaign)
+    {
+        if ($campaign === "blog@cover") {
+            $path = DIRNAME . "../../static/uploads/blog/cover/";
+        } else if ($campaign === "customers") {
+            $path = DIRNAME . "../../static/images/customers/";
+        } else {
+            $path = DIRNAME . "../../campaigns/" . $campaign . "/media/";
+        }
+        return $path;
+    }
+
+    private function getImagePath_Address($filename, $campaign = null, $output = false)
+    {
+        $pathInfo = pathinfo($filename);
+        $ext = $pathInfo['extension'];
+        $file = $pathInfo['filename'];
+        $fileFinal = $file . "." . $ext;
+        $path = DIRNAME . "../../static/images/";
+        if (not_empty($campaign)) {
+            $path = $this->getCampaignMain($campaign);
+        }
+        if ($output) {
+            $fileFinal = md5($file) . "." . $ext;
+            $path = DIRNAME . "../../static/images-compressed/";
+        }
+
+
+        return $path . $fileFinal;
+    }
+
+    private function getImagePath_URL($filename, $campaign = null, $compressed = false)
+    {
+        if ($filename === null || $filename === "") return null;
+        $pathInfo = pathinfo($filename);
+        $ext = $pathInfo['extension'];
+        $file = $pathInfo['filename'];
+        $fileFinal = $file . "." . $ext;
+
+        $path = SITE_URL . "static/images/" . $fileFinal;
+        if ($compressed) {
+            $fileFinal = md5($file) . "." . $ext;
+            $path = SITE_URL . "static/ic/" . $fileFinal;
+        } else if (not_empty($campaign)) {
+            if ($campaign === "blog@cover") {
+                $path = BLOG_COVER_PATH . $fileFinal;
+            } else if ($campaign === "customers") {
+                $path = SITE_URL . "static/images/customers/" . $fileFinal;
+            } else {
+                $path = SITE_URL . "c/" . $campaign . "/media/" . $fileFinal;
+            }
+        }
+        $file_headers = @get_headers($path);
+        if (stripos($file_headers[0], "404 Not Found") > 0 || (stripos($file_headers[0], "302 Found") > 0 && stripos($file_headers[7], "404 Not Found") > 0)) {
+            return null;
+        } else {
+            return $path;
+        }
+    }
+
+    private function compress($source, $destination, $quality)
+    {
+        $info = getimagesize($source);
+        $image = "";
+
+        if ($info['mime'] == 'image/jpeg') {
+            $image = imagecreatefromjpeg($source);
+
+        } elseif ($info['mime'] == 'image/gif') {
+            $image = imagecreatefromgif($source);
+
+        } elseif ($info['mime'] == 'image/png') {
+            $image = imagecreatefrompng($source);
+            imageAlphaBlending($image, true);
+            imageSaveAlpha($image, true);
+        }
+
+        if ($image !== "") {
+            imagepng($image, $destination, $quality);
+            return $destination;
+        }
+    }
+
+    public function getImagePath($filename, $campaign = null)
+    {
+        global $optimizerChain;
+        if ($filename !== null) {
+
+            try {
+                $pathToImage = $this->getImagePath_Address($filename, $campaign);
+                $pathToOutput = $this->getImagePath_Address($filename, $campaign, true);
+
+                if (file_exists($pathToOutput)) {
+                    return $this->getImagePath_URL($filename, $campaign, true);
+                } else {
+                    $this->compress($pathToImage, $pathToOutput, 9);
+                    return $this->getImagePath_URL($filename, $campaign, false);
+                }
+
+            } catch (Exception $exception) {
+                error_log($exception);
+            }
+        }
+        return true;
     }
 
 

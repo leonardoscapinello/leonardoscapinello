@@ -60,15 +60,12 @@ class BlogContent
         global $token;
         $id = 0;
         try {
-
             if (not_empty($post_content) && strlen($post_content) > 5) {
                 $id_account = $accounts->getIdAccount();
                 $html2TextConverter = new \Html2Text\Html2Text($post_content);
-
                 $post_content = $html2TextConverter->getHtml();
                 $post_content_clean = $html2TextConverter->getText();
                 $post_content_clean_minified = str_replace(array("\r", "\n"), " ", $post_content_clean);
-
                 $database->query("UPDATE blog_content SET id_author = ?, content = ?, content_clean = ?, content_clean_minified = ? WHERE id_content = ?");
                 $database->bind(1, $id_account);
                 $database->bind(2, $post_content);
@@ -77,19 +74,18 @@ class BlogContent
                 $database->bind(5, $id_content);
                 $database->execute();
                 $id = $id_content;
-
             } else {
                 $database->query("UPDATE blog_content SET is_active = 'N' WHERE id_content = ?");
                 $database->bind(1, $id_content);
                 $database->execute();
                 $id = $id_content;
             }
-
         } catch (Exception $exception) {
             error_log($exception);
         }
         return $id;
     }
+
 
     public function getAllByPost($id_blog, $edit = false)
     {

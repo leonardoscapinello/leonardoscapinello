@@ -21,7 +21,7 @@ $cover = $static->getImagePath($blog->getPostCover(), "blog@cover");
                                     <div class="post-data">
                                         <ul>
                                             <li><i class="far fa-clock"></i> 22/10/2020</li>
-                                            <li><i class="far fa-user"></i> <?= $author->getFullName() ?></li>
+                                            <li><i class="far fa-user"></i> <?= $blog->getAuthor() ?></li>
                                             <li><?= $blog->getCategoryStamp() ?></li>
                                         </ul>
                                     </div>

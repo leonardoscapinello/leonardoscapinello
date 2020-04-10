@@ -6,6 +6,8 @@ if ($p === "index.php") $home = !$home;
 
 $page = new Pages($p);
 
+
+
 ?>
 <html>
 <head>
@@ -36,12 +38,14 @@ $page = new Pages($p);
             require_once(DIRNAME . "../components/about-me.php");
             require_once(DIRNAME . "../components/cases.php");
         }
-    }else{
+    } else {
         require_once(DIRNAME . "../components/header.php");
+        echo "<div class=\"page-ctn\">";
+        $page->getContent() ? require_once($page->getContent()) : "";
+        echo "</div>";
     }
 
     require_once(DIRNAME . "../components/footer.php");
-    require_once(DIRNAME . "../components/footer-scripts.php");
     ?>
 </div>
 

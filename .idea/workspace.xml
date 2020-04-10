@@ -2,22 +2,318 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="038f153c-938b-4cd1-b7d1-679edc51ddf9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/class/EmailNotification.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/countdown/countdown-clock.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/countdown/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/blog/XZIs9hO0f6NFBmTjl1Kzk5LY5hwpfbggMoDLBJlWPgvNPTYkR1nhVT17YnuZvqAH-97a55b2b-fc75-4a79-ab6d-0600f485c791.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/blog/cover/ySl70RFBFi5gckX0F6Z01tx7sIgUeI4LpIsO8Xzs8eBiWdrZnSk8FZgnoesbDVlO-820e649f-2b51-44cc-900b-8f1db2d8d258.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/uploads/blog/vl6VGm2QWhVq1Aamp4GavYr4VnEIpAxzBNzr5oD0xL3nrhER0JEyn91vXhXXp3l6-7cf0f52f-2a59-4209-b850-ab4f2bc43a87.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/publish-post.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/class/AccountTemporary.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/start-register-widget.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/metodo-carbon.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/public/register-small-campaign-cookie.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/algorithmia/algorithmia/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/algorithmia/algorithmia/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/algorithmia/algorithmia/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/algorithmia/algorithmia/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/algorithmia/algorithmia/composer.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/algorithmia/algorithmia/examples/assets/cows.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/algorithmia/algorithmia/examples/assets/todo_list.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/algorithmia/algorithmia/examples/jons_basic_test.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/algorithmia/algorithmia/examples/jons_file_test.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/algorithmia/algorithmia/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/algorithmia/algorithmia/phpunit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/algorithmia/algorithmia/src/Algorithmia.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/algorithmia/algorithmia/src/Algorithmia/ACL.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/algorithmia/algorithmia/src/Algorithmia/AlgoException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/algorithmia/algorithmia/src/Algorithmia/AlgoResponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/algorithmia/algorithmia/src/Algorithmia/Algorithm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/algorithmia/algorithmia/src/Algorithmia/ByteArray.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/algorithmia/algorithmia/src/Algorithmia/Client.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/algorithmia/algorithmia/src/Algorithmia/DataConnectors.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/algorithmia/algorithmia/src/Algorithmia/DataDirectory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/algorithmia/algorithmia/src/Algorithmia/DataFile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/algorithmia/algorithmia/src/Algorithmia/DataObject.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/algorithmia/algorithmia/src/Algorithmia/HttpClient.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/algorithmia/algorithmia/tests/BaseTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/algorithmia/algorithmia/tests/Client/ClientACLTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/algorithmia/algorithmia/tests/Client/ClientBinaryTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/algorithmia/algorithmia/tests/Client/ClientDataDirectoryTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/algorithmia/algorithmia/tests/Client/ClientDataFileTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/algorithmia/algorithmia/tests/Client/ClientEnvironmentTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/algorithmia/algorithmia/tests/Client/ClientJsonTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/algorithmia/algorithmia/tests/Client/ClientTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/algorithmia/algorithmia/tests/Client/ClientUnicodeTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/algorithmia/algorithmia/tests/bootstrap.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/algorithmia/algorithmia/tests/opencv_example.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/algorithmia/algorithmia/tests/test_example.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/composer/autoload_files.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/.php_cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/UPGRADING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/Client.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/ClientInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/Cookie/CookieJar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/Cookie/CookieJarInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/Cookie/FileCookieJar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/Cookie/SessionCookieJar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/Cookie/SetCookie.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/Exception/BadResponseException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/Exception/ClientException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/Exception/ConnectException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/Exception/GuzzleException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/Exception/InvalidArgumentException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/Exception/SeekException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/Exception/ServerException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/Exception/TooManyRedirectsException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/Exception/TransferException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/Handler/CurlFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/Handler/CurlFactoryInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/Handler/CurlHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/Handler/CurlMultiHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/Handler/EasyHandle.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/Handler/MockHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/Handler/Proxy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/Handler/StreamHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/HandlerStack.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/MessageFormatter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/Middleware.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/Pool.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/PrepareBodyMiddleware.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/RedirectMiddleware.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/RequestOptions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/RetryMiddleware.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/TransferStats.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/UriTemplate.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/functions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle/src/functions_include.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/promises/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/promises/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/promises/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/promises/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/promises/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/promises/src/AggregateException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/promises/src/CancellationException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/promises/src/Coroutine.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/promises/src/EachPromise.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/promises/src/FulfilledPromise.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/promises/src/Promise.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/promises/src/PromiseInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/promises/src/PromisorInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/promises/src/RejectedPromise.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/promises/src/RejectionException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/promises/src/TaskQueue.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/promises/src/TaskQueueInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/promises/src/functions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/promises/src/functions_include.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/psr7/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/psr7/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/psr7/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/psr7/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/psr7/src/AppendStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/psr7/src/BufferStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/psr7/src/CachingStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/psr7/src/DroppingStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/psr7/src/FnStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/psr7/src/InflateStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/psr7/src/LazyOpenStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/psr7/src/LimitStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/psr7/src/MessageTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/psr7/src/MultipartStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/psr7/src/NoSeekStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/psr7/src/PumpStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/psr7/src/Request.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/psr7/src/Response.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/psr7/src/Rfc7230.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/psr7/src/ServerRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/psr7/src/Stream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/psr7/src/StreamDecoratorTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/psr7/src/StreamWrapper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/psr7/src/UploadedFile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/psr7/src/Uri.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/psr7/src/UriNormalizer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/psr7/src/UriResolver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/psr7/src/functions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/guzzlehttp/psr7/src/functions_include.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/ps/image-optimizer/.github/FUNDING.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/ps/image-optimizer/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/ps/image-optimizer/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/ps/image-optimizer/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/ps/image-optimizer/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/ps/image-optimizer/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/ps/image-optimizer/src/ImageOptimizer/ChainOptimizer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/ps/image-optimizer/src/ImageOptimizer/ChangedOutputOptimizer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/ps/image-optimizer/src/ImageOptimizer/Command.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/ps/image-optimizer/src/ImageOptimizer/CommandOptimizer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/ps/image-optimizer/src/ImageOptimizer/Exception/CommandNotFound.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/ps/image-optimizer/src/ImageOptimizer/Exception/Exception.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/ps/image-optimizer/src/ImageOptimizer/Optimizer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/ps/image-optimizer/src/ImageOptimizer/OptimizerFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/ps/image-optimizer/src/ImageOptimizer/SmartOptimizer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/ps/image-optimizer/src/ImageOptimizer/SuppressErrorOptimizer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/ps/image-optimizer/src/ImageOptimizer/TypeGuesser/ExtensionTypeGuesser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/ps/image-optimizer/src/ImageOptimizer/TypeGuesser/GdTypeGuesser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/ps/image-optimizer/src/ImageOptimizer/TypeGuesser/SmartTypeGuesser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/ps/image-optimizer/src/ImageOptimizer/TypeGuesser/TypeGuesser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/ps/image-optimizer/src/ImageOptimizer/WrapperOptimizer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/psr/log/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/psr/log/Psr/Log/AbstractLogger.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/psr/log/Psr/Log/InvalidArgumentException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/psr/log/Psr/Log/LogLevel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/psr/log/Psr/Log/LoggerAwareInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/psr/log/Psr/Log/LoggerAwareTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/psr/log/Psr/Log/LoggerInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/psr/log/Psr/Log/LoggerTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/psr/log/Psr/Log/NullLogger.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/psr/log/Psr/Log/Test/DummyTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/psr/log/Psr/Log/Test/LoggerInterfaceTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/psr/log/Psr/Log/Test/TestLogger.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/psr/log/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/psr/log/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/ralouphie/getallheaders/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/ralouphie/getallheaders/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/ralouphie/getallheaders/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/ralouphie/getallheaders/src/getallheaders.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/spatie/image-optimizer/.styleci.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/spatie/image-optimizer/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/spatie/image-optimizer/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/spatie/image-optimizer/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/spatie/image-optimizer/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/spatie/image-optimizer/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/spatie/image-optimizer/src/DummyLogger.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/spatie/image-optimizer/src/Image.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/spatie/image-optimizer/src/Optimizer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/spatie/image-optimizer/src/OptimizerChain.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/spatie/image-optimizer/src/OptimizerChainFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/spatie/image-optimizer/src/Optimizers/BaseOptimizer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/spatie/image-optimizer/src/Optimizers/Cwebp.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/spatie/image-optimizer/src/Optimizers/Gifsicle.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/spatie/image-optimizer/src/Optimizers/Jpegoptim.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/spatie/image-optimizer/src/Optimizers/Optipng.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/spatie/image-optimizer/src/Optimizers/Pngquant.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/spatie/image-optimizer/src/Optimizers/Svgo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/options-resolver/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/options-resolver/Debug/OptionsResolverIntrospector.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/options-resolver/Exception/AccessException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/options-resolver/Exception/ExceptionInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/options-resolver/Exception/InvalidArgumentException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/options-resolver/Exception/InvalidOptionsException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/options-resolver/Exception/MissingOptionsException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/options-resolver/Exception/NoConfigurationException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/options-resolver/Exception/NoSuchOptionException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/options-resolver/Exception/OptionDefinitionException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/options-resolver/Exception/UndefinedOptionsException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/options-resolver/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/options-resolver/Options.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/options-resolver/OptionsResolver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/options-resolver/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/options-resolver/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/process/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/process/Exception/ExceptionInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/process/Exception/InvalidArgumentException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/process/Exception/LogicException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/process/Exception/ProcessFailedException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/process/Exception/ProcessSignaledException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/process/Exception/ProcessTimedOutException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/process/Exception/RuntimeException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/process/ExecutableFinder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/process/InputStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/process/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/process/PhpExecutableFinder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/process/PhpProcess.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/process/Pipes/AbstractPipes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/process/Pipes/PipesInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/process/Pipes/UnixPipes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/process/Pipes/WindowsPipes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/process/Process.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/process/ProcessUtils.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/process/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vendor/symfony/process/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images-compressed/0b6d855156b112c9fb30332272248123.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images-compressed/48498977fa666a1b682c93eb0f165b3e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images-compressed/5ac3e3980b3ea81bc4004203bec5d70f.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images-compressed/6b531eda3e6bd3cdd107a48a36758cca.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images-compressed/bb04898cd00be7c18b08279f4ec72c12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images-compressed/c954282842501759f914151690c99e0b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images-compressed/cce04298b800d39f25b0119c90695713.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images-compressed/cf778d9ae3990cb89d4ece2b8065b534.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images-compressed/d9fabb249d07f4410b1fdf295cb5c217.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images-compressed/e93c8d5290eacaaec65752b0a5b6beaf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images-compressed/f68ef59fa9f80ac0b52e927ed1659f5f.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images-compressed/fd82c075a64acbe7e2a6e79a6d84ba0c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/google-meu-negocio-resultados.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/leonardo-scapinello-flip.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/livro-metodo-carbon-disclaimer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/livro-metodo-carbon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/opovo-autonomos-temem-ficar-sem-sustento.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/javascript/jquery.mask.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/leonardoscapinello.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leonardoscapinello.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campaigns/20200325-sobreviva-ao-corona/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/campaigns/empresa-online/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campaigns/20200325-sobreviva-ao-corona/media/ebook-sobreviva-ao-corona.png" beforeDir="false" afterPath="$PROJECT_DIR$/campaigns/sobreviva-ao-corona/media/ebook-sobreviva-ao-corona.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campaigns/20200405-empresa-online/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/campaigns/sobreviva-ao-corona/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/class/AccountSession.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/AccountSession.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/class/Blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/Blog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/class/BlogContent.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/BlogContent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/class/EmailNotification.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/EmailNotification.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/class/Pages.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/Pages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/class/Upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/Upload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/notifications/preview-ebook.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/notifications/default.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/class/StaticCompiler.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/StaticCompiler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/about-me.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about-me.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blog-categories-widgets.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blog-categories-widgets.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blog-featured-widget.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blog-featured-widget.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blog-post-header-public.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blog-post-header-public.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cases.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cases.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/company-navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/company-navigation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer-scripts.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer-scripts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/series-widget.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/series-widget.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/empresa-online.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/empresa-online.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/properties/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/properties/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/search-api.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/search-api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendor/composer/autoload_namespaces.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/composer/autoload_namespaces.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/composer/autoload_real.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/javascript/leonardoscapinello.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/javascript/leonardoscapinello.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/less/stylesheet.less" beforeDir="false" afterPath="$PROJECT_DIR$/static/less/stylesheet.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/stylesheet/authenticate.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/stylesheet/authenticate.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/stylesheet/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/stylesheet/stylesheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/stylesheet/stylesheet.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/stylesheet/stylesheet.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/04HqTAYsG26PvGj9q9QMdQZn7TI3fcRV6mUIokSKWI0IbZViTFjCt9hbFMhcZa7I-ed834b1a-aba6-4134-abb2-3cd3524c04d8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/XZIs9hO0f6NFBmTjl1Kzk5LY5hwpfbggMoDLBJlWPgvNPTYkR1nhVT17YnuZvqAH-97a55b2b-fc75-4a79-ab6d-0600f485c791.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/cover/6vxJoQQ4b7Ufh2OYqcAC9TqLk1HW4sC0xT9GPpUOIK7pcZoYYnLREDlGwimPDP0F-b0fb6f25-bdbc-4b0a-9483-14dac11e4247.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/cover/7qnINxZQLlElP9TiNuYYlQ9chQTc0qmpyL6i4CWBBAPSmJCTlZT1IxQFQ2aPIfy7-7a1794fa-3085-4258-a6d1-a2030347ce6f.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/cover/CSQhMdXEWquyDtpSDfz5BGOqIEyHuCBUAkl9YPEMMH8xmrrJDs9bqOu6m867PKq3-19b73862-4c0b-4884-baa6-6cccbff4aa6f.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/cover/D1G0nx4JRkf7r7IZu9TR1DlgxCtq4zYqYazkGiPndqwFGs1bU81gLbniZOH8ZwKo-85fa962d-9d54-495b-9e8a-90c18f15ad3d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/cover/Ea7r9hFvzVueiDRmsQZKA27bQzUsQlxzn5fmThO7Xhiehv5hTG9JXnLix7Hy8qUx-e1096979-4583-4ae7-9d6a-9aae54af32c8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/cover/EyfkBkMO3NmixmKl4OFxGqHkVd1AzEmiZVmtjGxclphQSIpJ7hlUVKwQqoeOAVT6-84640bf5-a170-41dd-956d-7f6ef02d6030.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/cover/JYwZWSEStXbBKxgArQvg4YdHL9JdTk9ogjqwAxBfR0EU8Bz5u0d8G55bBHqyDRMh-5492c46b-4ee1-480c-8cbc-d134234fa97b.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/cover/S7Fd2dmnwowj0ajBRi57w5BCN807v2i8PCeoYacbmrWxV1IFeNT5hnvTYgj1jAik-212f6bd1-f420-44ca-8b69-14e6d3ace7df.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/cover/SUrIquRJOzaCxxssVVODbJ56qbIxWXuCP51Ao8uEMiztwNefJiueXRXkhClnz2AQ-288d3882-5a72-478e-bb58-0feb0bda1c26.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/cover/YyQ6ASc522vUfNu0G5VGIge5rcknLk4UyIxi3GfPsar52TWKsx8fFzCJ2f1kp49o-d29d4a8c-545c-4dff-aa83-b665876a808f.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/cover/bsgFx6vVC3FXyYyyU4YUAP97XJ3K0nw8wrH4hAnz9g7JrilHQf5UtdyAdbqBsSE9-bae12c93-fee4-4a14-91ec-8ab7872ced38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/cover/cq3UoqKz28oVHSFytDCDg2q9R7JAA6sj3nvfXJ4TShK6NMvmulNFOzA7ECF9j8e7-c53dd407-ca8c-48a5-8d78-e45bfa6aba08.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/cover/crrXigOIYycDM66NTuNYErgoMNQUg90NP1xcedpkt5HbrjU03glrixkLoeWvJISO-09c3f26e-2d94-46ca-8c72-ef7876cd59ce.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/cover/isAuuyKrG8uXcxusxQpygeIPf0IIkxzMu4qOydDj8ptME9eBA2BSxXH1tlEbgRPi-76bca121-a38b-49eb-89b3-36b0b0b67629.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/cover/pJT9YxY46MeLF7roWCnHI1efNTixkjtqXgO8ioYM4ikuYxNxVhF9dhXZ0UQszpgq-48ac4153-b4b3-48f0-9bf9-d363a8f645dd.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/cover/rtWWGGNtQcvsK5PPvxm9bKz8a5pI0wvjllJ1pHYf5Tqb5kR3kPVVTGog0d43zpuI-2d56b2de-5f98-4f61-9d86-de8a3380f179.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/cover/t8voAvMtssH60GQDdV3KHTqYv7jjbw395eZnNDpDcGoqv6j7rMSqYMIPbdJIuW8U-65992fc4-6ac5-4342-914c-3de458d2a764.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/cover/uJxQlLJNFVVnNtGSnbLWOYaWa18Tjjw01G1J0LI27TekBzXdXo6FsGpHKJEyaT7j-edbce408-9ed7-46fd-972d-97a127d533ac.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/cover/v0ZqvvQPfMr0yBrB3SiNhZbjcgCy2nTmVN195fYlMTZMHa0wMTrTrTzGxMPacv5T-a91afdd3-6232-4461-98fd-eec27026023e.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/cover/x9VdiGy7ulR4TJzKNqVqRJZRggE5Bzd0TkuAK848a9UdsjoYqOaeTZfcvQLKBhJs-20379036-2622-4a64-bacf-b19c59b55313.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/cover/y2x5C0DdCCkCLypPUpvY12VGdIttivUhUNwlbFJy9Au5rAkyYAra0RCwUWBbrf0z-830308e9-4887-4486-9fc3-067156d9ed19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/cover/ySl70RFBFi5gckX0F6Z01tx7sIgUeI4LpIsO8Xzs8eBiWdrZnSk8FZgnoesbDVlO-820e649f-2b51-44cc-900b-8f1db2d8d258.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/cover/zXYbzgyrSCvDlFen10ynv1GB6xfNBcCapnFsTQm6iBVYAkFEMzpSitfgMl2jlXKJ-7fb02b71-a117-4bec-82ee-0b913d764f97.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/q1pwNhcFTNsF0JiOHVrIsjGgT4dgme2lYeTwy2mLk2qtSQy8XwT6pv0dgk8fg7K0-25ce9ea5-3c80-4897-876f-a112e5150e83.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/blog/vl6VGm2QWhVq1Aamp4GavYr4VnEIpAxzBNzr5oD0xL3nrhER0JEyn91vXhXXp3l6-7cf0f52f-2a59-4209-b850-ab4f2bc43a87.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +336,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3">
     <include_path>
       <path value="$PROJECT_DIR$/src/vendor/dompdf/dompdf" />
       <path value="$PROJECT_DIR$/src/vendor/psr/http-message" />
@@ -51,6 +347,16 @@
       <path value="$PROJECT_DIR$/src/vendor/sabberworm/php-css-parser" />
       <path value="$PROJECT_DIR$/src/vendor/composer" />
       <path value="$PROJECT_DIR$/src/vendor/html2text/html2text" />
+      <path value="$PROJECT_DIR$/src/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/src/vendor/spatie/image-optimizer" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/src/vendor/ps/image-optimizer" />
+      <path value="$PROJECT_DIR$/src/vendor/algorithmia/algorithmia" />
+      <path value="$PROJECT_DIR$/src/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/src/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/src/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/src/vendor/guzzlehttp/psr7" />
     </include_path>
   </component>
   <component name="ProjectId" id="1ZclvSmNuJZ1IZScD1cj7Ymq8dB" />
@@ -66,15 +372,18 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/images/countdown" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/blog" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\leonardoscapinello\src\components" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\leonardoscapinello\static\images\countdown" />
-      <recent name="C:\wamp64\www\leonardoscapinello\src\class" />
-      <recent name="C:\wamp64\www\leonardoscapinello\campaigns\20200405-empresa-online" />
-      <recent name="C:\wamp64\www\leonardoscapinello\src\public" />
       <recent name="C:\wamp64\www\leonardoscapinello\blog" />
+      <recent name="C:\wamp64\www\leonardoscapinello\src\pages" />
+      <recent name="C:\wamp64\www\leonardoscapinello\static\javascript" />
+      <recent name="C:\wamp64\www\leonardoscapinello\src\class" />
+      <recent name="C:\wamp64\www\leonardoscapinello\src\public" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -99,7 +408,8 @@
       <workItem from="1586213833792" duration="616000" />
       <workItem from="1586260859724" duration="8551000" />
       <workItem from="1586274191884" duration="18138000" />
-      <workItem from="1586355604733" duration="16722000" />
+      <workItem from="1586355604733" duration="28820000" />
+      <workItem from="1586433455932" duration="35019000" />
     </task>
     <servers />
   </component>
@@ -110,45 +420,79 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1020" y="242" key="#com.intellij.ide.util.MemberChooser" timestamp="1586303351693">
+    <state x="566" y="184" key="#CLI_Interpreters" timestamp="1586391280141">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state x="566" y="184" key="#CLI_Interpreters/0.0.2560.1050/-1920.0.1536.834@0.0.2560.1050" timestamp="1586391280141" />
+    <state x="578" y="188" width="816" height="729" key="#Intentions" timestamp="1586390558465">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state x="578" y="188" width="816" height="729" key="#Intentions/0.0.2560.1050/-1920.0.1536.834@0.0.2560.1050" timestamp="1586390558465" />
+    <state x="693" y="120" key="#PHP" timestamp="1586391282076">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state x="693" y="120" key="#PHP/0.0.2560.1050/-1920.0.1536.834@0.0.2560.1050" timestamp="1586391282076" />
+    <state x="440" y="184" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586385176697">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state x="440" y="184" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1050/-1920.0.1536.834@0.0.2560.1050" timestamp="1586385176697" />
+    <state x="1020" y="242" key="#com.intellij.ide.util.MemberChooser" timestamp="1586477825626">
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state x="1020" y="242" key="#com.intellij.ide.util.MemberChooser/-1920.0.1536.840/0.0.2560.1050@0.0.2560.1050" timestamp="1586303351693" />
     <state x="-1155" y="242" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1586267469112" />
     <state x="765" y="242" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1585848432122" />
     <state x="765" y="242" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1585605171499" />
+    <state x="1020" y="242" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1050/-1920.0.1536.834@0.0.2560.1050" timestamp="1586477825626" />
     <state x="-1433" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585406082338">
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
     <state x="-1433" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1585406082338" />
-    <state x="1059" y="449" key="NewPhpFileDialog" timestamp="1586364285871">
+    <state x="765" y="271" key="FileChooserDialogImpl" timestamp="1586391086039">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state x="765" y="271" key="FileChooserDialogImpl/0.0.2560.1050/-1920.0.1536.834@0.0.2560.1050" timestamp="1586391086039" />
+    <state x="1059" y="449" key="NewPhpFileDialog" timestamp="1586438418779">
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state x="1059" y="449" key="NewPhpFileDialog/-1920.0.1536.840/0.0.2560.1050@0.0.2560.1050" timestamp="1586301487060" />
     <state x="-1126" y="449" key="NewPhpFileDialog/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1585690788544" />
     <state x="794" y="449" key="NewPhpFileDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1585592031563" />
     <state x="794" y="449" key="NewPhpFileDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1585706234790" />
-    <state x="1059" y="449" key="NewPhpFileDialog/0.0.2560.1050/-1920.0.1536.834@0.0.2560.1050" timestamp="1586364285871" />
-    <state x="-1395" y="278" key="com.intellij.ide.util.TipDialog" timestamp="1586355612756">
-      <screen x="-1920" y="0" width="1536" height="834" />
+    <state x="1059" y="449" key="NewPhpFileDialog/0.0.2560.1050/-1920.0.1536.834@0.0.2560.1050" timestamp="1586438418779" />
+    <state x="875" y="350" key="com.intellij.ide.util.TipDialog" timestamp="1586433461450">
+      <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state x="-1264" y="350" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1586274196569" />
     <state x="656" y="350" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1586213836307" />
     <state x="-1395" y="278" key="com.intellij.ide.util.TipDialog/0.0.2560.1050/-1920.0.1536.834@-1920.0.1536.834" timestamp="1586355612756" />
+    <state x="875" y="350" key="com.intellij.ide.util.TipDialog/0.0.2560.1050/-1920.0.1536.834@0.0.2560.1050" timestamp="1586433461450" />
     <state x="-1151" y="443" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586265153118">
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
     <state x="-1151" y="443" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1586265153118" />
-    <state x="616" y="243" key="run.anything.popup" timestamp="1585705962210">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="821" y="243" key="run.anything.popup" timestamp="1586434875862">
+      <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state x="-1304" y="243" key="run.anything.popup/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1585694151307" />
     <state x="616" y="243" key="run.anything.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1585587657860" />
     <state x="616" y="243" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1585705962210" />
+    <state x="821" y="243" key="run.anything.popup/0.0.2560.1050/-1920.0.1536.834@0.0.2560.1050" timestamp="1586434875862" />
     <state x="-1297" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1585696041124">
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
     <state x="-1297" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1585696041124" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1585598007646" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/class/StaticCompiler.php</url>
+          <line>163</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

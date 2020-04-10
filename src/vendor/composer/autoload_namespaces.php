@@ -8,4 +8,6 @@ $baseDir = dirname(dirname($vendorDir));
 return array(
     'Sabberworm\\CSS' => array($vendorDir . '/sabberworm/php-css-parser/lib'),
     'Monolog' => array($vendorDir . '/monolog/monolog/src'),
+    'ImageOptimizer' => array($vendorDir . '/ps/image-optimizer/src'),
+    'Algorithmia' => array($vendorDir . '/algorithmia/algorithmia/src'),
 );

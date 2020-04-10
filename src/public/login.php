@@ -23,8 +23,10 @@ if (not_empty($username)) $username = $text->base64_decode($username);
     <form action="<?= LOGIN_URL ?>/createsession" method="POST">
         <div class="authentibox">
             <div class="company">
+                <a href="<?=SITE_URL?>" style="margin: 0;">
                 <img src="<?= $static->getImagePath("ls-white-background-black-icon.png") ?>"
                      alt="Leonardo Scapinello"/>
+                </a>
                 <?php if (get_request("attempt")) { ?>
                     <h2 style="color: #ed145b">Usuário ou Senha Incorretos.</h2>
                 <?php } else { ?>
@@ -51,7 +53,6 @@ if (not_empty($username)) $username = $text->base64_decode($username);
 </div>
 
 
-<script src="./static/javascript/jquery.min.js"></script>
-<script src="./static/javascript/jquery-ui.min.js"></script>
+<?php require_once(DIRNAME . "../components/footer-scripts.php") ?>
 </body>
 </html>

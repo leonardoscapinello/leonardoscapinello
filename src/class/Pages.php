@@ -89,10 +89,14 @@ class Pages
     public function getContent()
     {
         try {
-
+            $p = DIRNAME . "../pages/" . $this->content;
+            if (notempty($this->content) && file_exists($p)) {
+                return $p;
+            }
         } catch (Exception $exception) {
-
+            error_log($exception);
         }
+        return false;
     }
 
     /**

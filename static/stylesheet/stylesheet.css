@@ -54,6 +54,7 @@ h3:before {
 }
 p {
   line-height: 27px;
+  text-align: justify;
 }
 @media only screen and (min-width: 0px) and (max-width: 480px) {
   h2 {
@@ -230,7 +231,7 @@ p {
   display: none !important;
 }
 .main-wrap .navigation ul li.account {
-  background: #0ABB87;
+  background: #42EBD5;
   color: #000;
 }
 .main-wrap .navigation ul li:first-child {
@@ -327,6 +328,25 @@ p {
   min-width: 140px;
   transition: all .7s;
 }
+.btn.btn--green {
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 30px;
+  border-radius: 60px;
+  background-color: #06d6a0;
+  display: block;
+  margin: 30px 0;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all .2s;
+  text-decoration: none;
+  color: #090508;
+}
+.btn.btn--green:hover {
+  background-color: #06ecb5;
+}
 .btn.btn--secondary {
   color: #000000;
   border: 1px #000000 solid;
@@ -358,6 +378,9 @@ p {
 }
 .text.pink {
   color: #ed145b;
+}
+.text.green {
+  color: #42EBD5;
 }
 .text.right {
   text-align: right;
@@ -547,13 +570,28 @@ p {
   height: 450px;
   transition: all .4s;
 }
-.about-me {
+.about-me,
+.todark_sec {
   padding: 10px 0;
   background: #131313;
   background: linear-gradient(180deg,#131313 0%,#000000 26%);
 }
-.about-me .superior-space {
+.sec {
+  padding: 30px 0;
+}
+.sec.black {
+  background: #000000;
+}
+ .superior-space {
   padding-top: 120px;
+}
+.superior-space.half {
+  padding-top: 25px;
+}
+@media only screen and (min-width: 0px) and (max-width: 960px) {
+   .superior-space {
+    padding-top: 0;
+  }
 }
 .container-gradient {
   padding: 120px 0 50px 0;
@@ -568,13 +606,29 @@ p {
   width: 100%;
   height: 700px;
 }
+.me.frontal--photo--flip {
+  background: url("../images/leonardo-scapinello-flip.png");
+  background-size: contain;
+  background-position: left center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 700px;
+}
+@media only screen and (min-width: 0px) and (max-width: 960px) {
+  .me.frontal--photo,
+  .me.frontal--photo--flip {
+    background-position: top;
+    height: 480px;
+  }
+}
 .cases {
   background: #000000;
   padding: 80px 0;
+  box-sizing: border-box;
 }
 .cases .cases-carousel {
   padding: 30px 0;
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 .cases .cases-carousel .customer-widget {
   background: #FFFFFF;
@@ -582,6 +636,7 @@ p {
   text-align: center;
   border-radius: 5px;
   padding: 30px 0;
+  box-sizing: border-box;
 }
 .cases .cases-carousel .customer-widget .customer-logo {
   width: 140px;
@@ -598,7 +653,9 @@ p {
   font-weight: 600;
   color: rgba(78,82,93,0.5);
   display: block;
+  box-sizing: border-box;
   text-transform: uppercase;
+  text-align: center;
 }
 .shadow5 {
   position: relative;
@@ -656,11 +713,52 @@ p {
 }
 .white-box {
   width: 100%;
-  margin: 0 auto;
+  margin-bottom: 35px;
   background: #fff;
   padding: 30px;
   box-sizing: border-box;
   text-align: center;
+}
+.white-box .input_line {
+  display: block;
+  margin: 30px 0;
+  position: relative;
+}
+.white-box .input_line label {
+  display: block;
+  text-align: left;
+  margin-top: 10px;
+  transition: all .4s;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: .8em;
+  top: 0px;
+}
+.white-box .input_line input[type="phone"],
+.white-box .input_line input[type="email"],
+.white-box .input_line input[type="text"] {
+  display: block;
+  border: none;
+  border-bottom: 2px #2d2d2d solid;
+  width: 100%;
+  line-height: 40px;
+  transition: all .4s;
+}
+.white-box .input_line input:focus {
+  border-color: #ed145b;
+  line-height: 40px;
+}
+.white-box .input_line input:focus + label {
+  color: #ed145b;
+  top: -30px;
+}
+.white-box .input_line input + label {
+  top: -30px;
+}
+@media only screen and (min-width: 0px) and (max-width: 960px) {
+  .white-box {
+    padding: 10px 20px;
+  }
 }
 .newsletter {
   background: #131313;
@@ -1173,7 +1271,7 @@ p {
 }
 [data-paragraph]:hover,
 [data-paragraph]:focus {
-  border: 1px #0ABB87 dotted;
+  border: 1px #42EBD5 dotted;
   background: rgba(10,187,135,0.05);
   margin: 0 2px;
 }
@@ -1348,4 +1446,70 @@ video {
 .close_smdl i {
   font-size: 32px;
   color: #FFFFFF;
+}
+.page-ctn {
+  padding-top: 35px;
+}
+.price-box {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 30px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.from_price {
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 55px;
+  position: relative;
+}
+.from_price:before {
+  content: '';
+  display: block;
+  width: 60%;
+  height: 5px;
+  background: #ed145b;
+  position: absolute;
+  top: calc(40%);
+  left: 50%;
+  -webkit-transform: rotate(-3deg) translate(-50%,-50%);
+  transform: rotate(-5deg) translate(-50%,-50%);
+}
+.to_price {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 70px;
+  color: #ed145b;
+}
+@media (max-width: 960px) {
+  .from_price {
+    font-size: 30px;
+  }
+  .from_price:before {
+    width: 90%;
+  }
+  .accordion a {
+    width: auto;
+  }
+  .countdown {
+    padding: 20px 0;
+  }
+  .to_price {
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 70px;
+    color: #ed145b;
+  }
+}
+.countdown {
+  background: #ed145b;
+  background: linear-gradient(270deg,#ed145b,#b71349);
+  background-size: 400% 400%;
+  -webkit-animation: AnimationName 3s ease infinite;
+  -moz-animation: AnimationName 3s ease infinite;
+  -o-animation: AnimationName 3s ease infinite;
+  animation: AnimationName 3s ease infinite;
+  padding: 60px 0;
 }

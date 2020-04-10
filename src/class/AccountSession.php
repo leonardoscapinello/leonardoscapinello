@@ -132,10 +132,10 @@ class AccountSession
         return false;
     }
 
-    public function isLogged()
+    public function isLogged($cleanSessionWhenNotLogged = false)
     {
         if ($this->is_active === "Y") return true;
-        $this->cleanSession();
+        if ($cleanSessionWhenNotLogged) $this->cleanSession();
         return false;
     }
 

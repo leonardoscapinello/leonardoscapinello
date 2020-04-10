@@ -101,7 +101,7 @@ $(document).ready(function () {
         }
     });
 
-
+    $(".phone_with_ddd").mask("(00) 00000-0000");
     $(".header-outer-size").css("height", ($(".header--company").outerHeight() - 6) + "px");
 
 });
@@ -124,23 +124,23 @@ $(window).on("resize", function () {
 });
 
 
-function openSearch(){
+function openSearch() {
     $input.val("");
     $("#load-search").html("<div class=\"result\"> <div class=\"post-title text center\"> <i class=\"far fa-robot\"></i> <p class=\"text center\"><span class=\"big-text\">Bip. Bip.</span><br /> É só você digitar o que está procurando (aqui em cima) e vou revirar alguns documentos, beleza?</p> </div> </div>");
     $("#search_modal").fadeIn(300);
     $("body").css("overflow", "hidden");
 }
 
-$(".close_smdl").on("click", function(){
+$(".close_smdl").on("click", function () {
     $("#search_modal").fadeOut(300);
     $("body").css("overflow", "initial");
 });
 
-function doneTyping () {
+function doneTyping() {
     let v = $input.val();
-    if(v.length === 0){
+    if (v.length === 0) {
         $("#search_modal").fadeOut(300);
-    }else if(v.length > 0){
+    } else if (v.length > 0) {
         search(v);
     }
 }

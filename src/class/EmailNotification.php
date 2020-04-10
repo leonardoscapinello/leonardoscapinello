@@ -18,7 +18,7 @@ class EmailNotification
 
     public function button($text, $link)
     {
-        $element = "<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"btn btn-primary\"> <tbody> <tr> <td align=\"left\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\"> <tbody> <tr> <td> <a href=\"" . $link . "\" target=\"_blank\">" . $text . "</a></td> </tr> </tbody> </table> </td> </tr> </tbody> </table>";
+        $element = "<br /><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"btn btn-primary\"> <tbody> <tr> <td align=\"left\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\"> <tbody> <tr> <td> <a href=\"" . $link . "\" target=\"_blank\">" . $text . "</a></td> </tr> </tbody> </table> </td> </tr> </tbody> </table><br />";
         $this->add($element);
     }
 
