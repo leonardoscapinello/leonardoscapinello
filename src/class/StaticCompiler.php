@@ -182,7 +182,7 @@ class StaticCompiler
             }
         }
         $file_headers = @get_headers($path);
-        if (count($file_headers) > 0) {
+        if (is_array($file_headers) && count($file_headers) > 0) {
             if (stripos($file_headers[0], "404 Not Found") > 0 || (stripos($file_headers[0], "302 Found") > 0 && stripos($file_headers[7], "404 Not Found") > 0)) {
                 return null;
             }
