@@ -47,7 +47,7 @@ class AccountTemporary extends Text
     {
         $name = $this->getName();
         $name = trim($name);
-        $last_name = (strpos($name, ' ') === false) ? '' : preg_replace('#.*\s([\w-]*)$#', '$1', $name);
+        $last_name = (strpos($name, " ") === false) ? "" : preg_replace('#.*\s([\w-]*)$#', '$1', $name);
         $first_name = trim(preg_replace('#' . $last_name . '#', '', $name));
         return array($first_name, $last_name);
     }
@@ -56,13 +56,13 @@ class AccountTemporary extends Text
     public function getFirstName()
     {
         $f = $this->splitName();
-        return $f[0];
+        return trim($f[0]);
     }
 
     public function getLastName()
     {
         $f = $this->splitName();
-        return $f[1];
+        return trim($f[1]);
     }
 
     public function getEmail()
@@ -79,6 +79,22 @@ class AccountTemporary extends Text
         global $session;
         if ($session->isLogged(false)) return $accounts->getPhoneNumber();
         return $this->getCookie($this->cookie_name_prefix . "PH");
+    }
+
+    public function cleanTemporaryData()
+    {
+        if (isset($_SERVER['HTTP_COOKIE'])) {
+            $cookies = explode(';', $_SERVER['HTTP_COOKIE']);
+            foreach ($cookies as $cookie) {
+                $parts = explode('=', $cookie);
+                $name = trim($parts[0]);
+                if ($name !== "PHPSESSID" && strpos($name, $this->cookie_name_prefix) !== FALSE) {
+                    setcookie($name, '', time() - 1000);
+                    setcookie($name, '', time() - 1000, '/');
+                    unset($name);
+                }
+            }
+        }
     }
 
 }

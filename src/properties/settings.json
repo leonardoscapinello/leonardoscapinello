@@ -5,7 +5,7 @@
     "user": "developer",
     "password": "cbPw7zw4eNtU2DGX",
     "password_encryption": "",
-    "database": "leonardoscapinello_homolog",
+    "database": "leonardoscapinello",
     "driver": "mysql"
   }
 }

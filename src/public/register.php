@@ -31,7 +31,7 @@ if ($attempt === $text->base64_encode("0")) $message = "Já existe um usuário c
 <body>
 
 <div id="authenticate">
-    <form action="<?= LOGIN_URL ?>/createaccount" method="POST">
+    <form action="<?= LOGIN_URL ?>/createaccount" method="POST" onSubmit="register()">
         <div class="authentibox">
             <div class="company">
                 <a href="<?= SITE_URL ?>" style="margin: 0;">
@@ -39,7 +39,7 @@ if ($attempt === $text->base64_encode("0")) $message = "Já existe um usuário c
                          alt="Leonardo Scapinello"/>
                 </a>
                 <?php if (not_empty($attempt) && not_empty($message)) { ?>
-                    <h2 style="color: #ed145b"><?=$message?></h2>
+                    <h2 style="color: #ed145b"><?= $message ?></h2>
                 <?php } else { ?>
                     <h2>Crie sua conta grátis.</h2>
                 <?php } ?>
@@ -56,26 +56,26 @@ if ($attempt === $text->base64_encode("0")) $message = "Já existe um usuário c
                 <div class="input_line" <?= $accountsTemporaryRegister->getFirstName() !== "" ? "style=\"display:none;\"" : "" ?>>
                     <input type="text" name="first_name" id="first_name"
                            value="<?= $accountsTemporaryRegister->getFirstName() ?>" placeholder="Nome"
-                           autocomplete="off"/>
+                           autocomplete="off" required minlength="2"/>
                 </div>
                 <div class="input_line" <?= $accountsTemporaryRegister->getLastName() !== "" ? "style=\"display:none;\"" : "" ?>>
                     <input type="text" name="last_name" id="last_name"
                            value="<?= $accountsTemporaryRegister->getLastName() ?>" placeholder="Sobrenome"
-                           autocomplete="off"/>
+                           autocomplete="off" required minlength="2"/>
                 </div>
                 <div class="input_line" <?= $accountsTemporaryRegister->getEmail() !== null ? "style=\"display:none;\"" : "" ?>>
-                    <input type="text" name="username" id="username"
+                    <input type="email" name="username" id="username"
                            value="<?= $accountsTemporaryRegister->getEmail() ?>" placeholder="E-mail"
-                           autocomplete="off"/>
+                           autocomplete="off" required minlength="6"/>
                 </div>
                 <div class="input_line" <?= $accountsTemporaryRegister->getPhone() !== null ? "style=\"display:none;\"" : "" ?>>
                     <input type="text" name="phone" id="phone" class="phone_with_ddd"
                            value="<?= $accountsTemporaryRegister->getPhone() ?>"
-                           placeholder="WhatsApp" autocomplete="off"/>
+                           placeholder="WhatsApp" required autocomplete="off"/>
                 </div>
                 <div class="input_line">
                     <input type="password" name="password" id="password" value="" placeholder="Senha"
-                           autocomplete="off"/>
+                           autocomplete="off" required minlength="6"/>
                 </div>
                 <div class="input_line bt" align="center">
                     <button class="btn">Criar Conta</button>

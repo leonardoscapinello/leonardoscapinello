@@ -10,7 +10,11 @@ if (!isset($_SESSION)) {
 
 define("DIRNAME", dirname(__FILE__) . "/");
 define("SITE_NAME", "Leonardo Scapinello");
-define("SITE_URL", "http://leonardoscapinello.com/");
+if(isset($_COOKIE['dev'])){
+    define("SITE_URL", "http://flexwei-sv1.site/leonardoscapinello/");
+}else{
+    define("SITE_URL", "http://leonardoscapinello.com/");
+}
 define("LOGIN_URL", SITE_URL . "login");
 define("LOGOUT_URL", SITE_URL . "logout");
 define("ACCOUNT_PROFILE", SITE_URL . "meu-perfil");
