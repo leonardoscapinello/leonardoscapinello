@@ -107,19 +107,15 @@ class Accounts
             $database->execute();
 
             $id = $database->lastInsertId();
-            error_log("user used [$password] as password");
-
-
             $tmp_account = new Accounts($id);
             $tmp_account->resetPassword($password, $password);
 
+            return $id;
 
         } catch (Exception $exception) {
-            echo $exception;
             error_log($exception);
+            return 0;
         }
-        error_log("REG" . $id);
-        return $id;
     }
 
     public function isCustomer()
