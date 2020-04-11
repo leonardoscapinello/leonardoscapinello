@@ -87,7 +87,6 @@ class Accounts
     {
         global $database;
         global $security;
-        $id = 0;
         try {
 
             $phone = preg_replace("/[^0-9]/", "", $phone);
@@ -98,6 +97,14 @@ class Accounts
             if (strlen($password) < 6) return -4;
             if (strlen($phone) < 5) return -5;
 
+
+            $database->query("SELECT username, email FROM accounts WHERE username = ? OR email = ?");
+            $database->bind(1, $email_address);
+            $database->bind(2, $email_address);
+            $r = $database->resultset();
+
+            if (count($r) > 0) return 0;
+
             $database->query("INSERT INTO accounts (username, email, first_name, last_name, phone_number) VALUES (?,?,?,?,?)");
             $database->bind(1, $email_address);
             $database->bind(2, $email_address);
@@ -105,6 +112,7 @@ class Accounts
             $database->bind(4, $last_name);
             $database->bind(5, $phone);
             $database->execute();
+
 
             $id = $database->lastInsertId();
             $tmp_account = new Accounts($id);
