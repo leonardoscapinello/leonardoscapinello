@@ -106,6 +106,7 @@ if (get_request("recompile") !== null) {
     $static->add(DIRNAME . "../../static/stylesheet/container.css");
     $static->add(DIRNAME . "../../static/stylesheet/stylesheet.css");
     $static->add(DIRNAME . "../../static/stylesheet/tooltip.css");
+    $static->add(DIRNAME . "../../static/stylesheet/bootoast.css");
     $static->add(DIRNAME . "../../static/fonts/gilroy/Gilroy.css");
     $static->setOutputFile(DIRNAME . "../../static/stylesheet/stylesheet");
     $static->addReplace("../images/", SITE_URL . "static/images/");

@@ -16,6 +16,7 @@ if (not_empty($username)) $username = $text->base64_decode($username);
     <title></title>
     <link href="<?= $static->getFileLocation("../fonts/gilroy/Gilroy.css") ?>" type="text/css" rel="stylesheet">
     <link href="<?= $static->getFileLocation("authenticate.css") ?>" type="text/css" rel="stylesheet">
+    <link href="<?= $static->getFileLocation("bootoast.css") ?>" type="text/css" rel="stylesheet">
 </head>
 <body>
 
@@ -54,5 +55,14 @@ if (not_empty($username)) $username = $text->base64_decode($username);
 
 
 <?php require_once(DIRNAME . "../components/footer-scripts.php") ?>
+<script type="text/javascript">
+    bootoast({
+        message: '<b>Parabéns!</b> Sua conta foi criada com sucesso.',
+        position: 'top-right',
+        type: 'success',
+        timeout: 2000,
+        animationDuration: 300
+    });
+</script>
 </body>
 </html>

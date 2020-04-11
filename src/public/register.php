@@ -27,6 +27,7 @@ if ($attempt === $text->base64_encode("0")) $message = "Já existe um usuário c
     <title></title>
     <link href="<?= $static->getFileLocation("../fonts/gilroy/Gilroy.css") ?>" type="text/css" rel="stylesheet">
     <link href="<?= $static->getFileLocation("authenticate.css") ?>" type="text/css" rel="stylesheet">
+    <link href="<?= $static->getFileLocation("bootoast.css") ?>" type="text/css" rel="stylesheet">
 </head>
 <body>
 
@@ -88,5 +89,15 @@ if ($attempt === $text->base64_encode("0")) $message = "Já existe um usuário c
 
 
 <?php require_once(DIRNAME . "../components/footer-scripts.php") ?>
+<?php if (not_empty($attempt) && not_empty($message)) { ?>
+    <script type="text/javascript">
+        bootoast({
+            message: '<?=$message?>',
+            position: 'top-right',
+            type: 'danger',
+            timeout: 2000
+        });
+    </script>
+<?php } ?>
 </body>
 </html>
