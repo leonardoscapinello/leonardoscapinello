@@ -21,7 +21,7 @@ if (not_empty($username)) $username = $text->base64_decode($username);
 <body>
 
 <div id="authenticate">
-    <form action="<?= LOGIN_URL ?>/createsession" method="POST">
+    <form action="<?= LOGIN_URL ?>/recoveryPasswordService" method="POST">
         <div class="authentibox">
             <div class="company">
                 <a href="<?= SITE_URL ?>" style="margin: 0;">
@@ -31,7 +31,7 @@ if (not_empty($username)) $username = $text->base64_decode($username);
                 <?php if (get_request("attempt")) { ?>
                     <h2 style="color: #ed145b">Usuário ou Senha Incorretos.</h2>
                 <?php } else { ?>
-                    <h2>Entre com sua conta.</h2>
+                    <h2>Digite seu Endereço de E-mail</h2>
                 <?php } ?>
             </div>
 
@@ -41,13 +41,9 @@ if (not_empty($username)) $username = $text->base64_decode($username);
                     <input type="text" name="username" value="<?= $username ?>" id="password" placeholder="E-mail"
                            autocomplete="off"/>
                 </div>
-                <div class="input_line">
-                    <input type="password" name="password" id="password" placeholder="Senha" autocomplete="off"/>
-                </div>
                 <div class="input_line bt" align="center">
-                    <button class="btn">Entrar</button>
-                    <a href="<?= RECOVERY_URL ?>">Recuperar minha senha</a>
-                    <a href="<?= REGISTER_URL ?>">Criar minha Conta Grátis</a>
+                    <button class="btn">Recuperar</button>
+                    <a href="<?= LOGIN_URL ?>">Fazer Login</a>
                 </div>
             </div>
         </div>
@@ -56,26 +52,14 @@ if (not_empty($username)) $username = $text->base64_decode($username);
 
 
 <?php require_once(DIRNAME . "../components/footer-scripts.php") ?>
-<?php if (get_request("attempt") !== null) { ?>
-    <script type="text/javascript">
-        bootoast({
-            message: 'Usuário ou Senha Incorretos.',
-            position: 'top-right',
-            type: 'danger',
-            timeout: 2000,
-            animationDuration: 300
-        });
-    </script>
-<?php }else if (get_request("u") !== null) { ?>
-    <script type="text/javascript">
-        bootoast({
-            message: '<b>Seja bem-vindo(a)!</b> Sua conta foi criada com sucesso e você já pode acessar todo o conteúdo.',
-            position: 'top-right',
-            type: 'success',
-            timeout: 2000,
-            animationDuration: 300
-        });
-    </script>
-<?php } ?>
+<script type="text/javascript">
+    bootoast({
+        message: 'Serviço de recuperação de senha indisponível no momento. Entre em contato com nosso suporte: suporte@flexwei.com para te ajudarmos com isso.',
+        position: 'top-right',
+        type: 'danger',
+        timeout: 2000,
+        animationDuration: 300
+    });
+</script>
 </body>
 </html>

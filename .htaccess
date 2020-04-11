@@ -17,6 +17,7 @@ RewriteRule ^login$                 ./src/public/login.php?action=login [L,NC,QS
 RewriteRule ^register$              ./src/public/register.php?action=login [L,NC,QSA]
 RewriteRule ^register/store$        ./src/public/register-small-campaign-cookie.php?action=login [L,NC,QSA]
 RewriteRule ^logout$                ./src/public/login.php?action=logout [L,NC,QSA]
+RewriteRule ^recovery$                ./src/public/recovery.php?action=logout [L,NC,QSA]
 
 
 RewriteRule ^members/subscribe$   ./src/api/members/subscribe.php [L]

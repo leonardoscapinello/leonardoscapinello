@@ -5,6 +5,7 @@ $home = false;
 if ($p === "index.php" || $p === "" || $p === null) $home = true;
 
 $page = new Pages($p);
+
 ?>
 <html>
 <head>

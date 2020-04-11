@@ -79,15 +79,16 @@ class EmailNotification
                     'allow_self_signed' => true
                 )
             );
-            $mail->Host = "smtpout.secureserver.net";
+            $mail->Host = "smtp.office365.com";
             $mail->Port = 587;
             $mail->IsHTML(true);
-            $mail->Username = "suporte@flexwei.com";
-            $mail->Password = "az9P19k&Pw";
+            $mail->Username = "leonardoscapinello@outlook.com";
+            $mail->Password = "2ABkuizPJw2A";
 
             $mail->CharSet = 'utf-8';
             $mail->Subject = $this->subject;
-            $mail->setFrom($this->fromFix($this->sender), $this->sender . " do Portal LS");
+            //$mail->setFrom($this->fromFix($this->sender), $this->sender . " do Portal LS");
+            $mail->setFrom("leonardoscapinello@outlook.com", $this->sender . " do Portal LS");
 
             $template = get_page(SITE_URL . "src/notifications/" . $template);
 

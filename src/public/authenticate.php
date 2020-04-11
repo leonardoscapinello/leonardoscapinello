@@ -14,7 +14,7 @@ if ($session->isLogged()) {
         header("location: " . SITE_URL);
         die;
     } else {
-        header("location: " . LOGIN_URL . "?attempt=1");
+        header("location: " . LOGIN_URL . "?attempt=1&u=" . $text->base64_encode($username));
         die;
     }
 }

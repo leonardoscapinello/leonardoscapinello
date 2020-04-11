@@ -84,8 +84,6 @@ class Blog
             $emailNotification->paragraph("Porém, se já esta tudo certo e você só quer publicar, clique abaixo:");
             $emailNotification->button("Publicar meu Artigo", BLOG_ADMIN_PUBLISH_POST . "?id=" . $id_post[0] . "&post=" . $id_post[1]);
             $emailNotification->contact($author_name, $author_email);
-            $emailNotification->contact("Leonardo Scapinello", "leonardo.scapinello@outlook.com");
-            $emailNotification->contact("Samara Camargo", "samara.ncamargo@outlook.com");
             $emailNotification->send();
         } catch (Exception $exception) {
             error_log($exception);
