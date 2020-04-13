@@ -75,6 +75,9 @@ class Accounts
 
             $phone = preg_replace("/[^0-9]/", "", $phone);
 
+
+            echo "INSIDE REGISTER<br>";
+
             if (strlen($first_name) < 2) return -1;
             if (strlen($last_name) < 2) return -2;
             if (strlen($email_address) < 6) return -3;
@@ -82,12 +85,21 @@ class Accounts
             if (strlen($phone) < 5) return -5;
 
 
+            echo "first_name " . $first_name . "<br>";
+            echo "last_name " . $last_name . "<br>";
+            echo "email_address " . $email_address . "<br>";
+            echo "password " . $password . "<br>";
+            echo "phone " . $phone . "<br>";
+
             $database->query("SELECT username, email FROM accounts WHERE username = ? OR email = ?");
             $database->bind(1, $email_address);
             $database->bind(2, $email_address);
             $r = $database->resultset();
 
             if (count($r) > 0) return 0;
+
+
+            echo "a user with this name has not been found<br>";
 
             $database->query("INSERT INTO accounts (username, email, first_name, last_name, phone_number, is_active) VALUES (?,?,?,?,?,?)");
             $database->bind(1, $email_address);
@@ -98,12 +110,19 @@ class Accounts
             $database->bind(6, $this->is_active_default);
             $database->execute();
 
+
+            echo "a new one has been inserted<br>";
+
             $id = $database->lastInsertId();
             $tmp_account = new Accounts($id);
             $tmp_account->resetPassword($password, $password);
 
             $cookie_data = new AccountTemporary();
             $cookie_data->cleanTemporaryData();
+
+
+            echo "cleaned temporary " . $id . "<br>";
+
 
             return $id;
 
