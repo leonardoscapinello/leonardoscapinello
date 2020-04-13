@@ -32,7 +32,7 @@ if (not_empty($username)) {
 <div id="authenticate">
     <form action="<?= RECOVERY_URL ?>" method="POST">
         <div class="authentibox">
-            <?php if (isset($_COOKIE['LS_RECOVER_REQUEST'])) { ?>
+            <?php if (!isset($_COOKIE['LS_RECOVER_REQUEST'])) { ?>
                 <div class="company">
                     <a href="<?= SITE_URL ?>" style="margin: 0;">
                         <img src="<?= $static->getImagePath("ls-white-background-black-icon.png") ?>"
