@@ -13,6 +13,8 @@ class Accounts
     private $phone_number;
     private $insert_time;
     private $is_active;
+
+    private $is_active_default = "N";
     private $is_customer = "N";
 
     public function __construct($id_account = 0)
@@ -87,12 +89,13 @@ class Accounts
 
             if (count($r) > 0) return 0;
 
-            $database->query("INSERT INTO accounts (username, email, first_name, last_name, phone_number) VALUES (?,?,?,?,?)");
+            $database->query("INSERT INTO accounts (username, email, first_name, last_name, phone_number, is_active) VALUES (?,?,?,?,?,?)");
             $database->bind(1, $email_address);
             $database->bind(2, $email_address);
             $database->bind(3, $first_name);
             $database->bind(4, $last_name);
             $database->bind(5, $phone);
+            $database->bind(6, $this->is_active_default);
             $database->execute();
 
             $id = $database->lastInsertId();
@@ -106,8 +109,8 @@ class Accounts
 
         } catch (Exception $exception) {
             error_log($exception);
-            return 0;
         }
+        return 0;
     }
 
     public function isCustomer()
