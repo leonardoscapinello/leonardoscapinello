@@ -4,16 +4,15 @@ if ($session->isLogged()) {
     header("location: " . SITE_URL);
     die;
 }
-$attempt = get_request("attempt");
-$username = get_request("username");
-if (not_empty($username)) {
-    $accountRecovery = new AccountRecovery($username);
-    if ($accountRecovery->isUsernameExists()) {
-        header("location: " . RECOVERY_URL . "/code?u=" . $text->base64_encode($username) . "&t=" . $text->base64_encode($accountRecovery->getIdRecoveryToken()));
-    } else {
-        header("location: " . RECOVERY_URL . "?attempt=1");
-    }
+
+$user = get_request("u");
+$code = get_request("c");
+
+if (not_empty($user) && not_empty($code)) {
+
 }
+
+
 ?>
 <html>
 <head>
@@ -29,24 +28,29 @@ if (not_empty($username)) {
 <body>
 
 <div id="authenticate">
-    <form action="<?= RECOVERY_URL ?>" method="POST">
+    <form action="<?= RECOVERY_URL ?>/code" method="POST">
         <div class="authentibox">
             <div class="company">
                 <a href="<?= SITE_URL ?>" style="margin: 0;">
                     <img src="<?= $static->getImagePath("ls-white-background-black-icon.png") ?>"
                          alt="Leonardo Scapinello"/>
                 </a>
-                <h2>Qual seu e-mail?</h2>
+                <h2>Só pra confirmar...</h2>
+                <p class="text white" style="color: #FFF;font-size: 13px;margin-bottom: 30px">Te enviamos um código para
+                    confirmar que foi você mesmo, quem solicitou a alteração de senha. Dentro de instantes deve
+                    recebe-lo por e-mail.</p>
             </div>
 
 
             <div class="inputs">
+                <input type="hidden" name="u" value="<?= $user ?>"/>
                 <div class="input_line">
-                    <input type="text" name="username" value="<?= $username ?>" id="username" placeholder="E-mail"
-                           autocomplete="off"/>
+                    <input type="text" name="code" value="" id="code" placeholder="Digite o código de 6 digitos aqui"
+                           autocomplete="off" style="text-align: center;letter-spacing: 24px;text-transform: uppercase;"
+                           minlength="6" maxlength="6" required/>
                 </div>
                 <div class="input_line bt" align="center">
-                    <button class="btn">Recuperar</button>
+                    <button class="btn">Confirmar</button>
                     <a href="<?= LOGIN_URL ?>">Fazer Login</a>
                 </div>
             </div>
@@ -56,26 +60,14 @@ if (not_empty($username)) {
 
 
 <?php require_once(DIRNAME . "../components/footer-scripts.php") ?>
-<?php if (get_request("attempt") === "1") { ?>
-    <script type="text/javascript">
-        bootoast({
-            message: 'Oops! Não foi possível encontrar seu e-mail em nosso portal. Você está buscando criar sua conta? <a href=\"<?=REGISTER_URL?>\">Clique aqui para criar sua conta grátis.</a>',
-            position: 'top-right',
-            type: 'danger',
-            timeout: 2000,
-            animationDuration: 300
-        });
-    </script>
-<?php }else{ ?>
 <script type="text/javascript">
-    bootoast({
+    /*bootoast({
         message: 'Serviço de recuperação de senha indisponível no momento. Entre em contato com nosso suporte: suporte@flexwei.com para te ajudarmos com isso.',
         position: 'top-right',
         type: 'danger',
         timeout: 2000,
         animationDuration: 300
-    });
+    });*/
 </script>
-<?php } ?>
 </body>
 </html>

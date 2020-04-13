@@ -13,11 +13,13 @@ RewriteRule ^login/createaccount$   ./src/public/createAccount.php [L,NC,QSA]
 RewriteRule ^login/redirect$        ./src/public/redirect.php [L,NC,QSA]
 
 
-RewriteRule ^login$                 ./src/public/login.php?action=login [L,NC,QSA]
-RewriteRule ^register$              ./src/public/register.php?action=login [L,NC,QSA]
-RewriteRule ^register/store$        ./src/public/register-small-campaign-cookie.php?action=login [L,NC,QSA]
-RewriteRule ^logout$                ./src/public/login.php?action=logout [L,NC,QSA]
-RewriteRule ^recovery$                ./src/public/recovery.php?action=logout [L,NC,QSA]
+RewriteRule ^login$                 ./src/public/login.php [L,NC,QSA]
+RewriteRule ^register$              ./src/public/register.php [L,NC,QSA]
+RewriteRule ^register/store$        ./src/public/register-small-campaign-cookie.php [L,NC,QSA]
+RewriteRule ^logout$                ./src/public/login.php [L,NC,QSA]
+RewriteRule ^recovery$              ./src/public/recovery.php [L,NC,QSA]
+RewriteRule ^recovery/code$         ./src/public/recovery-code.php [L,NC,QSA]
+RewriteRule ^recovery/validate$     ./src/public/recovery-validate.php [L,NC,QSA]
 
 
 RewriteRule ^members/subscribe$   ./src/api/members/subscribe.php [L]

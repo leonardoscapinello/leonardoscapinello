@@ -1331,6 +1331,7 @@ p {
         padding-bottom: 56.25%; /* 16:9 */
         height: 0;
 
+
         @media only screen and (min-width: 0px) and (max-width: 720px) {
           margin: 10px 0;
         }
@@ -1905,4 +1906,29 @@ video {
   -o-animation: AnimationName 3s ease infinite;
   animation: AnimationName 3s ease infinite;
   padding: 60px 0;
+}
+
+
+.ct--post-video {
+  background: #f1f2f4;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 40px 0;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+
+
+  @media only screen and (min-width: 0px) and (max-width: 720px) {
+    margin: 10px 0;
+  }
+
+  & .ls-player-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    height: 90%;
+    transform: translate(-50%, -50%);
+  }
 }

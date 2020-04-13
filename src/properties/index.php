@@ -56,6 +56,7 @@ require_once(DIRNAME . "/../class/Campaign.php");
 require_once(DIRNAME . "/../class/Accounts.php");
 require_once(DIRNAME . "/../class/AccountSession.php");
 require_once(DIRNAME . "/../class/AccountTemporary.php");
+require_once(DIRNAME . "/../class/AccountRecovery.php");
 require_once(DIRNAME . "/../class/Security.php");
 require_once(DIRNAME . "/../class/StaticCompiler.php");
 require_once(DIRNAME . "/../class/SocialAnalytics.php");
