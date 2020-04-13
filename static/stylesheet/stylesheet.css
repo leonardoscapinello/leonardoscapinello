@@ -106,8 +106,8 @@ p {
     line-height: 26px;
   }
   p {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 15px;
+    line-height: 26px;
   }
 }
 @media only screen and (min-width: 960px) and (max-width: 1460px) {
@@ -765,7 +765,8 @@ p {
 }
 @media only screen and (min-width: 0px) and (max-width: 960px) {
   .white-box {
-    padding: 10px 20px;
+    padding: 10px;
+    margin-top: 40px;
   }
 }
 .newsletter {
@@ -1520,4 +1521,26 @@ video {
   -o-animation: AnimationName 3s ease infinite;
   animation: AnimationName 3s ease infinite;
   padding: 60px 0;
+}
+.ct--post-video {
+  background: #f1f2f4;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 40px 0;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+@media only screen and (min-width: 0px) and (max-width: 720px) {
+  .ct--post-video {
+    margin: 10px 0;
+  }
+}
+.ct--post-video .ls-player-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  height: 90%;
+  transform: translate(-50%,-50%);
 }

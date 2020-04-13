@@ -50,7 +50,7 @@ require_once(DIRNAME . "/../class/Text.php");
 require_once(DIRNAME . "/../class/Date.php");
 require_once(DIRNAME . "/../class/Token.php");
 require_once(DIRNAME . "/../class/Numeric.php");
-//require_once(DIRNAME . "/../class/lessphp/lessc.inc.php");
+require_once(DIRNAME . "/../class/lessphp/lessc.inc.php");
 require_once(DIRNAME . "/../class/Database.php");
 require_once(DIRNAME . "/../class/Campaign.php");
 require_once(DIRNAME . "/../class/Accounts.php");
@@ -83,7 +83,7 @@ $mail = new PHPMailer(true);
 $url = new URL();
 $static = new StaticCompiler();
 $socialAnalytics = new SocialAnalytics();
-//$less = new lessc();
+$less = new lessc();
 $text = new Text();
 $numeric = new Numeric();
 $token = new Token();
@@ -100,8 +100,8 @@ $session = new AccountSession();
 $accounts = $account = new Accounts();
 $accountsTemporaryRegister = new AccountTemporary();
 
-if (get_request("recompile") !== null) {
-    //$less->compileFile(DIRNAME . "../../static/less/stylesheet.less", DIRNAME . "../../static/stylesheet/stylesheet.css");
+if(isset($_COOKIE['dev'])){
+    $less->compileFile(DIRNAME . "../../static/less/stylesheet.less", DIRNAME . "../../static/stylesheet/stylesheet.css");
     $static->add(DIRNAME . "../../static/stylesheet/fontawesome.all.min.css");
     $static->add(DIRNAME . "../../static/stylesheet/reset.css");
     $static->add(DIRNAME . "../../static/stylesheet/container.css");

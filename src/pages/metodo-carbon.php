@@ -5,9 +5,9 @@
                 <div class="col-xl-12 col-lg-12 col-sm-12 text center">
                     <div align="center">
                         <img src="<?= $static->getImagePath("livro-metodo-carbon-disclaimer.png") ?>"
-                             alt="Agora em versão digital, pré-venda limitada a 300 cópias.">
+                             alt="Agora em versão digital, pré-venda limitada a 300 cópias." style="max-width: 100%">
                         <img src="<?= $static->getImagePath("livro-metodo-carbon.png") ?>"
-                             alt="Capa do Livro Método CarbOn" style="max-width: 960px;margin: 0 auto">
+                             alt="Capa do Livro Método CarbOn" style="max-width: 100%;margin: 0 auto;width: 960px;">
                     </div>
                 </div>
             </div>
