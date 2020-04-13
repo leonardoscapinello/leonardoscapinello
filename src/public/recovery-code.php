@@ -9,7 +9,17 @@ $user = get_request("u");
 $code = get_request("c");
 
 if (not_empty($user) && not_empty($code)) {
-
+    $username = $text->base64_decode($user);
+    $code = $text->base64_decode($code);
+    $accountRecovery = new AccountRecovery($username);
+    $validate = $accountRecovery->validate($code);
+    if ($validate) {
+        header("location: " . RECOVERY_URL . "/validate?u=" . $user . "&c=" . $text->base64_encode($code));
+        die;
+    } else {
+        header("location: " . RECOVERY_URL . "/code?u=" . $user . "&attempt=1");
+        die;
+    }
 }
 
 
@@ -28,7 +38,7 @@ if (not_empty($user) && not_empty($code)) {
 <body>
 
 <div id="authenticate">
-    <form action="<?= RECOVERY_URL ?>/code" method="POST">
+    <form action="" method="POST">
         <div class="authentibox">
             <div class="company">
                 <a href="<?= SITE_URL ?>" style="margin: 0;">
@@ -43,9 +53,9 @@ if (not_empty($user) && not_empty($code)) {
 
 
             <div class="inputs">
-                <input type="hidden" name="u" value="<?= $user ?>"/>
+                <input type="hidden" name="u" id="u" value="<?= $user ?>"/>
                 <div class="input_line">
-                    <input type="text" name="code" value="" id="code" placeholder="Digite o código de 6 digitos aqui"
+                    <input type="text" name="c" value="" id="c" placeholder="Digite o código de 6 digitos aqui"
                            autocomplete="off" style="text-align: center;letter-spacing: 24px;text-transform: uppercase;"
                            minlength="6" maxlength="6" required/>
                 </div>
@@ -60,14 +70,16 @@ if (not_empty($user) && not_empty($code)) {
 
 
 <?php require_once(DIRNAME . "../components/footer-scripts.php") ?>
-<script type="text/javascript">
-    /*bootoast({
-        message: 'Serviço de recuperação de senha indisponível no momento. Entre em contato com nosso suporte: suporte@flexwei.com para te ajudarmos com isso.',
-        position: 'top-right',
-        type: 'danger',
-        timeout: 2000,
-        animationDuration: 300
-    });*/
-</script>
+<?php if (get_request("attempt") === "1") { ?>
+    <script type="text/javascript">
+        bootoast({
+            message: '<b>Wooops! O código que você digitou não é exatamente o que esperavamos...</b><br /> Enviamos esse código por e-mail (não esqueça de olhar o SPAM) e só vale por 02 horas.',
+            position: 'top-right',
+            type: 'danger',
+            timeout: 2000,
+            animationDuration: 300
+        });
+    </script>
+<?php } ?>
 </body>
 </html>

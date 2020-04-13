@@ -9,6 +9,7 @@ $username = get_request("username");
 if (not_empty($username)) {
     $accountRecovery = new AccountRecovery($username);
     if ($accountRecovery->isUsernameExists()) {
+        $accountRecovery->notify();
         header("location: " . RECOVERY_URL . "/code?u=" . $text->base64_encode($username) . "&t=" . $text->base64_encode($accountRecovery->getIdRecoveryToken()));
     } else {
         header("location: " . RECOVERY_URL . "?attempt=1");
@@ -31,25 +32,35 @@ if (not_empty($username)) {
 <div id="authenticate">
     <form action="<?= RECOVERY_URL ?>" method="POST">
         <div class="authentibox">
-            <div class="company">
-                <a href="<?= SITE_URL ?>" style="margin: 0;">
-                    <img src="<?= $static->getImagePath("ls-white-background-black-icon.png") ?>"
-                         alt="Leonardo Scapinello"/>
-                </a>
-                <h2>Qual seu e-mail?</h2>
-            </div>
-
-
-            <div class="inputs">
-                <div class="input_line">
-                    <input type="text" name="username" value="<?= $username ?>" id="username" placeholder="E-mail"
-                           autocomplete="off"/>
+            <?php if (isset($_COOKIE['LS_RECOVER_REQUEST'])) { ?>
+                <div class="company">
+                    <a href="<?= SITE_URL ?>" style="margin: 0;">
+                        <img src="<?= $static->getImagePath("ls-white-background-black-icon.png") ?>"
+                             alt="Leonardo Scapinello"/>
+                    </a>
+                    <h2>Qual seu e-mail?</h2>
                 </div>
-                <div class="input_line bt" align="center">
-                    <button class="btn">Recuperar</button>
-                    <a href="<?= LOGIN_URL ?>">Fazer Login</a>
+                <div class="inputs">
+                    <div class="input_line">
+                        <input type="text" name="username" value="<?= $username ?>" id="username" placeholder="E-mail"
+                               autocomplete="off"/>
+                    </div>
+                    <div class="input_line bt" align="center">
+                        <button class="btn">Recuperar</button>
+                        <a href="<?= LOGIN_URL ?>">Fazer Login</a>
+                    </div>
                 </div>
-            </div>
+            <?php } else { ?>
+                <div class="company">
+                    <a href="<?= SITE_URL ?>" style="margin: 0;">
+                        <img src="<?= $static->getImagePath("ls-white-background-black-icon.png") ?>"
+                             alt="Leonardo Scapinello"/>
+                    </a>
+                    <h2>Você ainda não recebeu?</h2>
+                    <p style="color: #FFFFFF">Nós te enviamos um e-mail com instruções para recuperar sua senha, se você ainda não recebeu,
+                        entre em contato com nosso suporte para que possamos te ajudar.</p>
+                </div>
+            <?php } ?>
         </div>
     </form>
 </div>
@@ -66,16 +77,6 @@ if (not_empty($username)) {
             animationDuration: 300
         });
     </script>
-<?php }else{ ?>
-<script type="text/javascript">
-    bootoast({
-        message: 'Serviço de recuperação de senha indisponível no momento. Entre em contato com nosso suporte: suporte@flexwei.com para te ajudarmos com isso.',
-        position: 'top-right',
-        type: 'danger',
-        timeout: 2000,
-        animationDuration: 300
-    });
-</script>
 <?php } ?>
 </body>
 </html>

@@ -7,9 +7,31 @@ if ($session->isLogged()) {
 
 $user = get_request("u");
 $code = get_request("c");
+$password = get_request("password");
 
 if (not_empty($user) && not_empty($code)) {
-    $
+    $username = $text->base64_decode($user);
+    $code_decoded = $text->base64_decode($code);
+    $accountRecovery = new AccountRecovery($username);
+    $validate = $accountRecovery->validate($code_decoded);
+    if (!$validate) {
+        header("location: " . RECOVERY_URL . "/code?u=" . $user . "&attempt=1");
+        die;
+    }
+
+    if (not_empty($password)) {
+
+        error_log("recover to " . $accountRecovery->getIdAccount());
+        error_log("recover to password " . $password);
+
+        $accountToRecovery = new Accounts($accountRecovery->getIdAccount());
+        $changed = $accountToRecovery->resetPassword($password, $password);
+        if ($changed) {
+            header("location: " . LOGIN_URL . "?u=" . $user . "&recover=Y");
+            die;
+        }
+    }
+
 }
 
 
@@ -28,7 +50,7 @@ if (not_empty($user) && not_empty($code)) {
 <body>
 
 <div id="authenticate">
-    <form action="<?= RECOVERY_URL ?>/validate" method="POST">.
+    <form action="" method="POST">
         <div class="authentibox">
             <div class="company">
                 <a href="<?= SITE_URL ?>" style="margin: 0;">
@@ -36,24 +58,21 @@ if (not_empty($user) && not_empty($code)) {
                          alt="Leonardo Scapinello"/>
                 </a>
                 <h2>Chegou a hora!</h2>
-                <p class="text white" style="color: #FFF;font-size: 13px;margin-bottom: 30px">Obrigado por confirmar, isso garante sua segurança! Vamos ao grande momento, recuperar sua senha?</p>
+                <p class="text white" style="color: #FFF;font-size: 13px;margin-bottom: 30px">Obrigado por confirmar,
+                    isso garante sua segurança! Vamos ao grande momento, recuperar sua senha?</p>
             </div>
 
 
             <div class="inputs">
                 <input type="hidden" name="u" value="<?= $user ?>"/>
+                <input type="hidden" name="c" value="<?= $code ?>"/>
                 <div class="input_line">
                     <input type="password" name="password" value="" id="password" placeholder="Digite sua nova senha"
                            autocomplete="off"
                            minlength="6" maxlength="24" required/>
                 </div>
-                <div class="input_line">
-                    <input type="password" name="confirm_password" value="" id="confirm_password" placeholder="Confirme sua sua nova senha"
-                           autocomplete="off"
-                           minlength="6" maxlength="24" required/>
-                </div>
                 <div class="input_line bt" align="center">
-                    <button class="btn">Confirmar</button>
+                    <button class="btn">Alterar Senha</button>
                     <a href="<?= LOGIN_URL ?>">Fazer Login</a>
                 </div>
             </div>

@@ -67,6 +67,17 @@ if (not_empty($username)) $username = $text->base64_decode($username);
         });
     </script>
 <?php }else if (get_request("u") !== null) { ?>
+<?php if (get_request("recover") === "Y") { ?>
+    <script type="text/javascript">
+        bootoast({
+            message: '<b>É isso ai!</b> Sua nova senha já pode ser usada. ',
+            position: 'top-right',
+            type: 'success',
+            timeout: 2000,
+            animationDuration: 300
+        });
+    </script>
+<?php }else { ?>
     <script type="text/javascript">
         bootoast({
             message: '<b>Seja bem-vindo(a)!</b> Sua conta foi criada com sucesso e você já pode acessar todo o conteúdo.',
@@ -76,6 +87,7 @@ if (not_empty($username)) $username = $text->base64_decode($username);
             animationDuration: 300
         });
     </script>
+<?php } ?>
 <?php } ?>
 </body>
 </html>
