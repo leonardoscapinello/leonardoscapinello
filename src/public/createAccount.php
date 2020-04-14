@@ -14,22 +14,13 @@ if (!not_empty($next)) $next = LOGIN_URL . "?u=" . $text->base64_encode($usernam
 $reg = $account->register($first_name, $last_name, $username, $password, $phone);
 
 if ($reg > 0) {
-
-    echo "REG > 0<br>";
-    echo "user id is " . $reg;
-
-
-    //header("location: " . $next);
-    //die;
+    header("location: " . $next);
+    die;
 } else {
-
-
-    echo "REG <= 0<br>";
-
     $tmp = new AccountTemporary();
     $tmp->setName($first_name . " " . $last_name);
     $tmp->setPhone($phone);
-    //header("location: " . SITE_URL . "register?attempt=" . $text->base64_encode($reg));
-    //die;
+    header("location: " . SITE_URL . "register?attempt=" . $text->base64_encode($reg));
+    die;
 }
 
