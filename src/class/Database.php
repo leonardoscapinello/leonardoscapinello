@@ -19,29 +19,22 @@ class Database
 
     public function __construct()
     {
-
         global $connection_json;
-
 
         $this->server = $connection_json->database->server;
         $this->server_port = $connection_json->database->port;
         $this->user = $connection_json->database->user;
         $this->password_encryption = $connection_json->database->password_encryption;
-
         switch ($this->password_encryption) {
             case "base64":
                 $this->password = base64_decode($this->password);
                 break;
         }
-
         $this->password = $connection_json->database->password;
         $this->database = $connection_json->database->database;
         $this->db_model = $connection_json->database->driver;
-
+        $dsn = $this->db_model . ":host=" . $this->server . ":" . $this->server_port . ";dbname=" . $this->database;
         try {
-
-
-            $dsn = $this->db_model . ":host=" . $this->server . ";dbname=" . $this->database;
 
             $options = array(
                 PDO::ATTR_PERSISTENT => true,
@@ -51,6 +44,7 @@ class Database
         } catch (PDOException $e) {
             $this->error = $e->getMessage();
             echo $this->error;
+            echo $dsn;
         }
 
 
@@ -114,6 +108,7 @@ class Database
     public function execute()
     {
         $execute = $this->stmt->execute();
+
     }
 
     public function single()
